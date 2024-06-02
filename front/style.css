@@ -66,4 +66,24 @@
         /* left: 495px; */
         /* margin: 20px; */
     }
+
+    .content {
+        background: #ccc;
+        width: 1950px;
+        height: 600px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-around;
+        box-sizing: border-box;
+    }
+
+    .Quiz1, .Quiz2, .Quiz3, .Quiz4, .Quiz5, .Quiz6 {
+        background : #ffffff;
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+        border-color: aqua solid;
+    }
 }
