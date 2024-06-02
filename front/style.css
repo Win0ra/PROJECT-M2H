@@ -1,0 +1,44 @@
+@media screen and (min-width:1200px) {
+    body {
+        background: #eefffe;
+        width: 1200px;
+        position: absolute;
+    }
+
+    .Navbar {
+        background: #edc267;
+        width: 1950px;
+        height: 100px;
+    }
+
+    h1 {
+        position: relative;
+        bottom: 100px;
+        padding: 10px;
+        margin: 10px 10px;
+        left: 50px;
+    }
+
+    #SearchBar {
+        width: 1950px;
+        background: #aacbf5;
+        position: relative;
+        height: 100px;
+    }
+
+    .search-container {
+        color: #009;
+        /* border: 1px solid #999; */
+        font-size: 12px;
+        box-sizing: border-box;
+        text-align: left;
+        /* width: 14%; */
+        position: relative;
+        display: block;
+        left: 71px;
+        top: -120px;
+        background-size: 10%;
+        /* left: 495px; */
+        /* margin: 20px; */
+    }
+}
