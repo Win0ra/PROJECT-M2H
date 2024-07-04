@@ -2,7 +2,7 @@ body {
     font-family: "Lobster Two";
 }
 
-@media screen and (min-width:1200px) {
+/* @media screen and (min-width:1200px) { */
 
     * {
         padding: 0px;
@@ -100,33 +100,65 @@ body {
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 30px;
         grid-template-rows: repeat(3, 1fr);
+        justify-items: center;
     }
 
+    .cards {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: stretch;
+        height: 100%;
+    }
+    .spacer {
+        background: #ccc;
+        width: 18rem;
+        height: 5rem;
+    }
     .card {
         background: URL("/Images/Quizz_img.jpg") center center no-repeat;
         background-size: cover;
         width: 18rem;
         height: 20rem;
+        font-family: "Lobster Two";
+        overflow: hidden;
+        border-radius: 20px;
+    }
+    .card-title {
+        background: rgb(255 255 255 / 95%);
+        width: 18rem;
+        height: 4rem;
+        text-align: center;
+        margin: 0px;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-family: "Lobster Two";
-        /*border-radius: 20px;*/
     }
+
+    a.btn.btn-primary {
+        height: 50px;
+        background: linear-gradient( #3565BC, #114198);
+        color: wheat;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* a.btn {
+        bottom: 50px;
+    } */
     .Ranking {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        justify-content: space-between;
-        width: 870px;
+        justify-content: space-around;
     }
     h3 {
         text-align: center;
-        margin: 104px;
-    }
-    .First, .Second, .Third {
-        width: 100px;
-        height: 100px;
+        margin: 124px;
     }
     .fa-solid, .fas {
         font-weight: 900;
@@ -147,4 +179,4 @@ body {
         width: 100px;
         height: 120px;
     }
-}
+/* } */
