@@ -1,18 +1,16 @@
 body {
     font-family: "Lobster Two";
-    /* margin: 0px 150px; */
 }
 
 @media screen and (min-width:1200px) {
-    
-    *{
-        margin: 0px;
+
+    * {
         padding: 0px;
     }
 
     body {
-        background: rgb(170,203,245);
-        background: linear-gradient(0deg, rgba(170,203,245,1) 0%, rgba(238,255,254,1) 20%, rgba(238,255,254,1) 70%, rgba(170,203,245,1) 100%);
+        background: rgb(170, 203, 245);
+        background: linear-gradient(0deg, rgba(170, 203, 245, 1) 0%, rgba(238, 255, 254, 1) 20%, rgba(238, 255, 254, 1) 70%, rgba(170, 203, 245, 1) 100%);
     }
 
     .Navbar {
@@ -51,39 +49,40 @@ body {
         padding: 16px;
         text-decoration: none;
     }
+    .margin {
+        margin: 0px 200px;
+    }
 
-    h1, h2, p {
+    h1,h2, h3 {
         font-family: "Lobster Two";
         position: relative;
     }
 
     h1 {
         text-align: center;
+    }
 
+    p {
+        font-family: "Bellota", system-ui;
     }
 
     #SearchBar {
         position: relative;
         height: 125px;
-        /* margin: 0px 200px; */
         display: flex;
         align-items: center;
     }
 
     .search-container {
         color: #009;
-        /* border: 1px solid #999; */
         font-size: 12px;
         box-sizing: border-box;
         text-align: left;
-        /* width: 14%; */
         position: relative;
         display: block;
         left: 71px;
         top: -120px;
         background-size: 10%;
-        /* left: 495px; */
-        /* margin: 20px; */
     }
 
     input#searchBar {
@@ -97,24 +96,55 @@ body {
     }
 
     .content {
-        height: 800px;
         display: grid;
-        /* box-sizing: border-box; */
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 30px;
-        grid-template-rows: repeat(3,1fr);
-        margin: 0px 200px;
+        grid-template-rows: repeat(3, 1fr);
     }
 
     .card {
         background: URL("/Images/Quizz_img.jpg") center center no-repeat;
         background-size: cover;
-        width: 100%;
-        height: 100%;
-        border-radius: 10px;
+        width: 18rem;
+        height: 20rem;
         display: flex;
         align-items: center;
         justify-content: center;
         font-family: "Lobster Two";
+        /*border-radius: 20px;*/
+    }
+    .Ranking {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        width: 870px;
+    }
+    h3 {
+        text-align: center;
+        margin: 104px;
+    }
+    .First, .Second, .Third {
+        width: 100px;
+        height: 100px;
+    }
+    .fa-solid, .fas {
+        font-weight: 900;
+        font-size: 200px;
+    }
+    .FirstBlock {
+        background: red;
+        width: 100px;
+        height: 120px;
+    }
+    .SecondBlock {
+        background: yellow;
+        width: 100px;
+        height: 120px;
+    }
+    .ThirdBlock {
+        background: black;
+        width: 100px;
+        height: 120px;
     }
 }
