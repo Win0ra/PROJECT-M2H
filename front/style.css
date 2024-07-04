@@ -1,5 +1,4 @@
 body {
-    background: #eefffe;
     font-family: "Lobster Two";
     /* margin: 0px 150px; */
 }
@@ -12,8 +11,8 @@ body {
     }
 
     body {
-        background: #eefffe;
-        /* margin: 0px 150px; */
+        background: rgb(170,203,245);
+        background: linear-gradient(0deg, rgba(170,203,245,1) 0%, rgba(238,255,254,1) 20%, rgba(238,255,254,1) 70%, rgba(170,203,245,1) 100%);
     }
 
     .Navbar {
@@ -53,16 +52,17 @@ body {
         text-decoration: none;
     }
 
-    /* h1 {
+    h1, h2, p {
+        font-family: "Lobster Two";
         position: relative;
-        bottom: 100px;
-        padding: 10px;
-        margin: 10px 10px;
-        left: 50px;
-    } */
+    }
+
+    h1 {
+        text-align: center;
+
+    }
 
     #SearchBar {
-        background: linear-gradient(#B1C5FF, #eefffe);
         position: relative;
         height: 125px;
         /* margin: 0px 200px; */
@@ -115,5 +115,6 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
+        font-family: "Lobster Two";
     }
 }
