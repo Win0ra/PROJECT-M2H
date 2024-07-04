@@ -6,12 +6,15 @@ body {
 
     * {
         padding: 0px;
+        /*border: solid 1px red;*/
     }
 
     body {
         background: rgb(170, 203, 245);
         background: linear-gradient(0deg, rgba(170, 203, 245, 1) 0%, rgba(238, 255, 254, 1) 20%, rgba(238, 255, 254, 1) 70%, rgba(170, 203, 245, 1) 100%);
     }
+
+/********************** NAVBAR DEBUT *******************/
 
     .Navbar {
         background: #edc267;
@@ -49,6 +52,9 @@ body {
         padding: 16px;
         text-decoration: none;
     }
+
+/********************** NAVBAR DEBUT *******************/
+
     .margin {
         margin: 0px 200px;
     }
@@ -65,6 +71,8 @@ body {
     p {
         font-family: "Bellota", system-ui;
     }
+
+/********************** SEARCHBAR DEBUT *****************/
 
     #SearchBar {
         position: relative;
@@ -95,6 +103,9 @@ body {
         font-family: "Bellota", system-ui;
     }
 
+/********************** SEARCHBAR FIN *****************/
+
+/*************** QUIZZ CARDS DEBUT ******************/
     .content {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -143,21 +154,18 @@ body {
         justify-content: center;
     }
 
+/*************** QUIZZ CARDS FIN ******************/
+
     h3 {
         text-align: center;
         margin: 124px;
     }
 
+/****************** PODIUM DEBUT ***************/
+
     .fa-solid, .fas {
         font-weight: 900;
         /*font-size: 200px;*/
-    }
-
-    #second {
-        color: #707070;
-        font-size: 200px;
-        position: relative;
-        top: 51px;
     }
 
     #first {
@@ -165,6 +173,13 @@ body {
         font-size: 250px;
         position: relative;
         bottom: 70px;
+    }
+    
+    #second {
+        color: #707070;
+        font-size: 200px;
+        position: relative;
+        top: 51px;
     }
 
     #third {
@@ -202,8 +217,11 @@ body {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        justify-content: space-around;
+        justify-content: center;
         text-align: center;
         position: relative;
     }
+
+/****************** PODIUM FIN ***************/
+
 /* } */
