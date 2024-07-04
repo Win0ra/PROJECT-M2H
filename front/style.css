@@ -1,14 +1,31 @@
+body {
+    background: #eefffe;
+    font-family: "Lobster Two";
+    /* margin: 0px 150px; */
+}
+
 @media screen and (min-width:1200px) {
+    
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+
     body {
         background: #eefffe;
-        width: 1200px;
-        position: absolute;
+        /* margin: 0px 150px; */
     }
 
     .Navbar {
         background: #edc267;
-        width: 1950px;
-        height: 150px;
+        height: 60px;
+        position: sticky;
+        display: flex;
+        align-items: center;
+        border-radius: 100px;
+        margin: 10px;
+        box-shadow: 0px 0px 5px #0000007d;
+        font-family: "Bellota", system-ui;
     }
 
     .link {
@@ -36,19 +53,21 @@
         text-decoration: none;
     }
 
-    h1 {
+    /* h1 {
         position: relative;
         bottom: 100px;
         padding: 10px;
         margin: 10px 10px;
         left: 50px;
-    }
+    } */
 
     #SearchBar {
-        width: 1950px;
-        background: #aacbf5;
+        background: linear-gradient(#B1C5FF, #eefffe);
         position: relative;
         height: 125px;
+        /* margin: 0px 200px; */
+        display: flex;
+        align-items: center;
     }
 
     .search-container {
@@ -67,22 +86,34 @@
         /* margin: 20px; */
     }
 
-    .content {
-        background: #ccc;
-        width: 1950px;
-        height: 600px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        align-items: center;
-        justify-content: space-around;
-        box-sizing: border-box;
+    input#searchBar {
+        width: 100%;
+        border-radius: 100px;
+        box-shadow: 0px 0px 5px #0000007d;
+        padding: 5px 0px 5px 10px;
+        margin: 0px 200px;
+        border: none;
+        font-family: "Bellota", system-ui;
     }
 
-    .Quiz1, .Quiz2, .Quiz3, .Quiz4, .Quiz5, .Quiz6 {
+    .content {
+        background: #ccc;
+        height: 800px;
+        display: grid;
+        /* box-sizing: border-box; */
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+        grid-template-rows: repeat(3,1fr);
+        margin: 0px 200px;
+    }
+
+    .card-quiz {
         background : #ffffff;
-        width: 100px;
-        height: 100px;
+        width: 100%;
+        height: 100%;
         border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
