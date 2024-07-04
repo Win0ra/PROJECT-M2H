@@ -112,11 +112,7 @@ body {
         align-items: stretch;
         height: 100%;
     }
-    .spacer {
-        background: #ccc;
-        width: 18rem;
-        height: 5rem;
-    }
+
     .card {
         background: URL("/Images/Quizz_img.jpg") center center no-repeat;
         background-size: cover;
@@ -147,36 +143,67 @@ body {
         justify-content: center;
     }
 
-    /* a.btn {
-        bottom: 50px;
-    } */
-    .Ranking {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-    }
     h3 {
         text-align: center;
         margin: 124px;
     }
+
     .fa-solid, .fas {
         font-weight: 900;
+        /*font-size: 200px;*/
+    }
+
+    #second {
+        color: #707070;
         font-size: 200px;
+        position: relative;
+        top: 51px;
     }
+
+    #first {
+        color: #edc267;
+        font-size: 250px;
+        position: relative;
+        bottom: 70px;
+    }
+
+    #third {
+        color: #9b6c18;
+        font-size: 200px;
+        position: relative;
+        top: 46px;
+    }
+
     .FirstBlock {
-        background: red;
-        width: 100px;
-        height: 120px;
+        background: #edc267;
+        width: 325px;
+        height: 315px;
+        position: relative; 
+        bottom: 70px;
     }
+
     .SecondBlock {
-        background: yellow;
-        width: 100px;
-        height: 120px;
+        background: #707070;
+        width: 305px;
+        height: 245px;
+        position: relative;
+        top: 50px;
     }
+
     .ThirdBlock {
-        background: black;
-        width: 100px;
-        height: 120px;
+        background: #9b6c18;
+        width: 325px;
+        height: 250px;
+        position: relative;
+        top: 45px;
+    }
+
+    .Blocks {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        text-align: center;
+        position: relative;
     }
 /* } */
