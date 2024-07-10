@@ -1,0 +1,168 @@
+/* IMPORTS FONT */
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+
+/* RESET CSS */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/* CONTENU DE LA PAGE */
+
+
+body {
+    background: linear-gradient(0deg, rgba(170, 203, 245, 1) 0%, rgba(238, 255, 254, 1) 20%, rgba(238, 255, 254, 1) 70%, rgba(170, 203, 245, 1) 100%);
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+h1 {
+    font-family: Lobster Two;
+    font-size: 48px;
+    text-align: center;
+}
+
+.h1-connex {
+    margin: 0px 0px 64px 0px;
+}
+
+h3 {
+    font-family: Lobster Two;
+    font-size: 30px;
+    margin: 0px 0px 16px 0px;
+}
+
+p {
+    font-family: Bellota;
+    font-size: 18px;
+}
+
+.content {
+    margin: 0px auto;
+    width: 1040px;
+}
+
+#pseudo,
+#password {
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 510px;
+    height: 41px;
+    margin: 0px 0px 40px 0px;
+}
+
+#checkbox,
+p {
+    display: inline-block;
+}
+
+input#checkbox {
+    height: 22px;
+    width: 22px;
+}
+
+.checkbox {
+    width: 1040px;
+    margin: 0px 0px 40px 0px;
+}
+
+p.mdp-oublie {
+    text-align: right;
+    width: 100%;
+}
+
+.connexion{
+    width: 100%;
+    color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 9px 0px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(#3565BC, #114198);
+    font-family: Bellota;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0px 0px 80px 0px;
+}
+
+.connex-rs {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rs-button{
+    width: 245px;
+    color: black;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 9px 0px;
+    border-radius: 10px;
+    border: none;
+    background: white;
+    font-family: Bellota;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+a {
+    color: blue !important;
+    text-decoration: underline;
+}
+
+.no-compte{
+    text-align: center;
+    width: 100%;
+    margin: 72px 0px 0px 0px;
+}
+
+.fa-brands{
+    background-image: linear-gradient(#EDC267,#9a6748);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
