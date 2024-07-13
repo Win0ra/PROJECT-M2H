@@ -58,7 +58,7 @@ table {
 body {
     background: linear-gradient(0deg, rgba(170, 203, 245, 1) 0%, rgba(238, 255, 254, 1) 20%, rgba(238, 255, 254, 1) 70%, rgba(170, 203, 245, 1) 100%);
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 100%;
 }
 
 h1 {
@@ -67,7 +67,7 @@ h1 {
     text-align: center;
 }
 
-.h1-connex {
+.h1-inscri {
     margin: 0px 0px 64px 0px;
 }
 
@@ -87,19 +87,32 @@ p {
     width: 1040px;
 }
 
-#pseudo,
-#password {
+#pseudo, #password, #prenom, #nom,
+ #email, #age, select#sexe {
     border-radius: 30px;
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    width: 510px;
-    height: 41px;
+    width: 500px;
+    height: 40px;
     margin: 0px 0px 40px 0px;
+    box-sizing: border-box;
+    padding-inline: 0px;
+    padding-block: 0px;
 }
 
-#checkbox,
-p {
-    display: inline-block;
+::placeholder {
+    font-size: 20px;
+    padding: 10px 0 0 20px;
+    font-family: bellota;
+    line-height: 40px;
+}
+
+.center-placeholder::placeholder{
+    height: 13px;
+}
+
+#age{
+    width: 157px;
 }
 
 input#checkbox {
@@ -109,15 +122,15 @@ input#checkbox {
 
 .checkbox {
     width: 1040px;
-    margin: 0px 0px 40px 0px;
+    margin: 32px 0px 40px 0px;
+    display: flex;
 }
 
-p.mdp-oublie {
-    text-align: right;
-    width: 100%;
+.cgu{
+    padding: 0 0 0 8px;
 }
 
-.connexion{
+.inscription{
     width: 100%;
     color: white;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -131,38 +144,74 @@ p.mdp-oublie {
     margin: 0px 0px 80px 0px;
 }
 
-.connex-rs {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.rs-button{
-    width: 245px;
-    color: black;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    padding: 9px 0px;
-    border-radius: 10px;
-    border: none;
-    background: white;
-    font-family: Bellota;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-a {
-    color: blue !important;
-    text-decoration: underline;
-}
-
-.no-compte{
-    text-align: center;
-    width: 100%;
-    margin: 72px 0px 0px 0px;
-}
-
-.fa-brands{
+.fa-solid{
     background-image: linear-gradient(#EDC267,#9a6748);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
+}
+
+.infos-perso {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0 0 24px 0;
+}
+
+select#sexe {
+    position: relative;
+    width: 200px;
+    font-size: 20px;
+    text-align: center;
+    font-family: bellota;
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    appearance: none;
+}
+
+option {
+    font-size: 20px;
+    text-align: center;
+    font-family: bellota;
+    padding: 8px 0 0 0;
+}
+
+.select-sexe{
+    position: relative;
+}
+
+.fa-angle-down {
+    position: absolute;
+    z-index: 1;
+    top: 13px;
+    left: 170px;
+}
+
+.fa-basketball{
+    font-size: 60px;
+}
+
+.card-ci {
+    width: 157px;
+    height: 157px;
+    border-radius: 30px;
+    background: white;
+    margin: 0 0 32px 0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.centres.interets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 32px 0 0 0 ;
+}
+
+.txt-carte{
+    font-size: 20px;
+    font-weight: bold;
 }
