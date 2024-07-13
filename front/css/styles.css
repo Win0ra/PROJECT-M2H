@@ -153,7 +153,7 @@ h1 {
     font-family: Lobster Two;
     font-size: 48px;
     text-align: center;
-    margin-top: 20px;
+    margin: 0 0 64px 0;
 }
 
 .h1-bouz{
@@ -182,20 +182,8 @@ p {
     margin: 0px auto;
 }
 
-h1,
-h2,
-h3 {
-    font-family: "Lobster Two";
-    position: relative;
-}
 
-h1 {
-    text-align: center;
-}
-
-p {
-    font-family: "Bellota", system-ui;
-}
+/********************** SEARCHBAR DEBUT *****************/
 
 #SearchBar {
     position: relative;
@@ -226,6 +214,9 @@ input#searchBar {
     font-family: "Bellota", system-ui;
 }
 
+/********************** SEARCHBAR FIN *****************/
+
+/*************** QUIZZ CARDS DEBUT ******************/
 .content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -244,14 +235,8 @@ input#searchBar {
     height: 100%;
 }
 
-.spacer {
-    background: #ccc;
-    width: 18rem;
-    height: 5rem;
-}
-
 .card {
-    background: URL("/Images/Quizz_img.jpg") center center no-repeat;
+    background: URL("/images/quiz_img.jpg") center center no-repeat;
     background-size: cover;
     width: 18rem;
     height: 20rem;
@@ -259,7 +244,6 @@ input#searchBar {
     overflow: hidden;
     border-radius: 20px;
 }
-
 .card-title {
     background: rgb(255 255 255 / 95%);
     width: 18rem;
@@ -273,7 +257,7 @@ input#searchBar {
 
 a.btn.btn-primary {
     height: 50px;
-    background: linear-gradient(#3565BC, #114198);
+    background: linear-gradient( #3565BC, #114198);
     color: wheat;
     text-decoration: none;
     display: flex;
@@ -281,43 +265,72 @@ a.btn.btn-primary {
     justify-content: center;
 }
 
-/* a.btn {
-        bottom: 50px;
-    } */
-.Ranking {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-}
+/*************** QUIZZ CARDS FIN ******************/
 
 h3 {
     text-align: center;
     margin: 124px;
 }
 
-.fa-solid,
-.fas {
+/****************** PODIUM DEBUT ***************/
+
+.fa-solid, .fas {
     font-weight: 900;
+    /*font-size: 200px;*/
+}
+
+#first {
+    color: #edc267;
+    font-size: 250px;
+    position: relative;
+    bottom: 70px;
+}
+
+#second {
+    color: #707070;
     font-size: 200px;
+    position: relative;
+    top: 51px;
+}
+
+#third {
+    color: #9b6c18;
+    font-size: 200px;
+    position: relative;
+    top: 46px;
 }
 
 .FirstBlock {
-    background: red;
-    width: 100px;
-    height: 120px;
+    background: #edc267;
+    width: 325px;
+    height: 315px;
+    position: relative; 
+    bottom: 70px;
 }
 
 .SecondBlock {
-    background: yellow;
-    width: 100px;
-    height: 120px;
+    background: #707070;
+    width: 305px;
+    height: 245px;
+    position: relative;
+    top: 50px;
 }
 
 .ThirdBlock {
-    background: black;
-    width: 100px;
-    height: 120px;
+    background: #9b6c18;
+    width: 325px;
+    height: 250px;
+    position: relative;
+    top: 45px;
 }
 
-/* } */
+.Blocks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+/****************** PODIUM FIN ***************/
