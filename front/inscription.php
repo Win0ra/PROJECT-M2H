@@ -1,8 +1,8 @@
-<!-- <?php
+<?php
 
-include 'header.php';
+include './navbar.php';
 
-?> -->
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -94,3 +94,9 @@ include 'header.php';
 </body>
 
 </html>
+
+<?php
+
+include './footer.php';
+
+?>

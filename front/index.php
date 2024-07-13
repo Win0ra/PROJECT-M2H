@@ -1,3 +1,9 @@
+<?php
+
+include './navbar.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,18 +18,6 @@
         <script src="https://kit.fontawesome.com/e98829b701.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="Navbar">
-        <div class="link">
-            <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Lien 1</a></li>
-                <li><a href="#">Lien 2</a></li>
-                <li><a href="#">Lien 3</a></li>
-                <li><a href="#">Lien 4</a></li>
-                <li><a href="#">Lien 5</a></li>
-            </ul>
-        </div>
-    </div>
     <div class="margin">
         <div class="Presentation">
             <h1>La Bouzinerie</h1>
@@ -114,3 +108,9 @@
     </div>
 </body>
 </html>
+
+<?php
+
+include './footer.php';
+
+?>

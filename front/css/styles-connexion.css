@@ -58,7 +58,7 @@ table {
 body {
     background: linear-gradient(0deg, rgba(170, 203, 245, 1) 0%, rgba(238, 255, 254, 1) 20%, rgba(238, 255, 254, 1) 70%, rgba(170, 203, 245, 1) 100%);
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 100%;
 }
 
 h1 {
@@ -83,7 +83,7 @@ p {
 }
 
 .content {
-    margin: 0px auto;
+    margin: 0px auto 96px auto;
     width: 1040px;
 }
 
@@ -150,7 +150,7 @@ p.mdp-oublie {
     font-weight: bold;
 }
 
-a {
+p a {
     color: blue !important;
     text-decoration: underline;
 }
@@ -161,7 +161,7 @@ a {
     margin: 72px 0px 0px 0px;
 }
 
-.fa-brands{
+.connex-rs .fa-brands{
     background-image: linear-gradient(#EDC267,#9a6748);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 

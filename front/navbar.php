@@ -10,14 +10,14 @@
 <body>
 <div class="Navbar">
     <ul>
-        <li><a href="#">Accueil</a></li>
-        <li><a href="#">Connexion</a></li>
-        <li><a href="#">Inscription</a></li>
+        <li><a href="./index.php">Accueil</a></li>
+        <li><a href="./connexion.php">Connexion</a></li>
+        <li><a href="./inscription.php">Inscription</a></li>
         <li><a href="#">Jouer</a></li>
         <li><a href="#">Classement</a></li>
         <li><a href="#">Mon Compte</a></li>
     </ul>
-    <div class="logo"><i class="fa-brands fa-html5"> LOGO</i></div>
+    <div class="logo"><a href="./index.php"><i class="fa-brands fa-html5"> LOGO</i></a></div>
 </div>
 </body>
 </html>
