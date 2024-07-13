@@ -20,7 +20,7 @@ include './navbar.php';
 <body>
     <div class="margin">
         <div class="Presentation">
-            <h1>La Bouzinerie</h1>
+            <h1 class="h1-bouz">La Bouzinerie</h1>
             <h2>La Bouzinerie, qu'est-ce que c'est ?</h2>
             <p>Tout simplement l'histoire de 3 jeunes développeurs en herbe adorant les quizz animés (voire même
                 mouvementés) et qui se sont décidés à créer un site ludique et amusant.<br />

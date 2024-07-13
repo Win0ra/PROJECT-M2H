@@ -60,7 +60,7 @@ include './navbar.php';
                         class="center-placeholder">
 
                     <h3>Age (ans)</h3>
-                    <input type="text" name="age" id="age" required>
+                    <input type="number" name="age" id="age" required placeholder="18">
                 </div>
             </div>
 

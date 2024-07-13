@@ -101,9 +101,15 @@ p {
     padding-block: 0px;
 }
 
+#pseudo, #password, #prenom, #nom,
+ #email, #age {
+    padding: 0 0 0 20px;
+    box-sizing: border-box;
+}
+
 ::placeholder {
     font-size: 20px;
-    padding: 10px 0 0 20px;
+    padding: 10px 0 0 0px;
     font-family: bellota;
     line-height: 40px;
 }
