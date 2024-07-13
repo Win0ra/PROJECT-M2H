@@ -16,11 +16,11 @@ include './navbar.php';
 </head>
 
 <body>
-    <form action="">
+    <form action="" method="get">
         <div class="content">
             <h1 class="h1-inscri">Inscrivez-vous</h1>
 
-<!-- INFORMATIONS PERSOS -->
+            <!-- INFORMATIONS PERSOS -->
 
             <div class="infos-perso">
                 <div class="gauche">
@@ -33,8 +33,7 @@ include './navbar.php';
                     <input type="email" name="email" id="email" placeholder="MonsieurBouzin@gmail.com" required>
 
                     <h3>Mot de passe</h3>
-                    <input type="password" name="password" id="password" placeholder="****************"
-                        class="center-placeholder" required>
+                    <input type="password" name="password" id="password" placeholder="****************" class="center-placeholder" required>
 
                     <h3>Sexe</h3>
                     <div class="select-sexe">
@@ -56,8 +55,7 @@ include './navbar.php';
                     <input type="text" name="pseudo" id="pseudo" placeholder="Le-plus-grand-des-bouzins">
 
                     <h3>Confirmer le mot de passe</h3 required>
-                    <input type="password" name="password" id="password" placeholder="****************"
-                        class="center-placeholder">
+                    <input type="password" name="password" id="password" placeholder="****************" class="center-placeholder">
 
                     <h3>Age (ans)</h3>
                     <input type="number" name="age" id="age" required placeholder="18">
@@ -68,18 +66,42 @@ include './navbar.php';
 
             <h3>Centre d'inttérêts</h3>
             <div class="centres interets">
-                <div class="card-ci"><i class="fa-solid fa-basketball"></i><p class="txt-carte">Sport</p></div>
-                <div class="card-ci"><i class="fa-solid fa-basketball"></i><p class="txt-carte">Sport</p></div>
-                <div class="card-ci"><i class="fa-solid fa-basketball"></i><p class="txt-carte">Sport</p></div>
-                <div class="card-ci"><i class="fa-solid fa-basketball"></i><p class="txt-carte">Sport</p></div>
-                <div class="card-ci"><i class="fa-solid fa-basketball"></i><p class="txt-carte">Sport</p></div>
-                <div class="card-ci"><i class="fa-solid fa-basketball"></i><p class="txt-carte">Sport</p></div>
-                <div class="card-ci"><i class="fa-solid fa-basketball"></i><p class="txt-carte">Sport</p></div>
-                <div class="card-ci"><i class="fa-solid fa-basketball"></i><p class="txt-carte">Sport</p></div>
-                <div class="card-ci"><i class="fa-solid fa-basketball"></i><p class="txt-carte">Sport</p></div>
-                <div class="card-ci"><i class="fa-solid fa-basketball"></i><p class="txt-carte">Sport</p></div>
-                <div class="card-ci"><i class="fa-solid fa-basketball"></i><p class="txt-carte">Sport</p></div>
-                <div class="card-ci"><i class="fa-solid fa-basketball"></i><p class="txt-carte">Sport</p></div>
+                <div class="card-ci"><i class="fa-solid fa-basketball"></i>
+                    <p class="txt-carte">Sport</p>
+                </div>
+                <div class="card-ci"><i class="fa-solid fa-basketball"></i>
+                    <p class="txt-carte">Sport</p>
+                </div>
+                <div class="card-ci"><i class="fa-solid fa-basketball"></i>
+                    <p class="txt-carte">Sport</p>
+                </div>
+                <div class="card-ci"><i class="fa-solid fa-basketball"></i>
+                    <p class="txt-carte">Sport</p>
+                </div>
+                <div class="card-ci"><i class="fa-solid fa-basketball"></i>
+                    <p class="txt-carte">Sport</p>
+                </div>
+                <div class="card-ci"><i class="fa-solid fa-basketball"></i>
+                    <p class="txt-carte">Sport</p>
+                </div>
+                <div class="card-ci"><i class="fa-solid fa-basketball"></i>
+                    <p class="txt-carte">Sport</p>
+                </div>
+                <div class="card-ci"><i class="fa-solid fa-basketball"></i>
+                    <p class="txt-carte">Sport</p>
+                </div>
+                <div class="card-ci"><i class="fa-solid fa-basketball"></i>
+                    <p class="txt-carte">Sport</p>
+                </div>
+                <div class="card-ci"><i class="fa-solid fa-basketball"></i>
+                    <p class="txt-carte">Sport</p>
+                </div>
+                <div class="card-ci"><i class="fa-solid fa-basketball"></i>
+                    <p class="txt-carte">Sport</p>
+                </div>
+                <div class="card-ci"><i class="fa-solid fa-basketball"></i>
+                    <p class="txt-carte">Sport</p>
+                </div>
             </div>
 
             <div class="checkbox">
@@ -88,7 +110,7 @@ include './navbar.php';
                     Je reconnais que mes données seront traitées conformément à cette politique.
                     Je comprends que je peux me désinscrire à tout moment.</p>
             </div>
-            <button class="inscription">Inscription</button>
+            <a href="./index.php"> <button class="inscription"> <i class="fa-solid fa-pen-to-square" id=" i-white"></i><p class="txt-inscription">Inscription</p></button></a>
         </div>
     </form>
 </body>

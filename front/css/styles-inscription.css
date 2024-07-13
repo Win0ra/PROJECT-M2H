@@ -88,6 +88,11 @@ p {
     width: 1040px;
 }
 
+input {
+    font-family: 'Bellota';
+    font-size: 20px;
+}
+
 #pseudo, #password, #prenom, #nom,
  #email, #age, select#sexe {
     border-radius: 30px;
@@ -149,12 +154,9 @@ input#checkbox {
     font-size: 24px;
     font-weight: bold;
     margin: 0px 0px 96px 0px;
-}
-
-.fa-solid{
-    background-image: linear-gradient(#EDC267,#9a6748);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .infos-perso {
@@ -196,6 +198,9 @@ option {
 
 .fa-basketball{
     font-size: 60px;
+    background-image: linear-gradient(#EDC267,#9a6748);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
 }
 
 .card-ci {
@@ -221,4 +226,19 @@ option {
 .txt-carte{
     font-size: 20px;
     font-weight: bold;
+}
+
+.txt-inscription {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 0 0 0 25px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.fa-pen-to-square{
+    background-image: white;
 }
