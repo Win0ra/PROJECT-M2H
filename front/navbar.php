@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Navbar</title>
     <link rel="stylesheet" href="./css/styles-navbar.css" type="text/css" media ="all">    
     <script src="https://kit.fontawesome.com/e98829b701.js" crossorigin="anonymous"></script>
 </head>

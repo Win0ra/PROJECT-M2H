@@ -1,0 +1,153 @@
+/* IMPORTS FONT */
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+
+/* RESET CSS */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/* CONTENU DE LA PAGE */
+
+
+body {
+    background: #EEFFFE;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+h1 {
+    font-family: Lobster Two;
+    font-size: 48px;
+    text-align: center;
+}
+
+h2 {
+    font-family: Lobster Two;
+    font-size: 36px;
+    text-align: center;
+    width: 100%;
+    margin: 0 0 24px 0;
+}
+
+h3 {
+    font-family: Lobster Two;
+    font-size: 30px;
+    margin: 0px 0px 16px 0px;
+}
+
+p {
+    font-family: Bellota;
+    font-size: 18px;
+}
+
+.content {
+    margin: 64px auto 96px auto;
+    width: 1280px;
+}
+
+.retour {
+    width: 365px;
+    color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 9px 0px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(#3565BC, #114198);
+    font-family: Bellota;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0px 0px 80px 0px;
+    cursor: pointer;
+}
+
+button.retour {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa-angle-left{
+    padding: 0 25px 0 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.list-joueurs {
+    background: linear-gradient(135deg, hsl(249deg 70% 22% / 20%), hwb(189deg 0% 45% / 20%));
+    height: 600px;
+    width: 100%;
+    border-radius: 30px;
+}
+
+.gauche {
+    width: 365px;
+    margin: 0 32px 0 0;
+}
+
+.droite {
+    width: 891px;
+    margin: 0 32px 0 0;
+    height: 728px;
+}
+
+
+*{
+    border: 1px solid red !important;
+}
+
+.gauche-et-droite {
+    display: flex;
+    flex-direction: row;
+}
+
+.deux-btn {
+    display: flex;
+}
