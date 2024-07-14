@@ -88,6 +88,8 @@ p {
     width: 1040px;
 }
 
+/* INFORMATIONS PERSONNELLES */
+
 input {
     font-family: 'Bellota';
     font-size: 20px;
@@ -127,46 +129,6 @@ input {
     width: 157px;
 }
 
-input#checkbox {
-    height: 22px;
-    width: 22px;
-}
-
-.checkbox {
-    width: 1040px;
-    margin: 32px 0px 40px 0px;
-    display: flex;
-}
-
-.cgu{
-    padding: 0 0 0 8px;
-}
-
-.inscription {
-    width: 100%;
-    color: white;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    padding: 9px 0px;
-    border-radius: 10px;
-    border: none;
-    background: linear-gradient(#3565BC, #114198);
-    font-family: Bellota;
-    font-size: 24px;
-    font-weight: bold;
-    margin: 0px 0px 96px 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.infos-perso {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: space-between;
-    margin: 0 0 24px 0;
-}
-
 select#sexe {
     position: relative;
     width: 200px;
@@ -195,6 +157,16 @@ option {
     top: 13px;
     left: 170px;
 }
+
+.infos-perso {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0 0 24px 0;
+}
+
+/* CENTRES D'INTERETS */
 
 .fa-basketball{
     font-size: 60px;
@@ -228,6 +200,39 @@ option {
     font-weight: bold;
 }
 
+/* FIN DU FORMULAIRE */
+
+input#checkbox {
+    height: 22px;
+    width: 22px;
+}    
+
+.checkbox {
+    width: 1040px;
+    margin: 32px 0px 40px 0px;
+    display: flex;
+}    
+
+.cgu{
+    padding: 0 0 0 8px;
+}    
+
+.inscription {
+    width: 100%;
+    color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 9px 0px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(#3565BC, #114198);
+    font-family: Bellota;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0px 0px 96px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}    
 .txt-inscription {
     color: white;
     text-decoration: none;

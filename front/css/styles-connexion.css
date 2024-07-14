@@ -124,7 +124,7 @@ p.mdp-oublie {
     width: 100%;
 }
 
-.connexion{
+.connexion {
     width: 100%;
     color: white;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -136,6 +136,7 @@ p.mdp-oublie {
     font-size: 24px;
     font-weight: bold;
     margin: 0px 0px 80px 0px;
+    cursor: pointer;
 }
 
 .connex-rs {
@@ -155,6 +156,7 @@ p.mdp-oublie {
     font-family: Bellota;
     font-size: 24px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 p a {

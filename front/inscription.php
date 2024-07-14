@@ -104,13 +104,17 @@ include './navbar.php';
                 </div>
             </div>
 
+            <!-- FIN DU FORMULAIRE -->
+
             <div class="checkbox">
                 <input type="checkbox" name="checkbox" id="checkbox" required>
                 <p class="cgu">J'accepte les Conditions Générales d'Utilisation et la Politique de Confidentialité.
                     Je reconnais que mes données seront traitées conformément à cette politique.
                     Je comprends que je peux me désinscrire à tout moment.</p>
             </div>
-            <a href="./index.php"> <button class="inscription"> <i class="fa-solid fa-pen-to-square" id=" i-white"></i><p class="txt-inscription">Inscription</p></button></a>
+            <a href="./index.php"> <button class="inscription"> <i class="fa-solid fa-pen-to-square" id=" i-white"></i>
+                    <p class="txt-inscription">Inscription</p>
+                </button></a>
         </div>
     </form>
 </body>
