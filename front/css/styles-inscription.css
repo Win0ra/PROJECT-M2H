@@ -1,0 +1,249 @@
+/* IMPORTS FONT */
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+
+/* RESET CSS */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/* CONTENU DE LA PAGE */
+
+
+body {
+    background: linear-gradient(0deg, rgba(170, 203, 245, 1) 0%, rgba(238, 255, 254, 1) 20%, rgba(238, 255, 254, 1) 70%, rgba(170, 203, 245, 1) 100%);
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+h1 {
+    font-family: Lobster Two;
+    font-size: 48px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.h1-inscri {
+    margin: 0px 0px 64px 0px;
+}
+
+h3 {
+    font-family: Lobster Two;
+    font-size: 30px;
+    margin: 0px 0px 16px 0px;
+}
+
+p {
+    font-family: Bellota;
+    font-size: 18px;
+}
+
+.content {
+    margin: 0px auto;
+    width: 1040px;
+}
+
+/* INFORMATIONS PERSONNELLES */
+
+input {
+    font-family: 'Bellota';
+    font-size: 20px;
+}
+
+#pseudo, #password, #prenom, #nom,
+ #email, #age, select#sexe {
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 500px;
+    height: 40px;
+    margin: 0px 0px 40px 0px;
+    box-sizing: border-box;
+    padding-inline: 0px;
+    padding-block: 0px;
+}
+
+#pseudo, #password, #prenom, #nom,
+ #email, #age {
+    padding: 0 0 0 20px;
+    box-sizing: border-box;
+}
+
+::placeholder {
+    font-size: 20px;
+    padding: 10px 0 0 0px;
+    font-family: bellota;
+    line-height: 40px;
+}
+
+.center-placeholder::placeholder{
+    height: 13px;
+}
+
+#age{
+    width: 157px;
+}
+
+select#sexe {
+    position: relative;
+    width: 200px;
+    font-size: 20px;
+    text-align: center;
+    font-family: bellota;
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    appearance: none;
+}
+
+option {
+    font-size: 20px;
+    text-align: center;
+    font-family: bellota;
+    padding: 8px 0 0 0;
+}
+
+.select-sexe{
+    position: relative;
+}
+
+.fa-angle-down {
+    position: absolute;
+    z-index: 1;
+    top: 13px;
+    left: 170px;
+}
+
+.infos-perso {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0 0 24px 0;
+}
+
+/* CENTRES D'INTERETS */
+
+.fa-basketball{
+    font-size: 60px;
+    background-image: linear-gradient(#EDC267,#9a6748);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+
+.card-ci {
+    width: 157px;
+    height: 157px;
+    border-radius: 30px;
+    background: white;
+    margin: 0 0 32px 0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.centres.interets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 32px 0 0 0 ;
+}
+
+.txt-carte{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* FIN DU FORMULAIRE */
+
+input#checkbox {
+    height: 22px;
+    width: 22px;
+}    
+
+.checkbox {
+    width: 1040px;
+    margin: 32px 0px 40px 0px;
+    display: flex;
+}    
+
+.cgu{
+    padding: 0 0 0 8px;
+}    
+
+.inscription {
+    width: 100%;
+    color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 9px 0px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(#3565BC, #114198);
+    font-family: Bellota;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0px 0px 96px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}    
+.txt-inscription {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 0 0 0 25px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.fa-pen-to-square{
+    background-image: white;
+}

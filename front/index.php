@@ -1,35 +1,19 @@
+<?php
+
+include './navbar.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css" media="all" />
-    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
+    <title>Accueil La Bouzinerie</title>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" media="all" />
         <script src="https://kit.fontawesome.com/e98829b701.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
-<!-- NAVBAR DEBUT -->
-    <div class="Navbar">
-        <div class="link">
-            <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Connexion</a></li>
-                <li><a href="#">Inscription</a></li>
-                <li><a href="#">Jouer</a></li>
-                <li><a href="#">Classement</a></li>
-                <li><a href="#">Mon Compte</a></li>
-            </ul>
-        </div>
-    </div>
-<!-- NAVBAR FIN -->
-
     <div class="margin">
 <!-- PRESENTATION DEBUT -->
         <div class="Presentation">
@@ -128,7 +112,11 @@
         </div>
 <!-- BLOCKS FIN -->
     </div>
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
 </body>
-
 </html>
+
+<?php
+
+include './footer.php';
+
+?>

@@ -1,0 +1,65 @@
+/* IMPORTS FONT */
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+
+/* CONTENU DE LA PAGE */
+
+.footer {
+    height: 451px;
+    width: 100%;
+    background: #253154;
+    display: flex;
+}
+
+.foot-centre {
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: Bellota;
+    font-size: 24px;
+    justify-content: center;
+    align-items: center;
+}
+
+.foot-gauche, .foot-droite {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: Bellota;
+    font-size: 24px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.foot-droite {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    font-family: Bellota;
+    font-size: 24px;
+    align-items: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.foot-droite-colonne {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+p.txt-foot-centre {
+    font-family: Lobster two;
+    padding: 30px 0px 0px 0px;
+}
