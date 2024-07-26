@@ -6,16 +6,18 @@ include './navbar.php';
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil La Bouzinerie</title>
     <link rel="stylesheet" type="text/css" href="./css/styles.css" media="all" />
-        <script src="https://kit.fontawesome.com/e98829b701.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/e98829b701.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <div class="margin">
-<!-- PRESENTATION DEBUT -->
+        <!-- PRESENTATION DEBUT -->
         <div class="Presentation">
             <h1>La Bouzinerie</h1>
             <h2>La Bouzinerie, qu'est-ce que c'est ?</h2>
@@ -27,15 +29,15 @@ include './navbar.php';
                 Nous espérons que vous vous amuserez autant que nous ici, seul.e ou en équipe !<br />
                 Lequel d'entre-vous va devenir le meilleur Bouzin ? &#x1F600</p>
         </div>
-<!-- PRESENTATION FIN -->
+        <!-- PRESENTATION FIN -->
 
-<!-- SEARCHBAR DEBUT -->
+        <!-- SEARCHBAR DEBUT -->
         <div id="SearchBar">
             <input type="text" id="searchBar" placeholder="Rechercher un quiz...">
         </div>
-<!-- SEARCHBAR FIN -->
+        <!-- SEARCHBAR FIN -->
 
-<!-- CONTENT DEBUT -->
+        <!-- CONTENT DEBUT -->
         <div class="content">
             <div class="card">
                 <div class="cards">
@@ -92,10 +94,10 @@ include './navbar.php';
                 </div>
             </div>
         </div>
-<!-- CONTENT FIN -->
+        <!-- CONTENT FIN -->
 
-<!-- BLOCKS DEBUT -->
-    <h3>Classement des meilleurs bouzins du moment</h3>
+        <!-- BLOCKS DEBUT -->
+        <h3>Classement des meilleurs bouzins du moment</h3>
         <div class="Blocks">
             <div class="Second">
                 <i class="fa-sharp fa-solid fa-trophy" id="second"></i>
@@ -103,17 +105,38 @@ include './navbar.php';
             </div>
             <div class="First">
                 <i class="fa-sharp fa-solid fa-trophy" id="first"></i>
-            <div class="FirstBlock">1ère place</div>
+                <div class="FirstBlock">1ère place</div>
             </div>
             <div class="Third">
                 <i class="fa-sharp fa-solid fa-trophy" id="third"></i>
                 <div class="ThirdBlock">3ème place</div>
             </div>
         </div>
-<!-- BLOCKS FIN -->
+        <!-- BLOCKS FIN -->
+
+        <!-- RANKING DEBUT -->
+            <a href="#"><button class="ranking"><i class="fa-solid fa-ranking-star"></i>
+                    <p class="txt-ranking">Voir le Classement</p>
+                </button></a>
+        <!-- RANKING FIN -->
+
+        <!-- QUIZ CREATION DEBUT -->
+        <div class="Creation">
+        <h3 class="bouz">Lance-toi, crées ton propre quiz !</h3>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, vel. Facere, a dignissimos voluptas nam vero quod incidunt iure rem eaque, tempora dolores cumque. Ipsam, est. Consectetur sit aspernatur magnam.
+        </p>
+
+        <a href="#"><button class="creation"><i class="fa-solid fa-pencil"></i>
+                <p class="txt-creation">Créer un quiz</p>
+        </button></a>
+        </div>
     </div>
 </body>
+
 </html>
+
+
 
 <?php
 

@@ -1,5 +1,5 @@
 /* IMPORTS FONT */
-
+/* DEBUT COPIER COLLER POUR CSS AUTRES PAGES */
 @import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
@@ -172,11 +172,16 @@ h3 {
     margin: 0px 0px 16px 0px;
 }
 
+h3.bouz {
+    text-align: left;
+    margin: 45px;
+}
+
 p {
     font-family: Bellota;
     font-size: 18px;
 }
-
+/* FIN COPIER COLLER POUR CSS AUTRES PAGES */
 .margin {
     width: 1040px;
     margin: 0px auto;
@@ -334,3 +339,44 @@ h3 {
 }
 
 /****************** PODIUM FIN ***************/
+
+/* RANKING DEBUT */
+
+button.ranking {
+    width: 425px;
+    color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 9px 0px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(#3565BC, #114198);
+    font-family: Bellota;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0px 0px 0px 0px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    left: 304px;
+    bottom: 25px;
+}
+
+/* QUIZ CREATION DEBUT */
+
+button.creation {
+    width: 365px;
+    color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 9px 0px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(#EDC267,#9a6748);
+    font-family: Bellota;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px 0;
+    cursor: pointer;
+}
