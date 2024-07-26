@@ -198,8 +198,12 @@ button.retour {
     justify-content: center;
 }
 
-.fa-angle-left {
+.fa-angle-left, .fa-link, .fa-play {
     padding: 0 25px 0 0;
+}
+
+.fa-link {
+    color: white;
 }
 
 a {

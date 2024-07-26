@@ -32,7 +32,7 @@
                     <div class="joueur"><p>Bouzin malicieux</p></div>
                     <div class="joueur"><p>Bouzin malicieux</p></div>
                 </div>
-                <a href="./index.php"><button class="retour lien"><i class="fa-solid fa-angle-left"></i>
+                <a href="#"><button class="retour lien"><i class="fa-solid fa-link"></i>
                         <p class="txt-connexion">Inviter des amis</p>
                     </button></a>
             </div>
@@ -57,7 +57,7 @@
                     <div class="carte-quiz"><i class="fa-solid fa-basketball"></i> <p class="titre-carte">Sport</p></div>
                     <div class="carte-quiz"><i class="fa-solid fa-basketball"></i> <p class="titre-carte">Sport</p></div>
                 </div>
-                <a href="./index.php" class="btn-droite"><button class="retour lancer-quiz"><i class="fa-solid fa-angle-left"></i>
+                <a href="#" class="btn-droite"><button class="retour lancer-quiz"><i class="fa-solid fa-play"></i>
                         <p class="txt-connexion">Lancer le quiz</p>
                     </button></a>
             </div>
