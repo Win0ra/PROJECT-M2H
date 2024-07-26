@@ -6,48 +6,135 @@
 
 /* RESET CSS */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
+
 body {
-	line-height: 1;
+    line-height: 1;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+    list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+    quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 
@@ -58,7 +145,6 @@ table {
 body {
     background: #EEFFFE;
     background-repeat: no-repeat;
-    height: 100vh;
 }
 
 h1 {
@@ -87,7 +173,7 @@ p {
 }
 
 .content {
-    margin: 64px auto 96px auto;
+    margin: 24px auto auto auto;
     width: 1280px;
 }
 
@@ -102,7 +188,7 @@ p {
     font-family: Bellota;
     font-size: 24px;
     font-weight: bold;
-    margin: 0px 0px 80px 0px;
+    margin: 0px 0px 40px 0px;
     cursor: pointer;
 }
 
@@ -112,19 +198,23 @@ button.retour {
     justify-content: center;
 }
 
-.fa-angle-left{
+.fa-angle-left {
     padding: 0 25px 0 0;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
 .list-joueurs {
     background: linear-gradient(135deg, hsl(249deg 70% 22% / 20%), hwb(189deg 0% 45% / 20%));
-    height: 600px;
+    height: 640px;
     width: 100%;
     border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .gauche {
@@ -134,13 +224,6 @@ a{
 
 .droite {
     width: 891px;
-    margin: 0 32px 0 0;
-    height: 728px;
-}
-
-
-*{
-    border: 1px solid red !important;
 }
 
 .gauche-et-droite {
@@ -150,4 +233,69 @@ a{
 
 .deux-btn {
     display: flex;
+}
+
+button.retour.lien {
+    width: 100%;
+    margin: 0 32px 0 0;
+}
+
+button.retour.lancer-quiz {
+    width: 100%;
+}
+
+button.retour.lien,
+button.retour.lancer-quiz {
+    margin: 40px 0 0 0;
+    background: linear-gradient(#EDC267,#9a6748);
+}
+
+.joueurs {
+    display: flex;
+}
+
+.joueur {
+    background: white;
+    width: 299px;
+    border-radius: 30px;
+    height: 41px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.list-quiz {
+    background: linear-gradient(135deg, hsl(249deg 70% 22% / 20%), hwb(189deg 0% 45% / 20%));
+    height: 640px;
+    width: 100%;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.carte-quiz {
+    background: white;
+    width: 157px;
+    height: 157px;
+    border-radius: 30px;
+    box-shadow: 0px 4px 4px #00000040;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+i.fa-solid.fa-basketball {
+    font-size: 68px;
+    color: orange;
+}
+
+p.titre-carte {
+    margin: 16px 0 0 0;
+    font-size: 20px;
+    font-weight: bold;
 }
