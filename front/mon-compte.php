@@ -30,67 +30,25 @@ include './navbar.php';
                 <div class="photo-profil"><i class="fa-solid fa-image" type="file"><input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg"></i></div>
                 <div class="infos-persos">
                     <div class="info">
-                        <p class="titre-info"><span class="souligne">Nom :</span> [recup ici infos form]</p>
+                        <p class="titre-info"><span class="souligne">Prénom :</span> [données du form]</p>
                     </div>
                     <div class="info">
-                        <p class="titre-info"><span class="souligne">Nom :</span> [recup ici infos form]</p>
+                        <p class="titre-info"><span class="souligne">Nom :</span> [données du form]</p>
                     </div>
                     <div class="info">
-                        <p class="titre-info"><span class="souligne">Nom :</span> [recup ici infos form]</p>
+                        <p class="titre-info"><span class="souligne">Pseudo :</span> [données du form]</p>
                     </div>
                     <div class="info">
-                        <p class="titre-info"><span class="souligne">Nom :</span> [recup ici infos form]</p>
+                        <p class="titre-info"><span class="souligne">E-mail :</span> [données du form]</p>
                     </div>
                     <div class="info">
-                        <p class="titre-info"><span class="souligne">Nom :</span> [recup ici infos form]</p>
+                        <p class="titre-info"><span class="souligne">Mot de passe :</span> [données du form]</p>
                     </div>
                     <div class="info">
-                        <p class="titre-info"><span class="souligne">Nom :</span> [recup ici infos form]</p>
+                        <p class="titre-info"><span class="souligne">Sexe :</span> [données du form]</p>
                     </div>
                     <div class="info">
-                        <p class="titre-info"><span class="souligne">Nom :</span> [recup ici infos form]</p>
-                    </div>
-                    <div class="info">
-                        <p class="titre-info"><span class="souligne">Nom :</span> [recup ici infos form]</p>
-                    </div>
-                    <div class="info">
-                        <p class="titre-info"><span class="souligne">Nom :</span> [recup ici infos form]</p>
-                    </div>
-                    <div class="info">
-                        <p class="titre-info"><span class="souligne">Nom :</span> [recup ici infos form]</p>
-                    </div>
-                    <div class="info">
-                        <p class="titre-info"><span class="souligne">Nom :</span> [recup ici infos form]</p>
-                    </div>
-                    <div class="info">
-                        <p class="titre-info"><span class="souligne">Nom :</span> [recup ici infos form]</p>
-                    </div>
-                    <div class="info">
-                        <p class="titre-info"><span class="souligne">Nom :</span> [recup ici infos form]</p>
-                    </div>
-                    <div class="info">
-                        <p class="titre-info"><span class="souligne">Nom :</span> [recup ici infos form]</p>
-                    </div>
-                    <div class="info">
-                        <p class="titre-info"><span class="souligne">Nom :</span> [recup ici infos form]</p>
-                    </div>
-                    <div class="info">
-                        <p class="titre-info"><span class="souligne">Nom :</span> [recup ici infos form]</p>
-                    </div>
-                    <div class="info">
-                        <p class="titre-info"><span class="souligne">Nom :</span> [recup ici infos form]</p>
-                    </div>
-                    <div class="info">
-                        <p class="titre-info"><span class="souligne">Nom :</span> [recup ici infos form]</p>
-                    </div>
-                    <div class="info">
-                        <p class="titre-info"><span class="souligne">Nom :</span> [recup ici infos form]</p>
-                    </div>
-                    <div class="info">
-                        <p class="titre-info"><span class="souligne">Nom :</span> [recup ici infos form]</p>
-                    </div>
-                    <div class="info">
-                        <p class="titre-info"><span class="souligne">Nom :</span> [recup ici infos form]</p>
+                        <p class="titre-info"><span class="souligne">Age :</span> [données du form]</p>
                     </div>
                 </div>
             </div>
@@ -106,11 +64,136 @@ include './navbar.php';
                 <div class="carte-quiz"><i class="fa-solid fa-basketball"></i>
                     <p class="titre-carte">Sport</p>
                 </div>
+                <div class="carte-quiz"><i class="fa-solid fa-flask-vial"></i>
+                    <p class="titre-carte">Science</p>
+                </div>
+                <div class="carte-quiz"><i class="fa-solid fa-music"></i>
+                    <p class="titre-carte">Music</p>
+                </div>
+                <div class="carte-quiz"><i class="fa-solid fa-video"></i>
+                    <p class="titre-carte">Film</p>
+                </div>
+                <div class="carte-quiz"><i class="fa-solid fa-feather"></i>
+                    <p class="titre-carte">Histoire</p>
+                </div>
+                <div class="carte-quiz"><i class="fa-solid fa-earth-americas"></i>
+                    <p class="titre-carte">Géographie</p>
+                </div>
+                <div class="carte-quiz"><i class="fa-solid fa-gamepad"></i>
+                    <p class="titre-carte">Jeux Vidéos</p>
+                </div>
             </div>
         </div>
-        <div class="Sécurité"></div>
-        <div class="Notifications"></div>
-    </div>
+        <div class="securite">
+            <div class="titre-et-button">
+                <h3>Sécurité</h3>
+            </div>
+            <div class="list-btn-securite">
+                <div class="btn-et-txt">
+                    <div class="btn-securite">
+                        <div class="cercle-jaune"></div>
+                    </div>
+                    <p class="param">Parametre</p>
+                </div>
+                <div class="btn-et-txt">
+                    <div class="btn-securite">
+                        <div class="cercle-jaune"></div>
+                    </div>
+                    <p class="param">Parametre</p>
+                </div>
+                <div class="btn-et-txt">
+                    <div class="btn-securite">
+                        <div class="cercle-jaune"></div>
+                    </div>
+                    <p class="param">Parametre</p>
+                </div>
+                <div class="btn-et-txt">
+                    <div class="btn-securite">
+                        <div class="cercle-jaune"></div>
+                    </div>
+                    <p class="param">Parametre</p>
+                </div>
+                <div class="btn-et-txt">
+                    <div class="btn-securite">
+                        <div class="cercle-jaune"></div>
+                    </div>
+                    <p class="param">Parametre</p>
+                </div>
+                <div class="btn-et-txt">
+                    <div class="btn-securite">
+                        <div class="cercle-jaune"></div>
+                    </div>
+                    <p class="param">Parametre</p>
+                </div>
+                <div class="btn-et-txt">
+                    <div class="btn-securite">
+                        <div class="cercle-jaune"></div>
+                    </div>
+                    <p class="param">Parametre</p>
+                </div>
+                <div class="btn-et-txt">
+                    <div class="btn-securite">
+                        <div class="cercle-jaune"></div>
+                    </div>
+                    <p class="param">Parametre</p>
+                </div>
+            </div>
+        </div>
+        <div class="Notifications">
+        <div class="titre-et-button">
+                <h3>Notifications</h3>
+            </div>
+            <div class="list-btn-securite">
+                <div class="btn-et-txt">
+                    <div class="btn-securite">
+                        <div class="cercle-jaune"></div>
+                    </div>
+                    <p class="param">Parametre</p>
+                </div>
+                <div class="btn-et-txt">
+                    <div class="btn-securite">
+                        <div class="cercle-jaune"></div>
+                    </div>
+                    <p class="param">Parametre</p>
+                </div>
+                <div class="btn-et-txt">
+                    <div class="btn-securite">
+                        <div class="cercle-jaune"></div>
+                    </div>
+                    <p class="param">Parametre</p>
+                </div>
+                <div class="btn-et-txt">
+                    <div class="btn-securite">
+                        <div class="cercle-jaune"></div>
+                    </div>
+                    <p class="param">Parametre</p>
+                </div>
+                <div class="btn-et-txt">
+                    <div class="btn-securite">
+                        <div class="cercle-jaune"></div>
+                    </div>
+                    <p class="param">Parametre</p>
+                </div>
+                <div class="btn-et-txt">
+                    <div class="btn-securite">
+                        <div class="cercle-jaune"></div>
+                    </div>
+                    <p class="param">Parametre</p>
+                </div>
+                <div class="btn-et-txt">
+                    <div class="btn-securite">
+                        <div class="cercle-jaune"></div>
+                    </div>
+                    <p class="param">Parametre</p>
+                </div>
+                <div class="btn-et-txt">
+                    <div class="btn-securite">
+                        <div class="cercle-jaune"></div>
+                    </div>
+                    <p class="param">Parametre</p>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="./js/script-mon-compte.js"></script>
 </body>

@@ -131,7 +131,15 @@ span.souligne{
 
 .mes-classement {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 0 0 68px 0;
+}
+
+.list-classements {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .btn-classement {
@@ -159,11 +167,39 @@ span.souligne{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin: 0 0 24px 0;
 }
 
-i.fa-solid.fa-basketball {
+.carte-quiz i {
     font-size: 68px;
+}
+
+.fa-basketball {
     color: orange;
+}
+
+.fa-flask-vial {
+    color: blueviolet;
+}
+
+.fa-music {
+    color: yellowgreen;
+}
+
+.fa-video {
+    color: #3467ff;
+}
+
+.fa-feather {
+    color: brown;
+}
+
+.fa-earth-americas {
+    color: cadetblue;
+}
+
+.fa-gamepad {
+    color: violet;
 }
 
 p.titre-carte {
@@ -172,8 +208,47 @@ p.titre-carte {
     font-weight: bold;
 }
 
+.btn-securite {
+    background: white;
+    width: 68px;
+    height: 29px;
+    border-radius: 100px;
+    box-shadow: 0px 4px 4px hsl(0deg 0% 0% / 25%);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 4px 0 0;
+}
 
-/* BORDER DEBUG */
-* {
-    border: 1px solid red !important;
+.cercle-jaune {
+    height: 23px;
+    width: 23px;
+    background: #EDC267;
+    border-radius: 100px;
+}
+
+.list-btn-securite {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.btn-et-txt {
+    display: flex;
+    width: 25%;
+    margin: 0 0 40px 0;
+    align-items: center;
+}
+
+p.param {
+    margin: 0 0px 0 16px;
+}
+
+.securite {
+    margin: 0 0 24px 0;
+}
+
+a {
+    text-decoration: none;
 }
