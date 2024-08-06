@@ -23,14 +23,30 @@
                     <h2>8</h2>
                 </div>
                 <div class="list-joueurs">
-                    <div class="joueur"><p>Bouzin malicieux</p></div>
-                    <div class="joueur"><p>Bouzin malicieux</p></div>
-                    <div class="joueur"><p>Bouzin malicieux</p></div>
-                    <div class="joueur"><p>Bouzin malicieux</p></div>
-                    <div class="joueur"><p>Bouzin malicieux</p></div>
-                    <div class="joueur"><p>Bouzin malicieux</p></div>
-                    <div class="joueur"><p>Bouzin malicieux</p></div>
-                    <div class="joueur"><p>Bouzin malicieux</p></div>
+                    <div class="joueur">
+                        <p>Bouzin malicieux</p>
+                    </div>
+                    <div class="joueur">
+                        <p>Bouzin malicieux</p>
+                    </div>
+                    <div class="joueur">
+                        <p>Bouzin malicieux</p>
+                    </div>
+                    <div class="joueur">
+                        <p>Bouzin malicieux</p>
+                    </div>
+                    <div class="joueur">
+                        <p>Bouzin malicieux</p>
+                    </div>
+                    <div class="joueur">
+                        <p>Bouzin malicieux</p>
+                    </div>
+                    <div class="joueur">
+                        <p>Bouzin malicieux</p>
+                    </div>
+                    <div class="joueur">
+                        <p>Bouzin malicieux</p>
+                    </div>
                 </div>
                 <a href="#"><button class="retour lien"><i class="fa-solid fa-link"></i>
                         <p class="txt-connexion">Inviter des amis</p>
@@ -41,21 +57,51 @@
                     <h2>Thèmes</h2>
                 </div>
                 <div class="list-quiz">
-                    <div class="carte-quiz"><i class="fa-solid fa-basketball"></i> <p class="titre-carte">Sport</p></div>
-                    <div class="carte-quiz"><i class="fa-solid fa-basketball"></i> <p class="titre-carte">Sport</p></div>
-                    <div class="carte-quiz"><i class="fa-solid fa-basketball"></i> <p class="titre-carte">Sport</p></div>
-                    <div class="carte-quiz"><i class="fa-solid fa-basketball"></i> <p class="titre-carte">Sport</p></div>
-                    <div class="carte-quiz"><i class="fa-solid fa-basketball"></i> <p class="titre-carte">Sport</p></div>
-                    <div class="carte-quiz"><i class="fa-solid fa-basketball"></i> <p class="titre-carte">Sport</p></div>
-                    <div class="carte-quiz"><i class="fa-solid fa-basketball"></i> <p class="titre-carte">Sport</p></div>
-                    <div class="carte-quiz"><i class="fa-solid fa-basketball"></i> <p class="titre-carte">Sport</p></div>
-                    <div class="carte-quiz"><i class="fa-solid fa-basketball"></i> <p class="titre-carte">Sport</p></div>
-                    <div class="carte-quiz"><i class="fa-solid fa-basketball"></i> <p class="titre-carte">Sport</p></div>
-                    <div class="carte-quiz"><i class="fa-solid fa-basketball"></i> <p class="titre-carte">Sport</p></div>
-                    <div class="carte-quiz"><i class="fa-solid fa-basketball"></i> <p class="titre-carte">Sport</p></div>
-                    <div class="carte-quiz"><i class="fa-solid fa-basketball"></i> <p class="titre-carte">Sport</p></div>
-                    <div class="carte-quiz"><i class="fa-solid fa-basketball"></i> <p class="titre-carte">Sport</p></div>
-                    <div class="carte-quiz"><i class="fa-solid fa-basketball"></i> <p class="titre-carte">Sport</p></div>
+                    <div class="carte-quiz"><i class="fa-solid fa-basketball"></i>
+                        <p class="titre-carte">Sport</p>
+                    </div>
+                    <div class="carte-quiz"><i class="fa-solid fa-flask-vial"></i>
+                        <p class="titre-carte">Science</p>
+                    </div>
+                    <div class="carte-quiz"><i class="fa-solid fa-music"></i>
+                        <p class="titre-carte">Music</p>
+                    </div>
+                    <div class="carte-quiz"><i class="fa-solid fa-video"></i>
+                        <p class="titre-carte">Film</p>
+                    </div>
+                    <div class="carte-quiz"><i class="fa-solid fa-feather"></i>
+                        <p class="titre-carte">Histoire</p>
+                    </div>
+                    <div class="carte-quiz"><i class="fa-solid fa-earth-americas"></i>
+                        <p class="titre-carte">Géographie</p>
+                    </div>
+                    <div class="carte-quiz"><i class="fa-solid fa-gamepad"></i>
+                        <p class="titre-carte">Jeux Vidéos</p>
+                    </div>
+                    <div class="carte-quiz"><i class="fa-solid fa-basketball"></i>
+                        <p class="titre-carte">Sport</p>
+                    </div>
+                    <div class="carte-quiz"><i class="fa-solid fa-flask-vial"></i>
+                        <p class="titre-carte">Science</p>
+                    </div>
+                    <div class="carte-quiz"><i class="fa-solid fa-music"></i>
+                        <p class="titre-carte">Music</p>
+                    </div>
+                    <div class="carte-quiz"><i class="fa-solid fa-video"></i>
+                        <p class="titre-carte">Film</p>
+                    </div>
+                    <div class="carte-quiz"><i class="fa-solid fa-feather"></i>
+                        <p class="titre-carte">Histoire</p>
+                    </div>
+                    <div class="carte-quiz"><i class="fa-solid fa-earth-americas"></i>
+                        <p class="titre-carte">Géographie</p>
+                    </div>
+                    <div class="carte-quiz"><i class="fa-solid fa-gamepad"></i>
+                        <p class="titre-carte">Jeux Vidéos</p>
+                    </div>
+                    <div class="carte-quiz"><i class="fa-solid fa-basketball"></i>
+                        <p class="titre-carte">Sport</p>
+                    </div>
                 </div>
                 <a href="#" class="btn-droite"><button class="retour lancer-quiz"><i class="fa-solid fa-play"></i>
                         <p class="txt-connexion">Lancer le quiz</p>

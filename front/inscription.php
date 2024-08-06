@@ -64,43 +64,28 @@ include './navbar.php';
 
             <!-- CARTES CENTRES D'INTERETS -->
 
-            <h3>Centre d'inttérêts</h3>
+            <h3>Centre d'intérêts</h3>
             <div class="centres interets">
                 <div class="card-ci"><i class="fa-solid fa-basketball"></i>
                     <p class="txt-carte">Sport</p>
                 </div>
-                <div class="card-ci"><i class="fa-solid fa-basketball"></i>
-                    <p class="txt-carte">Sport</p>
+                <div class="card-ci"><i class="fa-solid fa-flask-vial"></i>
+                    <p class="txt-carte">Science</p>
                 </div>
-                <div class="card-ci"><i class="fa-solid fa-basketball"></i>
-                    <p class="txt-carte">Sport</p>
+                <div class="card-ci"><i class="fa-solid fa-music"></i>
+                    <p class="txt-carte">Music</p>
                 </div>
-                <div class="card-ci"><i class="fa-solid fa-basketball"></i>
-                    <p class="txt-carte">Sport</p>
+                <div class="card-ci"><i class="fa-solid fa-video"></i>
+                    <p class="txt-carte">Film</p>
                 </div>
-                <div class="card-ci"><i class="fa-solid fa-basketball"></i>
-                    <p class="txt-carte">Sport</p>
+                <div class="card-ci"><i class="fa-solid fa-feather"></i>
+                    <p class="txt-carte">Histoire</p>
                 </div>
-                <div class="card-ci"><i class="fa-solid fa-basketball"></i>
-                    <p class="txt-carte">Sport</p>
+                <div class="card-ci"><i class="fa-solid fa-earth-americas"></i>
+                    <p class="txt-carte">Géographie</p>
                 </div>
-                <div class="card-ci"><i class="fa-solid fa-basketball"></i>
-                    <p class="txt-carte">Sport</p>
-                </div>
-                <div class="card-ci"><i class="fa-solid fa-basketball"></i>
-                    <p class="txt-carte">Sport</p>
-                </div>
-                <div class="card-ci"><i class="fa-solid fa-basketball"></i>
-                    <p class="txt-carte">Sport</p>
-                </div>
-                <div class="card-ci"><i class="fa-solid fa-basketball"></i>
-                    <p class="txt-carte">Sport</p>
-                </div>
-                <div class="card-ci"><i class="fa-solid fa-basketball"></i>
-                    <p class="txt-carte">Sport</p>
-                </div>
-                <div class="card-ci"><i class="fa-solid fa-basketball"></i>
-                    <p class="txt-carte">Sport</p>
+                <div class="card-ci"><i class="fa-solid fa-gamepad"></i>
+                    <p class="txt-carte">Jeux Vidéos</p>
                 </div>
             </div>
 

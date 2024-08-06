@@ -167,12 +167,36 @@ option {
 }
 
 /* CENTRES D'INTERETS */
+.card-ci i.fa-solid{
+    font-size: 60px !important;
+}
 
-.fa-basketball{
-    font-size: 60px;
-    background-image: linear-gradient(#EDC267,#9a6748);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
+.fa-basketball {
+    color: orange;
+}
+
+.fa-flask-vial {
+    color: blueviolet;
+}
+
+.fa-music {
+    color: yellowgreen;
+}
+
+.fa-video {
+    color: #3467ff;
+}
+
+.fa-feather {
+    color: brown;
+}
+
+.fa-earth-americas {
+    color: cadetblue;
+}
+
+.fa-gamepad {
+    color: violet;
 }
 
 .card-ci {
@@ -191,7 +215,7 @@ option {
 .centres.interets {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin: 32px 0 0 0 ;
 }
 

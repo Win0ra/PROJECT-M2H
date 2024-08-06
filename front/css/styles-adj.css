@@ -293,9 +293,36 @@ button.retour.lancer-quiz {
     flex-direction: column;
 }
 
-i.fa-solid.fa-basketball {
-    font-size: 68px;
+.carte-quiz i.fa-solid{
+    font-size: 60px !important;
+}
+
+.fa-basketball {
     color: orange;
+}
+
+.fa-flask-vial {
+    color: blueviolet;
+}
+
+.fa-music {
+    color: yellowgreen;
+}
+
+.fa-video {
+    color: #3467ff;
+}
+
+.fa-feather {
+    color: brown;
+}
+
+.fa-earth-americas {
+    color: cadetblue;
+}
+
+.fa-gamepad {
+    color: violet;
 }
 
 p.titre-carte {
