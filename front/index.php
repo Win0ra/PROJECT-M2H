@@ -124,7 +124,7 @@ include './navbar.php';
         <div class="Creation">
         <h3 class="bouz">Lance-toi, crées ton propre quiz !</h3>
         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, vel. Facere, a dignissimos voluptas nam vero quod incidunt iure rem eaque, tempora dolores cumque. Ipsam, est. Consectetur sit aspernatur magnam.
+            Si toi aussi tu as l'âme d'un créateur, clique sur le bouton ci-dessous ! 
         </p>
 
         <a href="#"><button class="creation"><i class="fa-solid fa-pencil"></i>
