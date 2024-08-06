@@ -32,8 +32,8 @@ include './navbar.php';
         <!-- PRESENTATION FIN -->
 
         <!-- SEARCHBAR DEBUT -->
-        <div id="SearchBar">
-            <input type="text" id="searchBar" placeholder="Rechercher un quiz...">
+        <div id="SearchBar"><i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="searchBar" placeholder = "Rechercher un quiz...">
         </div>
         <!-- SEARCHBAR FIN -->
 
@@ -101,15 +101,15 @@ include './navbar.php';
         <div class="Blocks">
             <div class="Second">
                 <i class="fa-sharp fa-solid fa-trophy" id="second"></i>
-                <div class="SecondBlock">2de place</div>
+                <div class="SecondBlock"><p class="p-podium">[Nom du 2eme]</p></div>
             </div>
             <div class="First">
                 <i class="fa-sharp fa-solid fa-trophy" id="first"></i>
-                <div class="FirstBlock">1ère place</div>
+                <div class="FirstBlock"><p class="p-podium">[Nom du 1er]</p></div>
             </div>
             <div class="Third">
                 <i class="fa-sharp fa-solid fa-trophy" id="third"></i>
-                <div class="ThirdBlock">3ème place</div>
+                <div class="ThirdBlock"><p class="p-podium">[Nom du 3eme]</p></div>
             </div>
         </div>
         <!-- BLOCKS FIN -->
@@ -126,7 +126,6 @@ include './navbar.php';
         <p>
             Si toi aussi tu as l'âme d'un créateur, clique sur le bouton ci-dessous ! 
         </p>
-
         <a href="#"><button class="creation"><i class="fa-solid fa-pencil"></i>
                 <p class="txt-creation">Créer un quiz</p>
         </button></a>
