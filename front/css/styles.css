@@ -1,5 +1,5 @@
 /* IMPORTS FONT */
-
+/* DEBUT COPIER COLLER POUR CSS AUTRES PAGES */
 @import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
@@ -93,6 +93,7 @@ video {
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+    text-decoration: none;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -156,7 +157,7 @@ h1 {
     margin: 0 0 64px 0;
 }
 
-.h1-bouz{
+.h1-bouz {
     margin: 0 0 64px 0;
 }
 
@@ -172,11 +173,17 @@ h3 {
     margin: 0px 0px 16px 0px;
 }
 
+h3.bouz {
+    text-align: left;
+    margin: 40px auto;
+}
+
 p {
     font-family: Bellota;
     font-size: 18px;
 }
 
+/* FIN COPIER COLLER POUR CSS AUTRES PAGES */
 .margin {
     width: 1040px;
     margin: 0px auto;
@@ -205,13 +212,23 @@ p {
 }
 
 input#searchBar {
-    width: 100%;
+    width: 1045px;
     border-radius: 100px;
-    box-shadow: 0px 0px 5px #0000007d;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
     padding: 5px 0px 5px 10px;
-    margin: 0px 200px;
     border: none;
     font-family: "Bellota", system-ui;
+    height: 41px;
+}
+
+::placeholder {
+    padding: 80px;
+}
+
+i.fa-solid.fa-magnifying-glass {
+    position: absolute;
+    left: 40px;
+    color: #757575;
 }
 
 /********************** SEARCHBAR FIN *****************/
@@ -220,7 +237,7 @@ input#searchBar {
 .content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 30px;
+    grid-gap: 84px;
     grid-template-rows: repeat(3, 1fr);
     justify-items: center;
 }
@@ -236,7 +253,7 @@ input#searchBar {
 }
 
 .card {
-    background: URL("/images/quiz_img.jpg") center center no-repeat;
+    background: URL("../../images/quizimg.jpg") center center no-repeat;
     background-size: cover;
     width: 18rem;
     height: 20rem;
@@ -244,6 +261,7 @@ input#searchBar {
     overflow: hidden;
     border-radius: 20px;
 }
+
 .card-title {
     background: rgb(255 255 255 / 95%);
     width: 18rem;
@@ -257,9 +275,8 @@ input#searchBar {
 
 a.btn.btn-primary {
     height: 50px;
-    background: linear-gradient( #3565BC, #114198);
+    background: linear-gradient(#3565BC, #114198);
     color: wheat;
-    text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -274,7 +291,8 @@ h3 {
 
 /****************** PODIUM DEBUT ***************/
 
-.fa-solid, .fas {
+.fa-solid,
+.fas {
     font-weight: 900;
     /*font-size: 200px;*/
 }
@@ -304,8 +322,11 @@ h3 {
     background: #edc267;
     width: 325px;
     height: 315px;
-    position: relative; 
+    position: relative;
     bottom: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .SecondBlock {
@@ -314,6 +335,9 @@ h3 {
     height: 245px;
     position: relative;
     top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .ThirdBlock {
@@ -322,6 +346,15 @@ h3 {
     height: 250px;
     position: relative;
     top: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p.p-podium {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
 }
 
 .Blocks {
@@ -334,3 +367,53 @@ h3 {
 }
 
 /****************** PODIUM FIN ***************/
+
+/* RANKING DEBUT */
+
+button.ranking {
+    width: 425px;
+    color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 9px 0px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(#3565BC, #114198);
+    font-family: Bellota;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0px 0px 0px 0px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 304px;
+    bottom: 25px;
+}
+.txt-ranking {
+    padding: 0 0 0 25px;
+    text-decoration: none;
+}
+
+/* QUIZ CREATION DEBUT */
+
+button.creation {
+    width: 365px;
+    color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 9px 0px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(#EDC267, #9a6748);
+    font-family: Bellota;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 34px 0 96px 0;
+    cursor: pointer;
+}
+.txt-creation {
+    padding: 0 0 0 25px;
+}

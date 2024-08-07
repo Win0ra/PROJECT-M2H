@@ -13,7 +13,7 @@
         <li><a href="./connexion.php">Connexion</a></li>
         <li><a href="./inscription.php">Inscription</a></li>
         <li><a href="./avant-de-jouer.php">Jouer</a></li>
-        <li><a href="#">Classement</a></li>
+        <li><a href="./ranking.php">Classement</a></li>
         <li><a href="./mon-compte.php">Mon Compte</a></li>
     </ul>
     <div class="logo"><a href="./index.php"><i class="fa-brands fa-html5"> LOGO</i></a></div>

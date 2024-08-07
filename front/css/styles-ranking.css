@@ -1,0 +1,249 @@
+/* IMPORTS FONT */
+/* DEBUT COPIER COLLER POUR CSS AUTRES PAGES */
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+
+/* RESET CSS */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+/* CONTENU DE LA PAGE */
+
+
+
+body {
+    background: linear-gradient(0deg, rgba(170, 203, 245, 1) 0%, rgba(238, 255, 254, 1) 20%, rgba(238, 255, 254, 1) 70%, rgba(170, 203, 245, 1) 100%);
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+h1 {
+    font-family: Lobster Two;
+    font-size: 48px;
+    text-align: center;
+    margin: 0 0 64px 0;
+}
+
+.h1-bouz{
+    margin: 0 0 64px 0;
+}
+
+h2 {
+    font-family: Lobster Two;
+    font-size: 36px;
+    margin: 0px 0px 16px 0px;
+}
+
+h3 {
+    font-family: Lobster Two;
+    font-size: 30px;
+    margin: 0px 0px 16px 0px;
+}
+
+h3.bouz {
+    text-align: left;
+    margin: 40px;
+}
+
+p {
+    font-family: Bellota;
+    font-size: 18px;
+}
+/* FIN COPIER COLLER POUR CSS AUTRES PAGES */
+.margin {
+    width: 1040px;
+    margin: 0px auto;
+}
+
+/****************** PODIUM DEBUT ***************/
+
+.fa-solid, .fas {
+    font-weight: 900;
+    /*font-size: 200px;*/
+}
+
+#first {
+    color: #edc267;
+    font-size: 250px;
+    position: relative;
+    bottom: 70px;
+}
+
+#second {
+    color: #707070;
+    font-size: 200px;
+    position: relative;
+    top: 51px;
+}
+
+#third {
+    color: #9b6c18;
+    font-size: 200px;
+    position: relative;
+    top: 46px;
+}
+
+.FirstBlock {
+    background: #edc267;
+    width: 325px;
+    height: 315px;
+    position: relative; 
+    bottom: 70px;
+}
+
+.SecondBlock {
+    background: #707070;
+    width: 305px;
+    height: 245px;
+    position: relative;
+    top: 50px;
+}
+
+.ThirdBlock {
+    background: #9b6c18;
+    width: 325px;
+    height: 250px;
+    position: relative;
+    top: 45px;
+}
+
+.Blocks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
