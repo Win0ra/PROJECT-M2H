@@ -154,7 +154,7 @@ h1 {
     font-family: Lobster Two;
     font-size: 48px;
     text-align: center;
-    margin: 0 0 64px 0;
+    margin: 0 0 84px 0;
 }
 
 .h1-bouz {
@@ -164,13 +164,13 @@ h1 {
 h2 {
     font-family: Lobster Two;
     font-size: 36px;
-    margin: 0px 0px 16px 0px;
+    margin: 0px 0px 24px 0px;
 }
 
 h3 {
     font-family: Lobster Two;
     font-size: 30px;
-    margin: 0px 0px 16px 0px;
+    margin: 0px 0px 48px 0px;
 }
 
 h3.bouz {
@@ -181,6 +181,7 @@ h3.bouz {
 p {
     font-family: Bellota;
     font-size: 18px;
+    line-height: 23px;
 }
 
 /* FIN COPIER COLLER POUR CSS AUTRES PAGES */
@@ -194,9 +195,9 @@ p {
 
 #SearchBar {
     position: relative;
-    height: 125px;
     display: flex;
     align-items: center;
+    margin: 88px auto;
 }
 
 .search-container {
@@ -215,20 +216,20 @@ input#searchBar {
     width: 1045px;
     border-radius: 100px;
     box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
-    padding: 5px 0px 5px 10px;
     border: none;
     font-family: "Bellota", system-ui;
     height: 41px;
 }
 
 ::placeholder {
-    padding: 80px;
+    padding:  0 0 0 80px;
+    font-size:20px
 }
 
 i.fa-solid.fa-magnifying-glass {
     position: absolute;
     left: 40px;
-    color: #757575;
+    color: #858585;
 }
 
 /********************** SEARCHBAR FIN *****************/
@@ -236,10 +237,10 @@ i.fa-solid.fa-magnifying-glass {
 /*************** QUIZZ CARDS DEBUT ******************/
 .content {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 84px;
-    grid-template-rows: repeat(3, 1fr);
-    justify-items: center;
+    grid-template-columns: repeat(3, 333px);
+    grid-gap: 20px;
+    grid-template-rows: repeat(3, 400px);
+    /* justify-items: center; */
 }
 
 .cards {
@@ -255,36 +256,42 @@ i.fa-solid.fa-magnifying-glass {
 .card {
     background: URL("../../images/quizimg.jpg") center center no-repeat;
     background-size: cover;
-    width: 18rem;
-    height: 20rem;
+    width: 333px;
+    height: 400px;
     font-family: "Lobster Two";
     overflow: hidden;
     border-radius: 20px;
+    box-shadow: 0px 0px 10px 1px hsl(0deg 0% 0% / 25%);
 }
 
 .card-title {
     background: rgb(255 255 255 / 95%);
-    width: 18rem;
-    height: 4rem;
+    width: 100%;
+    height: 72px;
     text-align: center;
     margin: 0px;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 30px;
 }
 
 a.btn.btn-primary {
     height: 50px;
     background: linear-gradient(#3565BC, #114198);
-    color: wheat;
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: Bellota;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 /*************** QUIZZ CARDS FIN ******************/
 
-h3 {
+.h2-podium {
+    font-size: 36px;
     text-align: center;
     margin: 124px;
 }
@@ -301,29 +308,29 @@ h3 {
     color: #edc267;
     font-size: 250px;
     position: relative;
-    bottom: 70px;
+    /* bottom: 70px; */
 }
 
 #second {
     color: #707070;
     font-size: 200px;
-    position: relative;
+    /* position: relative; */
     top: 51px;
 }
 
 #third {
     color: #9b6c18;
     font-size: 200px;
-    position: relative;
+    /* position: relative; */
     top: 46px;
 }
 
 .FirstBlock {
     background: #edc267;
     width: 325px;
-    height: 315px;
-    position: relative;
-    bottom: 70px;
+    height: 347px;
+    /* position: relative; */
+    /* bottom: 70px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -332,8 +339,8 @@ h3 {
 .SecondBlock {
     background: #707070;
     width: 305px;
-    height: 245px;
-    position: relative;
+    height: 160px;
+    /* position: relative; */
     top: 50px;
     display: flex;
     align-items: center;
@@ -343,12 +350,13 @@ h3 {
 .ThirdBlock {
     background: #9b6c18;
     width: 325px;
-    height: 250px;
-    position: relative;
+    height: 160px;
+    /* position: relative; */
     top: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 p.p-podium {
@@ -356,7 +364,11 @@ p.p-podium {
     font-weight: bold;
     color: white;
 }
-
+.Second, .Third, .First {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
 .Blocks {
     display: flex;
     flex-direction: row;
@@ -381,14 +393,12 @@ button.ranking {
     font-family: Bellota;
     font-size: 24px;
     font-weight: bold;
-    margin: 0px 0px 0px 0px;
+    margin: 48px auto 96px auto;
     cursor: pointer;
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    left: 304px;
-    bottom: 25px;
+    text-align: c;
 }
 .txt-ranking {
     padding: 0 0 0 25px;

@@ -19,6 +19,7 @@ include './navbar.php';
 
     <h1>Classement Général</h1>
     <div class="margin">
+    <h2>Catégorie Sport</h2>
         <!-- BLOCKS DEBUT -->
         <div class="Blocks">
             <div class="Second">

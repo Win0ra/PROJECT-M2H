@@ -33,10 +33,10 @@ include './navbar.php';
 
         <!-- SEARCHBAR DEBUT -->
         <div id="SearchBar"><i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" id="searchBar" placeholder = "Rechercher un quiz...">
+            <input type="text" id="searchBar" placeholder="Rechercher un quiz...">
         </div>
         <!-- SEARCHBAR FIN -->
-
+        <h3>Les quizs du moment</h3>
         <!-- CONTENT DEBUT -->
         <div class="content">
             <div class="card">
@@ -97,38 +97,44 @@ include './navbar.php';
         <!-- CONTENT FIN -->
 
         <!-- BLOCKS DEBUT -->
-        <h3>Classement des meilleurs bouzins du moment</h3>
+        <h3 class="h2-podium">Classement des meilleurs bouzins du moment</h3>
         <div class="Blocks">
             <div class="Second">
                 <i class="fa-sharp fa-solid fa-trophy" id="second"></i>
-                <div class="SecondBlock"><p class="p-podium">[Nom du 2eme]</p></div>
+                <div class="SecondBlock">
+                    <p class="p-podium">[Nom du 2eme]</p>
+                </div>
             </div>
             <div class="First">
                 <i class="fa-sharp fa-solid fa-trophy" id="first"></i>
-                <div class="FirstBlock"><p class="p-podium">[Nom du 1er]</p></div>
+                <div class="FirstBlock">
+                    <p class="p-podium">[Nom du 1er]</p>
+                </div>
             </div>
             <div class="Third">
                 <i class="fa-sharp fa-solid fa-trophy" id="third"></i>
-                <div class="ThirdBlock"><p class="p-podium">[Nom du 3eme]</p></div>
+                <div class="ThirdBlock">
+                    <p class="p-podium">[Nom du 3eme]</p>
+                </div>
             </div>
         </div>
         <!-- BLOCKS FIN -->
 
         <!-- RANKING DEBUT -->
-            <a href="#"><button class="ranking"><i class="fa-solid fa-ranking-star"></i>
-                    <p class="txt-ranking">Voir le Classement</p>
-                </button></a>
+        <a href="#"><button class="ranking"><i class="fa-solid fa-ranking-star"></i>
+                <p class="txt-ranking">Voir le Classement</p>
+            </button></a>
         <!-- RANKING FIN -->
 
         <!-- QUIZ CREATION DEBUT -->
         <div class="Creation">
-        <h3 class="bouz">Lance-toi, crées ton propre quiz !</h3>
-        <p>
-            Si toi aussi tu as l'âme d'un créateur, clique sur le bouton ci-dessous ! 
-        </p>
-        <a href="#"><button class="creation"><i class="fa-solid fa-pencil"></i>
-                <p class="txt-creation">Créer un quiz</p>
-        </button></a>
+            <h3 class="bouz">Lance-toi, crées ton propre quiz !</h3>
+            <p>Vous avez également la possibilité de créer votre quiz pour ensuite envoyer le lien à vos amis et tester leurs connaissances !
+                Si toi aussi tu as l'âme d'un créateur, clique sur le bouton ci-dessous !
+            </p>
+            <a href="#"><button class="creation"><i class="fa-solid fa-pencil"></i>
+                    <p class="txt-creation">Créer un quiz</p>
+                </button></a>
         </div>
     </div>
 </body>
