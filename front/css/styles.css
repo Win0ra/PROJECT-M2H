@@ -190,6 +190,10 @@ p {
     margin: 0px auto;
 }
 
+a#footer {
+    color: #ffffff;
+    font-size: 19px;
+}
 
 /********************** SEARCHBAR DEBUT *****************/
 
@@ -398,8 +402,8 @@ button.ranking {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: c;
 }
+
 .txt-ranking {
     padding: 0 0 0 25px;
     text-decoration: none;

@@ -27,7 +27,9 @@
                 <p class="txt-foot">Mon compte</p>
             </div>
             <div class="foot-droite-colonne">
-                <p class="txt-foot">Contact</p>
+                <ul>
+                <li><a href="contact.php" id="footer">Contact</a></li>
+            </ul>
                 <p class="txt-foot">CGU</p>
                 <p class="txt-foot">Mentions légales</p>
             </div>
