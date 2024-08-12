@@ -50,11 +50,9 @@ include './navbar.php';
         <!-- SEARCHBAR FIN -->
         <!-- RANKING DEBUT -->
         <div class="Ranking-List">
-                <ul class="Titles">
-                    <li class="First-Title"><h2>Position</h2></li>
-                    <li class="Second-Title"><h2>Pseudo</h2></li>
-                    <li class="Third-Title"><h2>Score</h2></li>
-                </ul>
+                <h3>Position</h3>
+                <h3>Pseudo</h3>
+                <h3>Score</h3>
         </div>
         <div class="General-Ranking">
                 <ul class="List-group-horizontal">
