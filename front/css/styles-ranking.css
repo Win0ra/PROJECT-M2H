@@ -193,36 +193,29 @@ p {
 .fa-solid,
 .fas {
     font-weight: 900;
-    /*font-size: 200px;*/
 }
 
 #first {
     color: #edc267;
     font-size: 250px;
     position: relative;
-    /* bottom: 70px; */
 }
 
 #second {
     color: #707070;
     font-size: 200px;
-    /* position: relative; */
     top: 51px;
 }
 
 #third {
     color: #9b6c18;
     font-size: 200px;
-    /* position: relative; */
     top: 46px;
 }
 
 .FirstBlock {
     background: #edc267;
-    width: 325px;
     height: 347px;
-    /* position: relative; */
-    /* bottom: 70px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -230,9 +223,7 @@ p {
 
 .SecondBlock {
     background: #707070;
-    width: 305px;
     height: 160px;
-    /* position: relative; */
     top: 50px;
     display: flex;
     align-items: center;
@@ -241,14 +232,11 @@ p {
 
 .ThirdBlock {
     background: #9b6c18;
-    width: 325px;
     height: 160px;
-    /* position: relative; */
     top: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 p.p-podium {
@@ -263,15 +251,17 @@ p.p-podium {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    width: 33.3%;
 }
 
 .Blocks {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: center;
     text-align: center;
     position: relative;
+    justify-content: center;
+    width: 1040px;
 }
 
 #SearchBar {
@@ -279,7 +269,6 @@ p.p-podium {
     display: flex;
     align-items: center;
     margin: 82px auto;
-    left: 40px;
 }
 
 .search-container {
@@ -316,28 +305,37 @@ i.fa-solid.fa-magnifying-glass {
 
 .Ranking-List {
     display: flex;
-    flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 100%;
-    position: relative;
-    right: 69px;
 }
 
 .General-Ranking {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-content: space-between;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    margin: 0px 0px 76px 0px;
+}
+
+h3.h3-position {
+    width: 157px;
+    text-align: center;
+}
+
+h3.h3-pseudo {width: 510px;text-align: center;}
+
+h3.h3-score {
+    width: 333px;
+    text-align: center;
 }
 
 li.Position,
 li.Pseudo,
 li.Score {
     border-radius: 5px;
-    margin: 24px 20px 20px 20px;
+    margin: 24px 0px 20px 0px;
     box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
     border: none;
     background: linear-gradient(90deg, rgba(29, 17, 96, 0.20) 0%, rgba(0, 120, 140, 0.20) 100%);
@@ -352,6 +350,9 @@ li.Score {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Bellota';
+    font-size: 18px;
+    font-weight: bold;
 }
 
 li.Position {
@@ -364,4 +365,8 @@ li.Pseudo {
 
 li.Score {
     width: 333px;
+}
+
+ul.List-group-horizontal {
+    width: 100%;
 }

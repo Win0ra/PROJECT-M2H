@@ -305,36 +305,29 @@ a.btn.btn-primary {
 .fa-solid,
 .fas {
     font-weight: 900;
-    /*font-size: 200px;*/
 }
 
 #first {
     color: #edc267;
     font-size: 250px;
     position: relative;
-    /* bottom: 70px; */
 }
 
 #second {
     color: #707070;
     font-size: 200px;
-    /* position: relative; */
     top: 51px;
 }
 
 #third {
     color: #9b6c18;
     font-size: 200px;
-    /* position: relative; */
     top: 46px;
 }
 
 .FirstBlock {
     background: #edc267;
-    width: 325px;
     height: 347px;
-    /* position: relative; */
-    /* bottom: 70px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -342,9 +335,7 @@ a.btn.btn-primary {
 
 .SecondBlock {
     background: #707070;
-    width: 305px;
     height: 160px;
-    /* position: relative; */
     top: 50px;
     display: flex;
     align-items: center;
@@ -353,9 +344,7 @@ a.btn.btn-primary {
 
 .ThirdBlock {
     background: #9b6c18;
-    width: 325px;
     height: 160px;
-    /* position: relative; */
     top: 45px;
     display: flex;
     align-items: center;
@@ -372,6 +361,7 @@ p.p-podium {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    width: 33.3%;
 }
 .Blocks {
     display: flex;
@@ -380,6 +370,7 @@ p.p-podium {
     justify-content: center;
     text-align: center;
     position: relative;
+    width: 1040px;
 }
 
 /****************** PODIUM FIN ***************/

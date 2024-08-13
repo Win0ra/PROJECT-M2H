@@ -21,7 +21,7 @@ include './navbar.php';
 <div class="Form" id="Form">
         <form name="Contact" method="post" action="mailto:mail@mail.com" enctype="text/plain">
 
-    <div class="LeftArea">
+    <div class="FirstName">
         <h2>Prénom</h2><br>
         <input type="text" name="FirstName" id="Prenom" placeholder="Jean-Bouzin-Le-Meilleur" class="champ personne" required>
     </div>
@@ -46,9 +46,9 @@ include './navbar.php';
         <textarea name="message" class="LongText" placeholder="Bonjour..."></textarea>
     </div>
     <label>
-        <input type="checkbox" name="Confidentiality" value="oui" required>Je ne suis pas un robot
+        <input type="checkbox" id="checkbox" name="Confidentiality" value="oui" required>Je ne suis pas un robot
     </label>
-    <a href="#"><button class="Send"><i class="fa-solid fa-square-arrow-up-right"></i>
+    <a href="#"><button class="Send"><i class="fa-solid fa-paper-plane"></i>
                 <p class="txt-send">Envoyer</p>
             </button></a>
 </div>
