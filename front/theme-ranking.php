@@ -17,8 +17,9 @@ include './navbar.php';
 
 <body>
 
+    <h1>Classement Général</h1>
     <div class="margin">
-        <h1>Classement Général</h1>
+    <h2>Catégorie Sport</h2>
         <!-- BLOCKS DEBUT -->
         <div class="Blocks">
             <div class="Second">
@@ -48,17 +49,17 @@ include './navbar.php';
         </div>
         <!-- SEARCHBAR FIN -->
         <!-- RANKING DEBUT -->
+        <div class="Ranking-List">
+                <h3>Position</h3>
+                <h3>Pseudo</h3>
+                <h3>Score</h3>
+        </div>
         <div class="General-Ranking">
-            <div class="Ranking-List">
-                <h3 class="h3-position">Position</h3>
-                <h3 class="h3-pseudo">Pseudo</h3>
-                <h3 class="h3-score">Score</h3>
-            </div>
-            <ul class="List-group-horizontal">
+                <ul class="List-group-horizontal">
                 <li class="Position">1</li>
                 <li class="Pseudo">Bouzineur-le-GOAT</li>
                 <li class="Score">999 999 999 999</li>
-            </ul>
+                </ul>
             <ul class="List-group-horizontal">
                 <li class="Position">1</li>
                 <li class="Pseudo">Bouzineur-le-GOAT</li>
@@ -155,8 +156,8 @@ include './navbar.php';
                 <li class="Score">999 999 999 999</li>
             </ul>
         </div>
-    </div>
-
+        </div>
+    
     <!-- RANKING FIN -->
 
 

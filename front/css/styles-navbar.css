@@ -91,6 +91,37 @@ li a {
     font-size: 24px;
 }
 
+a.dropdown {
+    position: absolute;
+    bottom: -28px;
+    right: 410px;
+    background: #edc267;
+    padding: 10px 20px 10px 20px;
+    display: flex;
+    justify-content: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    cursor: pointer;
+    color: black;
+    font-size: 24px;
+}
+
+.a-clasement{
+    position: relative;
+}
+
+i.fa-solid.fa-chevron-right {
+    position: absolute;
+    right: -25px;
+    font-size: 18px;
+    top: 5px;
+    cursor: pointer;
+}
+
+li {
+    position: relative;
+}
+
 .logo {
     width: 20%;
     height: 100%;

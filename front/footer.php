@@ -26,7 +26,7 @@
             <p class="txt-foot"><a href="./mon-compte.php">Mon compte</a></p>
         </div>
         <div class="foot-droite-colonne">
-                <p class="txt-foot"><a href="javascript:void(0)">Contact</a></p>
+                <p class="txt-foot"><a href="./contact.php">Contact</a></p>
                 <p class="txt-foot"><a href="javascript:void(0)">CGU</a></p>
                 <p class="txt-foot"><a href="javascript:void(0)">Mentions légales</a></p>
             </div>
