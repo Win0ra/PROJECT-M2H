@@ -13,31 +13,6 @@ body {
     height: 100%;
 }
 
-h1 {
-    font-family: Lobster Two;
-    font-size: 48px;
-    text-align: center;
-    margin: 0 0 48px 0;
-}
-
-h2 {
-    font-family: Lobster Two;
-    font-size: 36px;
-    margin: 0 0 80px 0;
-    text-align: center;
-}
-
-.h1-connex {
-    margin: 0px 0px 64px 0px;
-}
-
-h3 {
-    font-family: Lobster Two;
-    font-size: 30px;
-    margin: 0 56px 0 0;
-    width: 210px;
-}
-
 p {
     font-family: Bellota;
     font-size: 18px;
@@ -46,21 +21,6 @@ p {
 .content {
     margin: 0px auto 96px auto;
     width: 1040px;
-}
-
-.btn-infos {
-    width: 365px;
-    color: white;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    padding: 9px 0px;
-    border-radius: 10px;
-    border: none;
-    background: linear-gradient(#3565BC, #114198);
-    font-family: Bellota;
-    font-size: 24px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
 }
 
 .fa-pen, .fa-ranking-star {
@@ -82,51 +42,6 @@ i.fa-solid.fa-image:hover {
     display: flex;
     margin: 0 0 48px 0;
     align-items: center;
-}
-
-.photo-profil {
-    min-width: 210px;
-    height: 210px;
-    border-radius: 100%;
-    background-image: url(../../images/01.jpg);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin: 0 56px 0px 0;
-}
-
-input#avatar {
-    position: absolute;
-    top: 27%;
-    left: 28%;
-    height: 90px;
-    width: 90px;
-    opacity: 0;
-    cursor: pointer;
-}
-
-.photo-infos {
-    display: flex;
-    margin: 0 0 56px 0;
-}
-
-.infos-persos {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.info {
-    margin: 0 24px 24px 0;
-    display: flex;
-}
-
-span.souligne{
-    font-weight: bold;
-    text-decoration: underline;
 }
 
 .mes-classement {
@@ -213,54 +128,6 @@ p.titre-carte {
     margin: 16px 0 0 0;
     font-size: 20px;
     font-weight: bold;
-}
-
-.btn-securite {
-    background: white;
-    width: 68px;
-    height: 29px;
-    border-radius: 100px;
-    box-shadow: 0px 4px 4px hsl(0deg 0% 0% / 25%);
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding: 0px 4px 0px 0px;
-    transition-duration: 0.5s;
-    box-sizing: border-box;
-}
-
-.cercle-jaune {
-    height: 23px;
-    width: 23px;
-    background: #EDC267;
-    border-radius: 100px;
-    transition-duration: 0.8s;
-}
-
-.list-btn-securite {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.btn-et-txt {
-    display: flex;
-    width: 25%;
-    margin: 0 0 40px 0;
-    align-items: center;
-}
-
-p.param {
-    margin: 0 0px 0 16px;
-}
-
-.securite {
-    margin: 0 0 24px 0;
-}
-
-a {
-    text-decoration: none;
 }
 
 a .carte-quiz .titre-carte {

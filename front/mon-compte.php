@@ -13,6 +13,7 @@ include './navbar.php';
     <title>Mon Compte</title>
     <link rel="stylesheet" href="./css/styles-mon-compte.css" type="text/css" media="all">
     <script src="https://kit.fontawesome.com/e98829b701.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 
 <body>
@@ -61,27 +62,41 @@ include './navbar.php';
                     </button></a>
             </div>
             <div class="list-classements">
-                <div class="carte-quiz"><i class="fa-solid fa-basketball"></i>
-                    <p class="titre-carte">Sport</p>
-                </div>
-                <div class="carte-quiz"><i class="fa-solid fa-flask-vial"></i>
-                    <p class="titre-carte">Science</p>
-                </div>
-                <div class="carte-quiz"><i class="fa-solid fa-music"></i>
-                    <p class="titre-carte">Music</p>
-                </div>
-                <div class="carte-quiz"><i class="fa-solid fa-video"></i>
-                    <p class="titre-carte">Film</p>
-                </div>
-                <div class="carte-quiz"><i class="fa-solid fa-feather"></i>
-                    <p class="titre-carte">Histoire</p>
-                </div>
-                <div class="carte-quiz"><i class="fa-solid fa-earth-americas"></i>
-                    <p class="titre-carte">Géographie</p>
-                </div>
-                <div class="carte-quiz"><i class="fa-solid fa-gamepad"></i>
-                    <p class="titre-carte">Jeux Vidéos</p>
-                </div>
+                <a href="./theme-ranking.php">
+                    <div class="carte-quiz"><i class="fa-solid fa-basketball"></i>
+                        <p class="titre-carte">Sport</p>
+                    </div>
+                </a>
+                <a href="./theme-ranking.php">
+                    <div class="carte-quiz"><i class="fa-solid fa-flask-vial"></i>
+                        <p class="titre-carte">Science</p>
+                    </div>
+                </a>
+                <a href="./theme-ranking.php">
+                    <div class="carte-quiz"><i class="fa-solid fa-music"></i>
+                        <p class="titre-carte">Music</p>
+                    </div>
+                </a>
+                <a href="./theme-ranking.php">
+                    <div class="carte-quiz"><i class="fa-solid fa-video"></i>
+                        <p class="titre-carte">Film</p>
+                    </div>
+                </a>
+                <a href="./theme-ranking.php">
+                    <div class="carte-quiz"><i class="fa-solid fa-feather"></i>
+                        <p class="titre-carte">Histoire</p>
+                    </div>
+                </a>
+                <a href="./theme-ranking.php">
+                    <div class="carte-quiz"><i class="fa-solid fa-earth-americas"></i>
+                        <p class="titre-carte">Géographie</p>
+                    </div>
+                </a>
+                <a href="./theme-ranking.php">
+                    <div class="carte-quiz"><i class="fa-solid fa-gamepad"></i>
+                        <p class="titre-carte">Jeux Vidéos</p>
+                    </div>
+                </a>
             </div>
         </div>
         <div class="securite">
@@ -140,7 +155,7 @@ include './navbar.php';
             </div>
         </div>
         <div class="Notifications">
-        <div class="titre-et-button">
+            <div class="titre-et-button">
                 <h3>Notifications</h3>
             </div>
             <div class="list-btn-securite">

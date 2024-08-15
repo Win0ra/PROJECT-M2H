@@ -20,7 +20,7 @@
                 <a href="./ranking.php" class="a-classement" id="classement">Classement</a>
                 <i class="fa-solid fa-chevron-right arrow-dropdown"></i>
             </li>
-            <a href="./theme-ranking.php" class="dropdown">Classement par thèmes</a>
+            <a href="./ranking-choice.php" class="dropdown">Classement par thèmes</a>
             <li><a href="./mon-compte.php">Mon Compte</a></li>
         </ul>
         <div class="logo"><a href="./index.php"><i class="fa-brands fa-html5"> LOGO</i></a></div>
