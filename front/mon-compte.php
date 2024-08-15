@@ -55,7 +55,7 @@ include './navbar.php';
         </div>
         <div class="mes-classement">
             <div class="titre-et-button">
-                <h3>Mes classement</h3>
+                <h3>Mes classements</h3>
                 <a href="#"><button class="btn-infos btn-classement"><i class="fa-solid fa-ranking-star"></i>
                         <p class="txt-infos">Voir mon classement général</p>
                     </button></a>
