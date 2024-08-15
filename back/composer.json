@@ -1,0 +1,21 @@
+{
+    "name": "m2h/la_bouzinerie",
+    "description": "online quizz site",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "LaBouzinerie\\": "src/",
+            "LaBouzinerie\\Classes\\": "src/classes/"
+        }
+    },
+    "authors": [
+        {
+            "name": "M2H"
+        }
+    ],
+    "require": {
+        "doctrine/orm": "^3.2",
+        "doctrine/dbal": "^4.0",
+        "symfony/cache": "^7.1"
+    }
+}

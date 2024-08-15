@@ -1,0 +1,21 @@
+body {
+    text-align: center;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.menu button {
+    width: 100px;
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}

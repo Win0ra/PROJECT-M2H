@@ -1,0 +1,40 @@
+span {
+    font-weight: bolder;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: left;
+    margin-left: 10vw;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 20px;
+}
+
+form .input {
+    width: 35vw;
+    height: 120px;
+    background-color: rgb(197 197 197);
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: solid 1px black;
+}
+
+form .submit {
+    width: 20vw;
+    margin-top: 20px;
+    background-color: rgb(157 156 156);
+    color: black;
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-weight: bolder;
+}
