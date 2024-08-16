@@ -32,7 +32,7 @@ include './navbar.php';
                 <p class="mdp-oublie"><a href="">Mot de passe oublié ?</a></p>
             </div>
 
-            <a href="./index.php"><button class="connexion"><i class="fa-solid fa-user"></i><p class="txt-connexion">Connexion</p></button></a>
+            <a href="./mon-compte.php" class="a-connexion"><button class="connexion"><i class="fa-solid fa-user"></i><p class="txt-connexion">Connexion</p></button></a>
 
             <div class="connex-rs">
                 <a href="#"><button class="rs-button"><i class="fa-brands fa-google"></i></button></a>

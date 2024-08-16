@@ -121,7 +121,7 @@ include './navbar.php';
         <!-- BLOCKS FIN -->
 
         <!-- RANKING DEBUT -->
-        <a href="#"><button class="ranking"><i class="fa-solid fa-ranking-star"></i>
+        <a href="./ranking.php"><button class="ranking"><i class="fa-solid fa-ranking-star"></i>
                 <p class="txt-ranking">Voir le Classement</p>
             </button></a>
         <!-- RANKING FIN -->

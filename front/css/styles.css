@@ -223,10 +223,12 @@ input#searchBar {
     border: none;
     font-family: "Bellota", system-ui;
     height: 41px;
+    box-sizing: border-box;
+    padding: 0 0 0 80px;
 }
 
 ::placeholder {
-    padding:  0 0 0 80px;
+    /* padding:  0 0 0 80px; */
     font-size:20px
 }
 
