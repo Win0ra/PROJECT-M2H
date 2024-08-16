@@ -13,7 +13,6 @@ include './navbar.php';
     <title>Mon Compte</title>
     <link rel="stylesheet" href="./css/styles-ranking-choice.css" type="text/css" media="all">
     <script src="https://kit.fontawesome.com/e98829b701.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 
 <body>

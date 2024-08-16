@@ -13,6 +13,7 @@ include './navbar.php';
     <title>Inscription</title>
     <link rel="stylesheet" href="./css/styles-inscription.css" type="text/css" media="all">
     <script src="https://kit.fontawesome.com/e98829b701.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 
 <body>
@@ -55,7 +56,7 @@ include './navbar.php';
                     <input type="text" name="pseudo" id="pseudo" placeholder="Le-plus-grand-des-bouzins">
 
                     <h3>Confirmer le mot de passe</h3 required>
-                    <input type="password" name="password" id="password" placeholder="****************" class="center-placeholder">
+                    <input type="password" name="password" id="password-confirm" placeholder="****************" class="center-placeholder">
 
                     <h3>Age (ans)</h3>
                     <input type="number" name="age" id="age" required placeholder="18">
@@ -64,27 +65,30 @@ include './navbar.php';
 
             <!-- CARTES CENTRES D'INTERETS -->
 
-            <h3>Centre d'intérêts</h3>
+            <div class="centres-interets">
+                <h3>Centre d'intérêts</h3>
+            <p class="p-centres-interets"> Choisissez vos centres d'intérêts</p>
+            </div>
             <div class="centres interets">
-                <div class="card-ci" tabindex="0"><i class="fa-solid fa-basketball"></i>
+                <div class="card-ci"><i class="fa-solid fa-basketball"></i>
                     <p class="txt-carte">Sport</p>
                 </div>
-                <div class="card-ci" tabindex="0"><i class="fa-solid fa-flask-vial"></i>
+                <div class="card-ci"><i class="fa-solid fa-flask-vial"></i>
                     <p class="txt-carte">Science</p>
                 </div>
-                <div class="card-ci" tabindex="0"><i class="fa-solid fa-music"></i>
+                <div class="card-ci"><i class="fa-solid fa-music"></i>
                     <p class="txt-carte">Music</p>
                 </div>
-                <div class="card-ci" tabindex="0"><i class="fa-solid fa-video"></i>
+                <div class="card-ci"><i class="fa-solid fa-video"></i>
                     <p class="txt-carte">Film</p>
                 </div>
-                <div class="card-ci" tabindex="0"><i class="fa-solid fa-feather"></i>
+                <div class="card-ci"><i class="fa-solid fa-feather"></i>
                     <p class="txt-carte">Histoire</p>
                 </div>
-                <div class="card-ci" tabindex="0"><i class="fa-solid fa-earth-americas"></i>
+                <div class="card-ci"><i class="fa-solid fa-earth-americas"></i>
                     <p class="txt-carte">Géographie</p>
                 </div>
-                <div class="card-ci" tabindex="0"><i class="fa-solid fa-gamepad"></i>
+                <div class="card-ci"><i class="fa-solid fa-gamepad"></i>
                     <p class="txt-carte">Jeux Vidéos</p>
                 </div>
             </div>
@@ -102,6 +106,7 @@ include './navbar.php';
                 </button></a>
         </div>
     </form>
+    <script src="./js/script-inscription.js"></script>
 </body>
 
 </html>

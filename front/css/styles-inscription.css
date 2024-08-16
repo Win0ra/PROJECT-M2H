@@ -95,7 +95,7 @@ input {
     font-size: 20px;
 }
 
-#pseudo, #password, #prenom, #nom,
+#pseudo, #password, #password-confirm, #prenom, #nom,
  #email, #age, select#sexe {
     border-radius: 30px;
     border: none;
@@ -108,9 +108,14 @@ input {
     padding-block: 0px;
 }
 
-#pseudo, #password, #prenom, #nom,
- #email, #age {
+#pseudo, #password, #password-confirm, #prenom, #nom,
+ #email {
     padding: 0 0 0 20px;
+    box-sizing: border-box;
+}
+
+#age {
+    padding: 0 20px 0 20px;
     box-sizing: border-box;
 }
 
@@ -214,16 +219,20 @@ option {
     outline: none;
 }
 
-.card-ci:focus {
-    border: 3px solid #9ded67;
-    box-shadow: none;
-}
-
 .centres.interets {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 32px 0 0 0 ;
+}
+
+.centres-interets {
+    display: flex;
+    align-items: center;
+}
+
+p.p-centres-interets {
+    margin: 0 0 8px 32px;
 }
 
 .txt-carte{

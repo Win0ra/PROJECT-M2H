@@ -165,6 +165,7 @@ p.mdp-oublie {
 .no-compte p a, .checkbox p a {
     color: blue !important;
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .no-compte{

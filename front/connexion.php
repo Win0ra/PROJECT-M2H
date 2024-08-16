@@ -42,7 +42,7 @@ include './navbar.php';
             </div>
             
             <div class="no-compte">
-                <p class="souvenir">Vous n'avez pas encore de compte ? <a>Inscrivez-vous</a></p>
+                <p class="souvenir">Vous n'avez pas encore de compte ? <a href="./inscription.php">Inscrivez-vous</a></p>
             </div>
 
         </form>
