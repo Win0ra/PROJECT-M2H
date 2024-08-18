@@ -11,7 +11,7 @@
     <h1>Catégorie</h1>
     <a class=content href="./quizz.php">
     <?php 
-    require dirname(__DIR__).'/recover/index.php';
+    require_once dirname(__DIR__).'/recover/index.php';
     for ($i=0; $i<count($allTopic); $i++) {   
     ?>
         <div class="topic" style="width: 18rem; background-color: <?php echo $allTopic[$i]->getColor() ?>">

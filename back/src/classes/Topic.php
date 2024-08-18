@@ -30,8 +30,7 @@ class Topic {
     private Collection $quizzs;
 
     // CONSTRUCTOR
-    public function __construct(int $id, string $name, string $description, string $color) {
-        $this->id = $id;
+    public function __construct(string $name, string $description, string $color) {
         $this->name = $name;
         $this->description = $description;
         $this->color = $color;
