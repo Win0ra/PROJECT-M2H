@@ -103,7 +103,7 @@
                         <p class="titre-carte">Sport</p>
                     </div>
                 </div>
-                <a href="#" class="btn-droite"><button class="retour lancer-quiz"><i class="fa-solid fa-play"></i>
+                <a href="../back/src/view/question.php" class="btn-droite"><button class="retour lancer-quiz"><i class="fa-solid fa-play"></i>
                         <p class="txt-connexion">Lancer le quiz</p>
                     </button></a>
             </div>

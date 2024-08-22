@@ -132,7 +132,7 @@ include './navbar.php';
             <p>Vous avez également la possibilité de créer votre quiz pour ensuite envoyer le lien à vos amis et tester leurs connaissances !
                 Si toi aussi tu as l'âme d'un créateur, clique sur le bouton ci-dessous !
             </p>
-            <a href="#"><button class="creation"><i class="fa-solid fa-pencil"></i>
+            <a href="../back/src/create/"><button class="creation"><i class="fa-solid fa-pencil"></i>
                     <p class="txt-creation">Créer un quiz</p>
                 </button></a>
         </div>
