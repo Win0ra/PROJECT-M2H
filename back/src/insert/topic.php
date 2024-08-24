@@ -24,16 +24,14 @@
     </p>
     <div>
         <form action="" method="post" enctype="multipart/form-data">
-            <input type="file" name="new_topic" class="input" required />
-            <input type="submit" value="Valider" class="submit" />
+            <input type="file" name="new_topic" required/>
+            <input type="submit" value="Valider" class="submit"/>
         </form>
     </div>
 
 <?php
-require_once dirname(__DIR__).'/recover/index.php';
-// require_once dirname(__DIR__).'/../bootstrap.php';
-
 use LaBouzinerie\Classes\Topic;
+require_once dirname(__DIR__).'/recover/index.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!empty($_FILES['new_topic']['name'])) {
