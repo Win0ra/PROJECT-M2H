@@ -77,8 +77,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Récupération du thème en fonction de son id
             $selected_topic = $topicRepository->find($_POST['topic']);
             $quizz = New Quizz($_POST['title'], $_POST['description'], $_POST['level'], $_POST['is_completed'], $selected_topic);
-            // $entityManager->persist($quizz);
-            // $entityManager->flush();
+            $entityManager->persist($quizz);
+            $entityManager->flush();
             if (isset($quizz)) {
                 ?>
                 <div class="alert alert-success" role="alert">
