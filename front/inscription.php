@@ -17,7 +17,7 @@ include './navbar.php';
 </head>
 
 <body>
-    <form action="" method="get">
+    <form action="./mon-compte.php" method="get">
         <div class="content">
             <h1 class="h1-inscri">Inscrivez-vous</h1>
 
@@ -50,16 +50,17 @@ include './navbar.php';
 
                 <div class="droite">
                     <h3>Nom</h3>
-                    <input type="text" name="nom" id="nom" placeholder="Nom">
+                    <input type="text" name="nom" id="nom" placeholder="Nom" required>
 
                     <h3>Pseudo</h3 required>
-                    <input type="text" name="pseudo" id="pseudo" placeholder="Le-plus-grand-des-bouzins">
+                    <input type="text" name="pseudo" id="pseudo" placeholder="Le-plus-grand-des-bouzins" required>
 
-                    <h3>Confirmer le mot de passe</h3 required>
-                    <input type="password" name="password" id="password-confirm" placeholder="****************" class="center-placeholder">
+                    <h3>Confirmer le mot de passe</h3>
+                    <input type="password" name="password" id="password-confirm" placeholder="****************"  required 
+                    class="center-placeholder" onpaste="return false;" oncopy="return false;" oncut="return false;" autocomplete="off">
 
                     <h3>Age (ans)</h3>
-                    <input type="number" name="age" id="age" required placeholder="18">
+                    <input type="number" name="age" id="age" required placeholder="18" required>
                 </div>
             </div>
 
@@ -67,7 +68,7 @@ include './navbar.php';
 
             <div class="centres-interets">
                 <h3>Centre d'intérêts</h3>
-            <p class="p-centres-interets"> Choisissez vos centres d'intérêts</p>
+                <p class="p-centres-interets"> Choisissez vos centres d'intérêts</p>
             </div>
             <div class="centres interets">
                 <div class="card-ci"><i class="fa-solid fa-basketball"></i>
@@ -101,9 +102,10 @@ include './navbar.php';
                     Je reconnais que mes données seront traitées conformément à cette politique.
                     Je comprends que je peux me désinscrire à tout moment.</p>
             </div>
-            <a href="./index.php"> <button class="inscription"> <i class="fa-solid fa-pen-to-square" id=" i-white"></i>
-                    <p class="txt-inscription">Inscription</p>
-                </button></a>
+            <button type="submit" class="inscription">
+                <i class="fa-solid fa-pen-to-square" id="i-white"></i>
+                <p class="txt-inscription">Inscription</p>
+            </button>
         </div>
     </form>
     <script src="./js/script-inscription.js"></script>

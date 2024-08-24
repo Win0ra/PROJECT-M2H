@@ -23,7 +23,7 @@
     </div>
 
     <div class="content">
-        <img id="img" src="./../assets/img/Teldrassil.jpg" alt="Elfe de la nuit - World of Warcraft">
+        <img id="img" src="./../assets/img/arbre-monde.png" alt="Elfe de la nuit - World of Warcraft">
         <div class="answers">
             <div class="answer one">
                 <p class="letter">A</p>
@@ -51,15 +51,15 @@
 	<div class="lightbox">
 		<div class="main">
 			<div id="fermer">X</div>
-			<img id="zoom" src="./../assets/img/Teldrassil.jpg"/>
+			<img id="zoom" src="./../assets/img/arbre-monde.png"/>
 		</div>
 	</div>
 	<!-- LightBox fin -->   
 
     <div class="footer">
-        <p>Question : 2/10</p>
-        <p>0:30</p>
-        <p>Réponses : 0/4</p>
+        <p class="p-footer">Question : 2/10</p>
+        <p class="p-footer">0:30</p>
+        <p class="p-footer">Réponses : 0/4</p>
     </div>
 
 </body>
