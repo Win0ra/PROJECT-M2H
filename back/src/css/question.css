@@ -479,6 +479,8 @@ table {
         align-items: center;
         border-radius: 20px;
         width: 100%;
+        overflow-wrap: anywhere;
+        padding: 0 10px 0 70px;
     }
 
     .content .answers .two .item:hover {
@@ -505,6 +507,8 @@ table {
         align-items: center;
         border-radius: 20px;
         width: 100%;
+        overflow-wrap: anywhere;
+        padding: 0 10px 0 70px;
     }
 
     .content .answers .tree .item:hover {
@@ -531,6 +535,8 @@ table {
         align-items: center;
         border-radius: 20px;
         width: 100%;
+        overflow-wrap: anywhere;
+        padding: 0 10px 0 70px;
     }
 
     .content .answers .four .item:hover {
