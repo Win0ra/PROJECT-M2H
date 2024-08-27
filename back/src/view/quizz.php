@@ -9,14 +9,19 @@
 </head>
 <body>
     <h1>Choisis ton quizz</h1>
-    <div class=content>
-    <?php for ($i=0; $i<12; $i++) { ?>
+    <div class="content">
+    <?php 
+    require_once dirname(__DIR__).'/recover/index.php';
+    $quizzByTopic = $quizzRepository->findBy(['topic'=>$_GET['topic_id']]);
+    foreach ($quizzByTopic as $obj) {
+        // VOIR POUR RAJOUTER UN ATTRIBUT IMAGE A LA CLASSE QUIZZ
+    ?>
         <div class="card" style="width: 18rem;">
             <img src="./../assets/img/Interrogation_point.jpg" class="card-img-top" alt="Quizz">
             <div class="card-body">
-                <h5 class="card-title">League of Legend</h5>
-                <p class="card-text">League of Legends est un jeu de stratégie en équipe où deux équipes de cinq champions puissants s'affrontent pour détruire la base de l'autre.</p>
-                <a href="./question.php" class="btn btn-primary">Faire le quizz</a>
+                <h5 class="card-title"><?php echo $obj->getTitle() ?></h5>
+                <p class="card-text"><?php echo $obj->getDescription() ?></p>
+                <a href="./question.php?quizz_id=<?php echo $obj->getId() ?>&page=1" class="btn btn-primary">Faire le quizz</a>
             </div>
         </div>
     <?php } ?>

@@ -10,8 +10,6 @@ h1 {
     justify-content: space-around;
     padding: 0 50px 0 50px;
     box-sizing: border-box;
-    text-decoration: none;
-    color: black;
 }
 
 .topic {
@@ -22,6 +20,8 @@ h1 {
     margin: 35px;
     cursor: pointer;
     overflow: hidden;
+    text-decoration: none;
+    color: black;
 }
 
 .topic:hover {
