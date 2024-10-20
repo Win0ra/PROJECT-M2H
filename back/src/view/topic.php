@@ -9,17 +9,20 @@
 </head>
 <body>
     <h1>Catégorie</h1>
-    <a class=content href="./quizz.php">
+    <div class="content">
     <?php 
     require_once dirname(__DIR__).'/recover/index.php';
-    for ($i=0; $i<count($allTopic); $i++) {   
+    foreach ($allTopic as $obj) {   
     ?>
-        <div class="topic" style="width: 18rem; background-color: <?php echo $allTopic[$i]->getColor() ?>">
-            <h5><?php echo $allTopic[$i]->getName() ?></h5>
-            <p><?php echo $allTopic[$i]->getDescription() ?></p>
-        </div>
+        <a class="topic" href="./quizz.php?topic_id=<?php echo $obj->getId()?>" style="width: 18rem; background-color: <?php echo $obj->getColor() ?>">
+            <div>
+                <h5><?php echo $obj->getName() ?></h5>
+                <p><?php echo $obj->getDescription() ?></p>
+            </div>
+        </a>
     <?php } ?>
-    </a>
+    </div>
+    
     
 </body>
 </html>

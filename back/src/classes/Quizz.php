@@ -36,13 +36,11 @@ class Quizz {
     private Collection $users_who_liked;
 
     // CONSTRUCTOR
-    public function __construct(int $id, string $title, string $description, string $level, bool $is_completed, Question $questions, Topic $topic) {
-        $this->id = $id;
+    public function __construct(string $title, string $description, string $level, bool $is_completed, Topic $topic) {
         $this->title = $title;
         $this->description = $description;
         $this->level = $level;
         $this->is_completed = $is_completed;
-        $this->questions = $questions;
         $this->topic = $topic;
     }
 

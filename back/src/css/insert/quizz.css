@@ -1,0 +1,40 @@
+body {
+    padding: 10px
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+form {
+    margin-left: 30px;
+    border-left: solid 1px black;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+form label {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+form label input, form label select {
+    width: 35vw;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+form label span {
+    font-size: 17px;
+    font-weight: 500;
+    list-style-type: circle;
+}
+
+.submit {
+    background-color: #E0E0E0;
+}

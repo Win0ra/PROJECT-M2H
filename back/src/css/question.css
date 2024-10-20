@@ -88,7 +88,7 @@ table {
     /***** STATEMENT *****/
     .statement {
         width: 100%;
-        height: 124px;
+        height: 15vh;
         background: #5778A2;
         box-sizing: border-box;
         color: #fff;
@@ -101,6 +101,7 @@ table {
 
     /***** CONTENT *****/
     .content {
+        height: 50vh;
         display: flex;
         justify-content: space-between;
         margin: 120px 80px 88px 80px;
@@ -108,7 +109,7 @@ table {
 
     .content img {
         width: 527px;
-        height: 527px;
+        height: 50vh;
         border-radius: 40px;
         box-shadow: 0px 0px 5px 0px #000;
         cursor: pointer;
