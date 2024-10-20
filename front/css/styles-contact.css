@@ -1,0 +1,328 @@
+/* IMPORTS FONT */
+/* DEBUT COPIER COLLER POUR CSS AUTRES PAGES */
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+
+/* RESET CSS */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    text-decoration: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+/* CONTENU DE LA PAGE */
+
+
+
+body {
+    background: linear-gradient(0deg, rgba(170, 203, 245, 1) 0%, rgba(238, 255, 254, 1) 20%, rgba(238, 255, 254, 1) 70%, rgba(170, 203, 245, 1) 100%);
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+h1 {
+    font-family: Lobster Two;
+    font-size: 48px;
+    text-align: center;
+    margin: 0 0 84px 0;
+}
+
+.h1-bouz {
+    margin: 0 0 64px 0;
+}
+
+h2 {
+    font-family: Lobster Two;
+    font-size: 36px;
+    margin: 0px 0px 24px 0px;
+}
+
+h3 {
+    font-family: Lobster Two;
+    font-size: 30px;
+    margin: 0px 0px 48px 0px;
+}
+
+h3.bouz {
+    text-align: left;
+    margin: 40px auto;
+}
+
+p {
+    font-family: Bellota;
+    font-size: 18px;
+    line-height: 23px;
+}
+
+/* FIN COPIER COLLER POUR CSS AUTRES PAGES */
+.margin {
+    width: 1040px;
+    margin: 0px auto;
+}
+
+a#footer {
+    color: #ffffff;
+    font-size: 19px;
+}
+
+#Form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 88px auto;
+}
+
+.LeftArea, .LastName, .LongText, label {
+    font-family: "Bellota", system-ui;
+
+}
+.Form {
+    display: grid;
+    grid-template-columns: repeat(2, 333px);
+    grid-gap: 20px;
+    grid-template-rows: repeat(2, 400px);
+}
+
+input#text {
+    width: 1045px;
+    border-radius: 100px;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    border: none;
+    font-family: "Bellota", system-ui;
+    height: 41px;
+}
+
+::placeholder {
+    font-size:20px;
+    font-family: "Bellota", system-ui;
+}
+
+textarea.LongText {
+    padding: 32px 0 0 40px !important;
+}
+
+input#Nom, Input#Prenom {
+    width: 510px;
+    height: 41px;
+    border-radius: 100px;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    border: none;
+    font-family: "Bellota", system-ui;
+}
+
+input#Nom, input#Prenom, input#Email, input#Objet {
+    padding:  8px 0 8px 40px;
+    box-sizing: border-box;
+}
+
+.LastName {
+    position: relative;
+    left: 530px;
+    top: -120px;
+}
+
+.Email {
+    position: relative;
+    bottom: 100px;
+}
+
+.Object {
+    position: relative;
+    bottom: 70px;
+}
+
+.LongText {
+    position: relative;
+    bottom: 20px;
+}
+
+input#Email {
+    width: 1040px;
+    height: 41px;
+    border-radius: 100px;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    border: none;
+    font-family: "Bellota", system-ui;
+}
+
+input#Objet {
+    width: 510px;
+    height: 41px;
+    border-radius: 100px;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    border: none;
+    font-family: "Bellota", system-ui;
+}
+
+textarea.LongText {
+    width: 1040px;
+    height: 334px;
+    border-radius: 30px;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    border: none;
+    font-family: "Bellota", system-ui;
+}
+
+input#checkbox {
+    min-width: 22px;
+    height: 22px;
+    margin: 0 16px 0 0;
+}
+
+label {
+    display: flex;
+    align-items: center;
+}
+
+button.Send {
+    width: 1040px;
+    color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 9px 0px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(#3565BC, #114198);
+    font-family: Bellota;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 48px auto 96px auto;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.txt-send {
+    padding: 0 0 0 40px;
+    text-decoration: none;
+}

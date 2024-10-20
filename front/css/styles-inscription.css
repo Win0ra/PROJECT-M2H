@@ -88,7 +88,14 @@ p {
     width: 1040px;
 }
 
-#pseudo, #password, #prenom, #nom,
+/* INFORMATIONS PERSONNELLES */
+
+input {
+    font-family: 'Bellota';
+    font-size: 20px;
+}
+
+#pseudo, #password, #password-confirm, #prenom, #nom,
  #email, #age, select#sexe {
     border-radius: 30px;
     border: none;
@@ -101,9 +108,14 @@ p {
     padding-block: 0px;
 }
 
-#pseudo, #password, #prenom, #nom,
- #email, #age {
+#pseudo, #password, #password-confirm, #prenom, #nom,
+ #email {
     padding: 0 0 0 20px;
+    box-sizing: border-box;
+}
+
+#age {
+    padding: 0 20px 0 20px;
     box-sizing: border-box;
 }
 
@@ -120,49 +132,6 @@ p {
 
 #age{
     width: 157px;
-}
-
-input#checkbox {
-    height: 22px;
-    width: 22px;
-}
-
-.checkbox {
-    width: 1040px;
-    margin: 32px 0px 40px 0px;
-    display: flex;
-}
-
-.cgu{
-    padding: 0 0 0 8px;
-}
-
-.inscription {
-    width: 100%;
-    color: white;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    padding: 9px 0px;
-    border-radius: 10px;
-    border: none;
-    background: linear-gradient(#3565BC, #114198);
-    font-family: Bellota;
-    font-size: 24px;
-    font-weight: bold;
-    margin: 0px 0px 96px 0px;
-}
-
-.fa-solid{
-    background-image: linear-gradient(#EDC267,#9a6748);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-}
-
-.infos-perso {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: space-between;
-    margin: 0 0 24px 0;
 }
 
 select#sexe {
@@ -194,8 +163,45 @@ option {
     left: 170px;
 }
 
-.fa-basketball{
-    font-size: 60px;
+.infos-perso {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0 0 24px 0;
+}
+
+/* CENTRES D'INTERETS */
+.card-ci i.fa-solid{
+    font-size: 60px !important;
+}
+
+.fa-basketball {
+    color: orange;
+}
+
+.fa-flask-vial {
+    color: blueviolet;
+}
+
+.fa-music {
+    color: yellowgreen;
+}
+
+.fa-video {
+    color: #3467ff;
+}
+
+.fa-feather {
+    color: brown;
+}
+
+.fa-earth-americas {
+    color: cadetblue;
+}
+
+.fa-gamepad {
+    color: violet;
 }
 
 .card-ci {
@@ -209,16 +215,75 @@ option {
     align-items: center;
     flex-direction: column;
     justify-content: space-evenly;
+    cursor: pointer;
+    outline: none;
 }
 
 .centres.interets {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin: 32px 0 0 0 ;
+}
+
+.centres-interets {
+    display: flex;
+    align-items: center;
+}
+
+p.p-centres-interets {
+    margin: 0 0 8px 32px;
 }
 
 .txt-carte{
     font-size: 20px;
     font-weight: bold;
+}
+
+/* FIN DU FORMULAIRE */
+
+input#checkbox {
+    height: 22px;
+    width: 22px;
+}    
+
+.checkbox {
+    width: 1040px;
+    margin: 32px 0px 40px 0px;
+    display: flex;
+}    
+
+.cgu{
+    padding: 0 0 0 8px;
+}    
+
+.inscription {
+    width: 100%;
+    color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 9px 0px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(#3565BC, #114198);
+    font-family: Bellota;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0px 0px 96px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}    
+.txt-inscription {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 0 0 0 25px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.fa-pen-to-square{
+    background-image: white;
 }
