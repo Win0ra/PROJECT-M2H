@@ -22,7 +22,7 @@
     require_once dirname(__DIR__).'/recover/index.php';
     $questionByQuizz = $questionRepository->findBy(['quizz'=>$_GET['quizz_id']]); // Récupération des questions liée au quizz dont l'id est celui envoyé en GET via la variable 'quizz_id'
     $choiceByQuestion = $choiceRepository->findBy(['question'=>$questionByQuizz[$_GET['page']-1]->getId()]);// Récupération de tous les choix correspondant à l'id de la question du tableau $questionByQuizz à l'index indiqué par la variable $GET['page'] 
-    // VOIR POUR RAJOUTER UN ATTRIBUT IMAGE À LA CLASSE QUIZ
+    // VOIR POUR RAJOUTER UN ATTRIBUT IMAGE A LA CLASSE QUIZZ
     ?>
     <div class="statement">
         <h1><?php echo $questionByQuizz[$_GET['page']-1]->getStatement() ?></h1>

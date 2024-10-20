@@ -10,33 +10,46 @@ include './navbar.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/styles-connexion.css" type="text/css" media ="all">
+    <title>Connexion</title>
+    <link rel="stylesheet" href="./css/styles-connexion.css" type="text/css" media="all">
     <script src="https://kit.fontawesome.com/e98829b701.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="content">
+
         <h1 class="h1-connex">Connectez-vous</h1>
         <h3>Pseudo</h3>
-        <input type="text" name="pseudo" id="pseudo">
-        <h3>Mot de passe</h3>
-        <input type="password" name="password" id="password">
-        <div class="checkbox">
-            <input type="checkbox" name="checkbox" id="checkbox">
-            <p class="souvenir">Se souvenir de moi</p>
-            <p class="mdp-oublie"><a href="">Mot de passe oublié ?</a></p>
-        </div>
-        <button class="connexion">Connexion</button>
-        <div class="connex-rs">
-            <button class="rs-button"><i class="fa-brands fa-google"></i></button>
-            <button class="rs-button"><i class="fa-brands fa-facebook"></i></button>
-            <button class="rs-button"><i class="fa-brands fa-apple"></i></button>
-            <button class="rs-button"><i class="fa-brands fa-x-twitter"></i></button>
-        </div>
-        <div class="no-compte">
-            <p class="souvenir">Vous n'avez pas encore de compte ? <a>Inscrivez-vous</a></p>
-        </div>
+        <form action="./mon-compte.php" method="get">
+
+            <input type="text" name="pseudo" id="pseudo" required>
+            <h3>Mot de passe</h3>
+
+            <input type="password" name="password" id="password" required>
+            <div class="checkbox">
+                <input type="checkbox" name="checkbox" id="checkbox">
+                <p class="souvenir">Se souvenir de moi</p>
+                <p class="mdp-oublie"><a href="">Mot de passe oublié ?</a></p>
+            </div>
+
+            <button class="connexion" type="submit">
+                <i class="fa-solid fa-user"></i>
+                <p class="txt-connexion">Connexion</p>
+            </button>
+
+            <div class="connex-rs">
+                <a href="#"><button class="rs-button"><i class="fa-brands fa-google"></i></button></a>
+                <a href="#"></a><button class="rs-button"><i class="fa-brands fa-facebook"></i></button></a>
+                <a href="#"></a><button class="rs-button"><i class="fa-brands fa-apple"></i></button></a>
+                <a href="#"></a><button class="rs-button"><i class="fa-brands fa-x-twitter"></i></button></a>
+            </div>
+
+            <div class="no-compte">
+                <p class="souvenir">Vous n'avez pas encore de compte ? <a href="./inscription.php">Inscrivez-vous</a></p>
+            </div>
+
+        </form>
+
     </div>
 </body>
 

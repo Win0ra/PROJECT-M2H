@@ -25,6 +25,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+    text-decoration: none;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -99,6 +100,11 @@ p {
     box-sizing: border-box;
 }
 
+input{
+    font-family: Bellota;
+    font-size: 20px;
+}
+
 #checkbox,
 p {
     display: inline-block;
@@ -112,6 +118,8 @@ input#checkbox {
 .checkbox {
     width: 1040px;
     margin: 0px 0px 40px 0px;
+    display: flex;
+    align-items: center;
 }
 
 p.mdp-oublie {
@@ -119,7 +127,7 @@ p.mdp-oublie {
     width: 100%;
 }
 
-.connexion{
+.connexion {
     width: 100%;
     color: white;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -131,6 +139,7 @@ p.mdp-oublie {
     font-size: 24px;
     font-weight: bold;
     margin: 0px 0px 80px 0px;
+    cursor: pointer;
 }
 
 .connex-rs {
@@ -150,11 +159,13 @@ p.mdp-oublie {
     font-family: Bellota;
     font-size: 24px;
     font-weight: bold;
+    cursor: pointer;
 }
 
-p a {
+.no-compte p a, .checkbox p a {
     color: blue !important;
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .no-compte{
@@ -167,4 +178,28 @@ p a {
     background-image: linear-gradient(#EDC267,#9a6748);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
+}
+
+
+.rs-button:hover {
+    background: linear-gradient(#EDC267,#9a6748); 
+}
+
+.rs-button:hover .fa-brands {
+    background-image: none;
+    -webkit-text-fill-color: white;
+}
+
+p.txt-connexion {
+    font-size: 24px;
+    padding: 0 0 0 25px;
+}
+
+p.souvenir {
+    width: 100%;
+    margin: 0 0 0 8px;
+}
+
+.a-connexion {
+    height: 48px;
 }
