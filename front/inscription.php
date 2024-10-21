@@ -13,10 +13,11 @@ include './navbar.php';
     <title>Inscription</title>
     <link rel="stylesheet" href="./css/styles-inscription.css" type="text/css" media="all">
     <script src="https://kit.fontawesome.com/e98829b701.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 
 <body>
-    <form action="" method="get">
+    <form action="./mon-compte.php" method="get">
         <div class="content">
             <h1 class="h1-inscri">Inscrivez-vous</h1>
 
@@ -49,58 +50,47 @@ include './navbar.php';
 
                 <div class="droite">
                     <h3>Nom</h3>
-                    <input type="text" name="nom" id="nom" placeholder="Nom">
+                    <input type="text" name="nom" id="nom" placeholder="Nom" required>
 
                     <h3>Pseudo</h3 required>
-                    <input type="text" name="pseudo" id="pseudo" placeholder="Le-plus-grand-des-bouzins">
+                    <input type="text" name="pseudo" id="pseudo" placeholder="Le-plus-grand-des-bouzins" required>
 
-                    <h3>Confirmer le mot de passe</h3 required>
-                    <input type="password" name="password" id="password" placeholder="****************" class="center-placeholder">
+                    <h3>Confirmer le mot de passe</h3>
+                    <input type="password" name="password" id="password-confirm" placeholder="****************"  required 
+                    class="center-placeholder" onpaste="return false;" oncopy="return false;" oncut="return false;" autocomplete="off">
 
                     <h3>Age (ans)</h3>
-                    <input type="number" name="age" id="age" required placeholder="18">
+                    <input type="number" name="age" id="age" required placeholder="18" required>
                 </div>
             </div>
 
             <!-- CARTES CENTRES D'INTERETS -->
 
-            <h3>Centre d'inttérêts</h3>
+            <div class="centres-interets">
+                <h3>Centre d'intérêts</h3>
+                <p class="p-centres-interets"> Choisissez vos centres d'intérêts</p>
+            </div>
             <div class="centres interets">
                 <div class="card-ci"><i class="fa-solid fa-basketball"></i>
                     <p class="txt-carte">Sport</p>
                 </div>
-                <div class="card-ci"><i class="fa-solid fa-basketball"></i>
-                    <p class="txt-carte">Sport</p>
+                <div class="card-ci"><i class="fa-solid fa-flask-vial"></i>
+                    <p class="txt-carte">Science</p>
                 </div>
-                <div class="card-ci"><i class="fa-solid fa-basketball"></i>
-                    <p class="txt-carte">Sport</p>
+                <div class="card-ci"><i class="fa-solid fa-music"></i>
+                    <p class="txt-carte">Music</p>
                 </div>
-                <div class="card-ci"><i class="fa-solid fa-basketball"></i>
-                    <p class="txt-carte">Sport</p>
+                <div class="card-ci"><i class="fa-solid fa-video"></i>
+                    <p class="txt-carte">Film</p>
                 </div>
-                <div class="card-ci"><i class="fa-solid fa-basketball"></i>
-                    <p class="txt-carte">Sport</p>
+                <div class="card-ci"><i class="fa-solid fa-feather"></i>
+                    <p class="txt-carte">Histoire</p>
                 </div>
-                <div class="card-ci"><i class="fa-solid fa-basketball"></i>
-                    <p class="txt-carte">Sport</p>
+                <div class="card-ci"><i class="fa-solid fa-earth-americas"></i>
+                    <p class="txt-carte">Géographie</p>
                 </div>
-                <div class="card-ci"><i class="fa-solid fa-basketball"></i>
-                    <p class="txt-carte">Sport</p>
-                </div>
-                <div class="card-ci"><i class="fa-solid fa-basketball"></i>
-                    <p class="txt-carte">Sport</p>
-                </div>
-                <div class="card-ci"><i class="fa-solid fa-basketball"></i>
-                    <p class="txt-carte">Sport</p>
-                </div>
-                <div class="card-ci"><i class="fa-solid fa-basketball"></i>
-                    <p class="txt-carte">Sport</p>
-                </div>
-                <div class="card-ci"><i class="fa-solid fa-basketball"></i>
-                    <p class="txt-carte">Sport</p>
-                </div>
-                <div class="card-ci"><i class="fa-solid fa-basketball"></i>
-                    <p class="txt-carte">Sport</p>
+                <div class="card-ci"><i class="fa-solid fa-gamepad"></i>
+                    <p class="txt-carte">Jeux Vidéos</p>
                 </div>
             </div>
 
@@ -112,11 +102,13 @@ include './navbar.php';
                     Je reconnais que mes données seront traitées conformément à cette politique.
                     Je comprends que je peux me désinscrire à tout moment.</p>
             </div>
-            <a href="./index.php"> <button class="inscription"> <i class="fa-solid fa-pen-to-square" id=" i-white"></i>
-                    <p class="txt-inscription">Inscription</p>
-                </button></a>
+            <button type="submit" class="inscription">
+                <i class="fa-solid fa-pen-to-square" id="i-white"></i>
+                <p class="txt-inscription">Inscription</p>
+            </button>
         </div>
     </form>
+    <script src="./js/script-inscription.js"></script>
 </body>
 
 </html>

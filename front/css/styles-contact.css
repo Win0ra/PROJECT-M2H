@@ -223,9 +223,12 @@ input#text {
 }
 
 ::placeholder {
-    padding:  0 0 0 80px;
     font-size:20px;
     font-family: "Bellota", system-ui;
+}
+
+textarea.LongText {
+    padding: 32px 0 0 40px !important;
 }
 
 input#Nom, Input#Prenom {
@@ -235,6 +238,11 @@ input#Nom, Input#Prenom {
     box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
     border: none;
     font-family: "Bellota", system-ui;
+}
+
+input#Nom, input#Prenom, input#Email, input#Objet {
+    padding:  8px 0 8px 40px;
+    box-sizing: border-box;
 }
 
 .LastName {
@@ -276,13 +284,24 @@ input#Objet {
     font-family: "Bellota", system-ui;
 }
 
-textarea.LongText{
+textarea.LongText {
     width: 1040px;
     height: 334px;
-    border-radius: 15px;
+    border-radius: 30px;
     box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
     border: none;
     font-family: "Bellota", system-ui;
+}
+
+input#checkbox {
+    min-width: 22px;
+    height: 22px;
+    margin: 0 16px 0 0;
+}
+
+label {
+    display: flex;
+    align-items: center;
 }
 
 button.Send {

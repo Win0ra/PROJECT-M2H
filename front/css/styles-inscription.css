@@ -95,7 +95,7 @@ input {
     font-size: 20px;
 }
 
-#pseudo, #password, #prenom, #nom,
+#pseudo, #password, #password-confirm, #prenom, #nom,
  #email, #age, select#sexe {
     border-radius: 30px;
     border: none;
@@ -108,9 +108,14 @@ input {
     padding-block: 0px;
 }
 
-#pseudo, #password, #prenom, #nom,
- #email, #age {
+#pseudo, #password, #password-confirm, #prenom, #nom,
+ #email {
     padding: 0 0 0 20px;
+    box-sizing: border-box;
+}
+
+#age {
+    padding: 0 20px 0 20px;
     box-sizing: border-box;
 }
 
@@ -167,12 +172,36 @@ option {
 }
 
 /* CENTRES D'INTERETS */
+.card-ci i.fa-solid{
+    font-size: 60px !important;
+}
 
-.fa-basketball{
-    font-size: 60px;
-    background-image: linear-gradient(#EDC267,#9a6748);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
+.fa-basketball {
+    color: orange;
+}
+
+.fa-flask-vial {
+    color: blueviolet;
+}
+
+.fa-music {
+    color: yellowgreen;
+}
+
+.fa-video {
+    color: #3467ff;
+}
+
+.fa-feather {
+    color: brown;
+}
+
+.fa-earth-americas {
+    color: cadetblue;
+}
+
+.fa-gamepad {
+    color: violet;
 }
 
 .card-ci {
@@ -186,13 +215,24 @@ option {
     align-items: center;
     flex-direction: column;
     justify-content: space-evenly;
+    cursor: pointer;
+    outline: none;
 }
 
 .centres.interets {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin: 32px 0 0 0 ;
+}
+
+.centres-interets {
+    display: flex;
+    align-items: center;
+}
+
+p.p-centres-interets {
+    margin: 0 0 8px 32px;
 }
 
 .txt-carte{

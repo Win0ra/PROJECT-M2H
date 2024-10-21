@@ -1,0 +1,35 @@
+h1 {
+    text-align: center;
+    margin: 20px 0 50px 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 50px 0 50px;
+    box-sizing: border-box;
+}
+
+.card {
+    margin-bottom: 30px;
+}
+.card-img-top {
+    height: 200px;
+    object-fit: contain;
+    background: #fffff7;
+}
+
+.card-title {
+    font-size: 17px;
+}
+
+.card-text {
+    font-size: 12px;
+}
+
+.btn-primary {
+    font-size: 12px;
+}
+
