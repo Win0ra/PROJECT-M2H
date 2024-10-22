@@ -223,11 +223,12 @@ input#text {
 }
 
 ::placeholder {
+    padding:  8px 0 8px 40px;
     font-size:20px;
     font-family: "Bellota", system-ui;
 }
 
-textarea.LongText {
+textarea.LongText::placeholder {
     padding: 32px 0 0 40px !important;
 }
 
