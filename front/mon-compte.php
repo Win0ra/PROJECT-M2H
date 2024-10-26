@@ -1,7 +1,5 @@
 <?php
-
 include './navbar.php';
-
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +17,7 @@ include './navbar.php';
 <body>
     <div class="content">
         <h1>Mon compte</h1>
-        <h2>Bienvenue dans votre interface [Nom Utilisateur]</h2>
+        <h2>Bienvenue dans votre interface <?php echo $_SESSION['user_first_name']; ?></h2>
         <div class="mes-informations">
             <div class="titre-et-button">
                 <h3>Mes informations</h3>
@@ -46,7 +44,7 @@ include './navbar.php';
                         <p class="titre-info"><span class="souligne">Mot de passe :</span> [données du form]</p>
                     </div>
                     <div class="info">
-                        <p class="titre-info"><span class="souligne">Sexe :</span> [données du form]</p>
+                        <p class="titre-info"><span class="souligne">Genre :</span> [données du form]</p>
                     </div>
                     <div class="info">
                         <p class="titre-info"><span class="souligne">Age :</span> [données du form]</p>
