@@ -16,7 +16,7 @@
             <p class="txt-foot"><a href="./ranking.php">Classement</a></p>
         </div>
         <div class="foot-centre">
-            <a href="./index.php"><img src="" alt="Logo la Bouzinerie"></a>
+            <a href="./index.php"><img src="../images/logo_jaune.svg" alt="logo_la_bouzinerie"></a>
             <p class="txt-foot-centre">La Bouzinerie by M2H</p>
         </div>
         <div class="foot-droite">
@@ -27,8 +27,8 @@
         </div>
         <div class="foot-droite-colonne">
                 <p class="txt-foot"><a href="./contact.php">Contact</a></p>
-                <p class="txt-foot"><a href="./gcu.php">CGU</a></p>
-                <p class="txt-foot"><a href="./legal-notices.php">Mentions légales</a></p>
+                <p class="txt-foot"><a href="javascript:void(0)">CGU</a></p>
+                <p class="txt-foot"><a href="javascript:void(0)">Mentions légales</a></p>
             </div>
         </div>
     </div>

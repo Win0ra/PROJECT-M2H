@@ -7,7 +7,7 @@
 /* CONTENU DE LA PAGE */
 
 .footer {
-    height: 451px;
+    height: 320px;
     width: 100%;
     background: #253154;
     display: flex;
@@ -68,4 +68,8 @@ p.txt-foot-centre {
 a{
     text-decoration: none;
     color: white;
+}
+
+.foot-centre a img {
+    height: 120px;
 }

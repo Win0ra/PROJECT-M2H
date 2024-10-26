@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,17 +17,33 @@
     <div class="Navbar">
         <ul>
             <li><a href="./index.php">Accueil</a></li>
-            <li><a href="./connexion.php">Connexion</a></li>
-            <li><a href="./inscription.php">Inscription</a></li>
-            <li><a href="./avant-de-jouer.php">Jouer</a></li>
-            <li>
-                <a href="./ranking.php" class="a-classement" id="classement">Classement</a>
-                <i class="fa-solid fa-chevron-right arrow-dropdown"></i>
-            </li>
-            <a href="./ranking-choice.php" class="dropdown">Classement par thèmes</a>
-            <li><a href="./mon-compte.php">Mon Compte</a></li>
+            <?php if (isset($_SESSION['user_id'])) : ?>
+                <li><a href="./avant-de-jouer.php">Jouer</a></li>
+                <li><a href="./mon-compte.php">Mon Compte</a></li>
+                <li><a href="./deconnexion.php">Déconnexion</a></li>
+                <li>
+                    <a href="./ranking.php" class="a-classement" id="classement">Classement</a>
+                    <i class="fa-solid fa-chevron-right arrow-dropdown"></i>
+                </li>
+                <a href="./ranking-choice.php" class="dropdown">Classement par thèmes</a>
+            <?php else : ?>
+                <li><a href="./avant-de-jouer.php">Jouer</a></li>
+                <li><a href="./connexion.php">Connexion</a></li>
+                <li><a href="./inscription.php">Inscription</a></li>
+                <li>
+                    <a href="./ranking.php" class="a-classement" id="classement">Classement</a>
+                    <i class="fa-solid fa-chevron-right arrow-dropdown"></i>
+                </li>
+                <a href="./ranking-choice.php" class="dropdown">Classement par thèmes</a>
+            <?php endif; ?>
         </ul>
-        <div class="logo"><a href="./index.php"><i class="fa-brands fa-html5"> LOGO</i></a></div>
+        <div class="logo"><a href="./index.php"><img src="../images/logo_bleu.svg" alt="logo_la_bouzinerie"></a></div>
+    </div>
+
+    <?php if (isset($_SESSION['user_id'])) : ?>
+            <!-- Afficher l'identifiant de l'utilisateur -->
+            <div class="session"><span class="connecte">Connecté en tant que <?php echo $_SESSION['user_first_name']; ?></span></div>
+        <?php endif; ?>
     </div>
 
     <script src="./js/script-navbar.js"></script>

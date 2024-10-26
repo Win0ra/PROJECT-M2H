@@ -137,3 +137,18 @@ i.fa-brands.fa-html5 {
     font-size: 30px;
     color: black;
 }
+
+.logo img {
+    height: 50px;
+}
+
+span.connecte {
+    margin: 0px 313.5px;
+    display: block;
+    font-family: 'Bellota';
+    text-align: right;
+    font-size: 18px;
+    font-style: italic;
+    color: #114198;
+    font-weight: 600;
+}
