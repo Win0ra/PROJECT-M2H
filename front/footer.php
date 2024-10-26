@@ -16,7 +16,7 @@
             <p class="txt-foot"><a href="./ranking.php">Classement</a></p>
         </div>
         <div class="foot-centre">
-            <a href="./index.php"><img src="" alt="Logo la Bouzinerie"></a>
+            <a href="./index.php"><img src="../images/logo_jaune.svg" alt="logo_la_bouzinerie"></a>
             <p class="txt-foot-centre">La Bouzinerie by M2H</p>
         </div>
         <div class="foot-droite">

@@ -1,7 +1,5 @@
 <?php
-
 include './navbar.php';
-
 ?>
 
 <!DOCTYPE html>
@@ -36,13 +34,14 @@ include './navbar.php';
                     <h3>Mot de passe</h3>
                     <input type="password" name="password" id="password" placeholder="****************" class="center-placeholder" required>
 
-                    <h3>Sexe</h3>
+                    <h3>Genre</h3>
                     <div class="select-sexe">
                         <i class="fa-solid fa-angle-down"></i>
                         <select name="sexe" id="sexe" required>
-                            <option value="" disabled selected hidden>Votre sexe ?</option>
+                            <option value="" disabled selected hidden>Votre genre ?</option>
                             <option value="homme">Homme</option>
                             <option value="femme">Femme</option>
+                            <option value="femme">Autre</option>
                         </select>
                     </div>
 
