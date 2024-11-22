@@ -122,7 +122,7 @@ input#checkbox {
     align-items: center;
 }
 
-p.mdp-oublie {
+p.password-lost {
     text-align: right;
     width: 100%;
 }
@@ -142,13 +142,13 @@ p.mdp-oublie {
     cursor: pointer;
 }
 
-.connex-rs {
+.connex-sm {
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-.rs-button{
+.sm-button{
     width: 245px;
     color: black;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -174,18 +174,18 @@ p.mdp-oublie {
     margin: 72px 0px 0px 0px;
 }
 
-.connex-rs .fa-brands{
+.connex-sm .fa-brands{
     background-image: linear-gradient(#EDC267,#9a6748);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
 }
 
 
-.rs-button:hover {
+.sm-button:hover {
     background: linear-gradient(#EDC267,#9a6748); 
 }
 
-.rs-button:hover .fa-brands {
+.sm-button:hover .fa-brands {
     background-image: none;
     -webkit-text-fill-color: white;
 }
@@ -195,7 +195,7 @@ p.txt-connexion {
     padding: 0 0 0 25px;
 }
 
-p.souvenir {
+p.memorize {
     width: 100%;
     margin: 0 0 0 8px;
 }

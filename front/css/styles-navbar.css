@@ -91,10 +91,14 @@ li a {
     font-size: 24px;
 }
 
+li.li-chevron {
+    display: flex;
+}
+
 a.dropdown {
     position: absolute;
-    bottom: -28px;
-    right: 410px;
+    bottom: -24px;
+    right: 225px;
     background: #edc267;
     padding: 10px 20px 10px 20px;
     display: flex;
@@ -108,17 +112,15 @@ a.dropdown {
     transition-duration: 0.3s ;
 }
 
-.a-clasement{
+.a-ranking{
     position: relative;
 }
 
 i.fa-solid.fa-chevron-right {
-    position: absolute;
-    right: -25px;
     font-size: 18px;
-    top: 5px;
     cursor: pointer;
-    transition-duration: 0.6s ;
+    transition-duration: 0.6s;
+    padding: 4px 0px 0px 8px;
 }
 
 li {
@@ -142,7 +144,7 @@ i.fa-brands.fa-html5 {
     height: 50px;
 }
 
-span.connecte {
+span.connected {
     margin: 0px 313.5px;
     display: block;
     font-family: 'Bellota';

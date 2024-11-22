@@ -23,21 +23,21 @@ include './navbar.php';
             <input type="password" name="password" id="password" required>
             <div class="checkbox">
                 <input type="checkbox" name="checkbox" id="checkbox">
-                <p class="souvenir">Se souvenir de moi</p>
-                <p class="mdp-oublie"><a href="">Mot de passe oublié ?</a></p>
+                <p class="memorize">Se souvenir de moi</p>
+                <p class="password-lost"><a href="">Mot de passe oublié ?</a></p>
             </div>
             <button class="connexion" type="submit">
                 <i class="fa-solid fa-user"></i>
                 <p class="txt-connexion">Connexion</p>
             </button>
-            <div class="connex-rs">
-                <a href="#"><button class="rs-button"><i class="fa-brands fa-google"></i></button></a>
-                <a href="#"></a><button class="rs-button"><i class="fa-brands fa-facebook"></i></button></a>
-                <a href="#"></a><button class="rs-button"><i class="fa-brands fa-apple"></i></button></a>
-                <a href="#"></a><button class="rs-button"><i class="fa-brands fa-x-twitter"></i></button></a>
+            <div class="connex-sm">
+                <a href="#"><button class="sm-button"><i class="fa-brands fa-google"></i></button></a>
+                <a href="#"></a><button class="sm-button"><i class="fa-brands fa-facebook"></i></button></a>
+                <a href="#"></a><button class="sm-button"><i class="fa-brands fa-apple"></i></button></a>
+                <a href="#"></a><button class="sm-button"><i class="fa-brands fa-x-twitter"></i></button></a>
             </div>
             <div class="no-compte">
-                <p class="souvenir">Vous n'avez pas encore de compte ? <a href="./inscription.php">Inscrivez-vous</a></p>
+                <p class="memorize">Vous n'avez pas encore de compte ? <a href="./register.php">Inscrivez-vous</a></p>
             </div>
         </form>
 
@@ -59,7 +59,7 @@ include './navbar.php';
                     $_SESSION['user_id'] = $useridentified['id'];
                     $_SESSION['user_last_name'] = $useridentified['last_name'];
                     $_SESSION['user_first_name'] = $useridentified['first_name'];
-                    header('Location: inscription.php');
+                    header('Location: register.php');
                     exit();
                 } else {
                     echo 'Adresse e-mail ou mot de passe incorrect.';

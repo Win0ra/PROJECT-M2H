@@ -19,7 +19,7 @@ p {
 }
 
 .content {
-    margin: 0px auto 96px auto;
+    margin: 32px auto 96px auto;
     width: 1040px;
 }
 
@@ -38,26 +38,26 @@ i.fa-solid.fa-image:hover {
     text-shadow: 5px 5px 0px #eefffe;
 }
 
-.titre-et-button {
+.title-and-button {
     display: flex;
     margin: 0 0 48px 0;
     align-items: center;
 }
 
-.mes-classement {
+.my-ranking {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     margin: 0 0 68px 0;
 }
 
-.list-classements {
+.list-rankings {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.btn-classement {
+.btn-ranking {
     width: 365px;
     color: white;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -72,7 +72,7 @@ i.fa-solid.fa-image:hover {
     justify-content: center;
 }
 
-.carte-quiz {
+.card-quiz {
     background: white;
     width: 157px;
     height: 157px;
@@ -87,11 +87,11 @@ i.fa-solid.fa-image:hover {
     transition: all 0.2s ease-in-out;
 }
 
-.carte-quiz i {
+.card-quiz i {
     font-size: 68px;
 }
 
-.carte-quiz:hover {
+.card-quiz:hover {
     border: 1px solid #edc267;
     box-shadow: 0px 0px 20px 0px hwb(41deg 40% 7% / 75%);
 }
@@ -124,12 +124,12 @@ i.fa-solid.fa-image:hover {
     color: violet;
 }
 
-p.titre-carte {
+p.title-card {
     margin: 16px 0 0 0;
     font-size: 20px;
     font-weight: bold;
 }
 
-a .carte-quiz .titre-carte {
+a .card-quiz .title-card {
     color: black;
 }
