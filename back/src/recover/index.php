@@ -19,6 +19,13 @@ $allTopic = $topicRepository->findAll();
 // QUIZZ
 $quizzRepository = $entityManager->getRepository(Quizz::class);
 $allQuizz = $quizzRepository->findAll();
+$quiz = null;
+function getSearch($search, $quizzRepository): void{
+    // global permet d'accéder à la variable quizzrepository mais c'est pas propre
+    // global $quizzRepository;
+    // $quiz = $quizzRepository->findBy(['title' => 'League of Legends']);
+    $quiz = $quizzRepository->findBy(['title' => 'League of Legends']);
+}
 // FAIRE UNE FONCTION QUI PERMET DE DONNER UN TABLEAU DE CRITERE POUR LE findBy()
 // function feedFindBy (array $criteria) {
 //     $quizzByTopic = $entityManager->getRepository(Quizz::class)->findBy($criteria);
