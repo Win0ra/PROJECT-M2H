@@ -17,8 +17,7 @@ class UserPremium extends UserIdentified {
     private string $cc_number;
 
     // CONSTRUCTOR
-    public function __construct(int $id, string $pseudo, int $elo, string $last_name, string $first_name, DateTime $birthday, string $email, string $password, string $subscription_type, string $cc_number) {
-        $this->id = $id;
+    public function __construct(string $pseudo, int $elo, string $last_name, string $first_name, DateTime $birthday, string $email, string $password, string $subscription_type, string $cc_number) {
         $this->pseudo = $pseudo;
         $this->elo = $elo;
         $this->last_name = $last_name;
