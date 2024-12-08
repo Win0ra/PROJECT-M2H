@@ -1,0 +1,337 @@
+/* IMPORTS FONT */
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+
+/* RESET CSS */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+/* CONTENU DE LA PAGE */
+
+
+body {
+    background: #EEFFFE;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    font-family: Lobster Two;
+    font-size: 48px;
+    text-align: center;
+}
+
+h2 {
+    font-family: Lobster Two;
+    font-size: 36px;
+    text-align: center;
+    width: 100%;
+    margin: 0 0 24px 0;
+}
+
+h3 {
+    font-family: Lobster Two;
+    font-size: 30px;
+    margin: 0px 0px 16px 0px;
+}
+
+p {
+    font-family: Bellota;
+    font-size: 18px;
+}
+
+.content {
+    margin: 24px auto auto auto;
+    width: 1280px;
+}
+
+.back {
+    width: 365px;
+    color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 9px 0px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(#3565BC, #114198);
+    font-family: Bellota;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0px 0px 40px 0px;
+    cursor: pointer;
+}
+
+button.back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa-angle-left, .fa-link, .fa-play {
+    padding: 0 25px 0 0;
+}
+
+.fa-link {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+.list-players {
+    background: linear-gradient(135deg, hsl(249deg 70% 22% / 20%), hwb(189deg 0% 45% / 20%));
+    height: 640px;
+    width: 100%;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.left {
+    width: 365px;
+    margin: 0 32px 0 0;
+}
+
+.right {
+    width: 891px;
+}
+
+.right-and-left {
+    display: flex;
+    flex-direction: row;
+}
+
+button.back.link {
+    width: 100%;
+    margin: 0 32px 0 0;
+}
+
+button.back.start-quiz {
+    width: 100%;
+}
+
+button.back.link,
+button.back.start-quiz {
+    margin: 40px 0 0 0;
+    background: linear-gradient(#EDC267,#9a6748);
+}
+
+.players {
+    display: flex;
+}
+
+.player {
+    background: white;
+    width: 299px;
+    border-radius: 30px;
+    height: 41px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.list-quiz {
+    background: linear-gradient(135deg, hsl(249deg 70% 22% / 20%), hwb(189deg 0% 45% / 20%));
+    height: 640px;
+    width: 100%;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.card-quiz {
+    background: white;
+    width: 157px;
+    height: 157px;
+    border-radius: 30px;
+    box-shadow: 0px 4px 4px #00000040;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card-quiz i.fa-solid{
+    font-size: 60px !important;
+}
+
+.fa-basketball {
+    color: orange;
+}
+
+.fa-flask-vial {
+    color: blueviolet;
+}
+
+.fa-music {
+    color: yellowgreen;
+}
+
+.fa-video {
+    color: #3467ff;
+}
+
+.fa-feather {
+    color: brown;
+}
+
+.fa-earth-americas {
+    color: cadetblue;
+}
+
+.fa-gamepad {
+    color: violet;
+}
+
+p.title-card {
+    margin: 16px 0 0 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.back-button {
+    display: flex;
+}
+
+.spacer {
+    width: 72%;
+    height: 40px;
+}

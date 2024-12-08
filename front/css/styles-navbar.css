@@ -25,6 +25,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+    text-decoration: none;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -90,6 +91,42 @@ li a {
     font-size: 24px;
 }
 
+li.li-chevron {
+    display: flex;
+}
+
+a.dropdown {
+    position: absolute;
+    bottom: -24px;
+    right: 225px;
+    background: #edc267;
+    padding: 10px 20px 10px 20px;
+    display: flex;
+    justify-content: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    cursor: pointer;
+    color: black;
+    font-size: 24px;
+    opacity: 0;
+    transition-duration: 0.3s ;
+}
+
+.a-ranking{
+    position: relative;
+}
+
+i.fa-solid.fa-chevron-right {
+    font-size: 18px;
+    cursor: pointer;
+    transition-duration: 0.6s;
+    padding: 4px 0px 0px 8px;
+}
+
+li {
+    position: relative;
+}
+
 .logo {
     width: 20%;
     height: 100%;
@@ -101,4 +138,19 @@ li a {
 i.fa-brands.fa-html5 {
     font-size: 30px;
     color: black;
+}
+
+.logo img {
+    height: 50px;
+}
+
+span.connected {
+    margin: 0px 313.5px;
+    display: block;
+    font-family: 'Bellota';
+    text-align: right;
+    font-size: 18px;
+    font-style: italic;
+    color: #114198;
+    font-weight: 600;
 }

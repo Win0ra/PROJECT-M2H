@@ -1,5 +1,5 @@
 /* IMPORTS FONT */
-
+/* DEBUT COPIER COLLER POUR CSS AUTRES PAGES */
 @import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
@@ -93,6 +93,7 @@ video {
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+    text-decoration: none;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -153,55 +154,54 @@ h1 {
     font-family: Lobster Two;
     font-size: 48px;
     text-align: center;
-    margin-top: 20px;
+    margin: 0 0 84px 0;
 }
 
-.h1-bouz{
+.h1-bouz {
     margin: 0 0 64px 0;
 }
 
 h2 {
     font-family: Lobster Two;
     font-size: 36px;
-    margin: 0px 0px 16px 0px;
+    margin: 0px 0px 24px 0px;
 }
 
 h3 {
     font-family: Lobster Two;
     font-size: 30px;
-    margin: 0px 0px 16px 0px;
+    margin: 0px 0px 48px 0px;
+}
+
+h3.bouz {
+    text-align: left;
+    margin: 40px auto;
 }
 
 p {
     font-family: Bellota;
     font-size: 18px;
+    line-height: 23px;
 }
 
+/* FIN COPIER COLLER POUR CSS AUTRES PAGES */
 .margin {
     width: 1040px;
     margin: 0px auto;
 }
 
-h1,
-h2,
-h3 {
-    font-family: "Lobster Two";
-    position: relative;
+a#footer {
+    color: #ffffff;
+    font-size: 19px;
 }
 
-h1 {
-    text-align: center;
-}
-
-p {
-    font-family: "Bellota", system-ui;
-}
+/********************** SEARCHBAR DEBUT *****************/
 
 #SearchBar {
     position: relative;
-    height: 125px;
     display: flex;
     align-items: center;
+    margin: 88px auto;
 }
 
 .search-container {
@@ -217,21 +217,36 @@ p {
 }
 
 input#searchBar {
-    width: 100%;
+    width: 1045px;
     border-radius: 100px;
-    box-shadow: 0px 0px 5px #0000007d;
-    padding: 5px 0px 5px 10px;
-    margin: 0px 200px;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
     border: none;
     font-family: "Bellota", system-ui;
+    height: 41px;
+    box-sizing: border-box;
+    padding: 0 0 0 80px;
 }
 
+::placeholder {
+    /* padding:  0 0 0 80px; */
+    font-size:20px
+}
+
+i.fa-solid.fa-magnifying-glass {
+    position: absolute;
+    left: 40px;
+    color: #858585;
+}
+
+/********************** SEARCHBAR FIN *****************/
+
+/*************** QUIZZ CARDS DEBUT ******************/
 .content {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 30px;
-    grid-template-rows: repeat(3, 1fr);
-    justify-items: center;
+    grid-template-columns: repeat(3, 333px);
+    grid-gap: 20px;
+    grid-template-rows: repeat(3, 400px);
+    /* justify-items: center; */
 }
 
 .cards {
@@ -244,80 +259,171 @@ input#searchBar {
     height: 100%;
 }
 
-.spacer {
-    background: #ccc;
-    width: 18rem;
-    height: 5rem;
-}
-
 .card {
-    background: URL("/Images/Quizz_img.jpg") center center no-repeat;
+    background: URL("../../images/quizimg.jpg") center center no-repeat;
     background-size: cover;
-    width: 18rem;
-    height: 20rem;
+    width: 333px;
+    height: 400px;
     font-family: "Lobster Two";
     overflow: hidden;
     border-radius: 20px;
+    box-shadow: 0px 0px 10px 1px hsl(0deg 0% 0% / 25%);
 }
 
 .card-title {
     background: rgb(255 255 255 / 95%);
-    width: 18rem;
-    height: 4rem;
+    width: 100%;
+    height: 72px;
     text-align: center;
     margin: 0px;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 30px;
 }
 
 a.btn.btn-primary {
     height: 50px;
     background: linear-gradient(#3565BC, #114198);
-    color: wheat;
-    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Bellota;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/*************** QUIZZ CARDS FIN ******************/
+
+.h2-podium {
+    font-size: 36px;
+    text-align: center;
+    margin: 124px;
+}
+
+/****************** PODIUM DEBUT ***************/
+
+.fa-solid,
+.fas {
+    font-weight: 900;
+}
+
+#first {
+    color: #edc267;
+    font-size: 250px;
+    position: relative;
+}
+
+#second {
+    color: #707070;
+    font-size: 200px;
+    top: 51px;
+}
+
+#third {
+    color: #9b6c18;
+    font-size: 200px;
+    top: 46px;
+}
+
+.FirstBlock {
+    background: #edc267;
+    height: 347px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* a.btn {
-        bottom: 50px;
-    } */
-.Ranking {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-}
-
-h3 {
-    text-align: center;
-    margin: 124px;
-}
-
-.fa-solid,
-.fas {
-    font-weight: 900;
-    font-size: 200px;
-}
-
-.FirstBlock {
-    background: red;
-    width: 100px;
-    height: 120px;
-}
-
 .SecondBlock {
-    background: yellow;
-    width: 100px;
-    height: 120px;
+    background: #707070;
+    height: 160px;
+    top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .ThirdBlock {
-    background: black;
-    width: 100px;
-    height: 120px;
+    background: #9b6c18;
+    height: 160px;
+    top: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 
-/* } */
+p.p-podium {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+}
+.Second, .Third, .First {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 33.3%;
+}
+.Blocks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    width: 1040px;
+}
+
+/****************** PODIUM FIN ***************/
+
+/* RANKING DEBUT */
+
+button.ranking {
+    width: 425px;
+    color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 9px 0px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(#3565BC, #114198);
+    font-family: Bellota;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 48px auto 96px auto;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.txt-ranking {
+    padding: 0 0 0 25px;
+    text-decoration: none;
+}
+
+/* QUIZ CREATION DEBUT */
+
+button.creation {
+    width: 365px;
+    color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 9px 0px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(#EDC267, #9a6748);
+    font-family: Bellota;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 34px 0 96px 0;
+    cursor: pointer;
+}
+.txt-creation {
+    padding: 0 0 0 25px;
+}
+#mail-gcu {
+    color : #9a6748;
+}
