@@ -16,6 +16,9 @@ class UserIdentified extends UserGuest {
     #[ORM\Column()]
     protected string $first_name;
 
+    #[ORM\Column()]
+    protected string $sexe;
+
     #[ORM\Column(type: 'date')]
     protected DateTime $birthday;
 
@@ -25,8 +28,10 @@ class UserIdentified extends UserGuest {
     #[ORM\Column()]
     protected string $password;
 
-    #[ORM\OneToOne(targetEntity : Ladder::class, mappedBy : 'player')]
-    protected Ladder $ladder;
+    #[ORM\OneToMany(targetEntity : LadderUser::class, mappedBy : 'user', cascade: ['persist', 'remove'])]
+    // CASCADE permet d'executer automatiquement des actions sur toutes les entitées liées. 
+    // Donc ici, de 'persist' et de 'remove' UserIdentified AINSI que les entitées liées LadderUsers.
+    protected Collection $ladderUsers;
 
     #[ORM\OneToMany(targetEntity : Picture::class, mappedBy : 'user')]
     protected Collection $pictures;
@@ -36,16 +41,16 @@ class UserIdentified extends UserGuest {
     protected Collection $favorites_quizz;
     
     // CONSTRUCTOR
-    public function __construct(int $id, string $pseudo, int $elo, string $last_name, string $first_name, DateTime $birthday, string $email, string $password, Ladder $ladder) {
-        $this->id = $id;
+    public function __construct(string $pseudo, int $elo, string $last_name, string $first_name, String $sexe, DateTime $birthday, string $email, string $password) {
         $this->pseudo = $pseudo;
         $this->elo = $elo;
         $this->last_name = $last_name;
         $this->first_name = $first_name;
+        $this->sexe = $sexe;
         $this->birthday = $birthday;
         $this->email = $email;
         $this->password = $password;
-        $this->ladder = $ladder;
+        $this->ladderUsers = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     // METHODS
@@ -83,6 +88,24 @@ class UserIdentified extends UserGuest {
     public function setFirstName(string $first_name): self
     {
         $this->first_name = $first_name;
+
+        return $this;
+    }
+    
+    /**
+     * Get the value of sexe
+     */
+    public function getSexe(): string
+    {
+        return $this->sexe;
+    }
+
+    /**
+     * Set the value of sexe
+     */
+    public function setSexe(string $sexe): self
+    {
+        $this->sexe = $sexe;
 
         return $this;
     }
@@ -142,19 +165,19 @@ class UserIdentified extends UserGuest {
     }
 
     /**
-     * Get the value of ladder
+     * Get the value of ladderUsers
      */
-    public function getLadder(): Ladder
+    public function getLadderUsers(): Collection
     {
-        return $this->ladder;
+        return $this->ladderUsers;
     }
 
     /**
-     * Set the value of ladder
+     * Set the value of ladderUsers
      */
-    public function setLadder(Ladder $ladder): self
+    public function setLadderUsers(LadderUser $ladderUsers): self
     {
-        $this->ladder = $ladder;
+        $this->ladderUsers = $ladderUsers;
 
         return $this;
     }
