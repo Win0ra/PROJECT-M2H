@@ -147,6 +147,10 @@ p.mdp-oublie {
     display: flex;
     justify-content: space-between;
 }
+/* Masquer le bouton Google natif pour respecter notre design */
+/* #g_id_onload, .g_id_signin {
+    display: none !important;
+} */
 
 .rs-button{
     width: 245px;
