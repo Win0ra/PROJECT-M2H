@@ -3,8 +3,7 @@
 include './navbar.php';
 // NAVBAR END
 
-
-// $POST & $FILE START 
+// INSCRIPTION D'UN UTILISATEUR - LOGIQUE MÉTIER START
     if (empty($_SESSION)) {
         session_start();
     } 
@@ -15,28 +14,67 @@ include './navbar.php';
     require_once dirname(__DIR__) . "/back/src/recover/index.php";
 
     if (!empty($_POST)){
-        $isPasswordConfirmed = false;
+        $birthday = new DateTime($_POST['birthday']);
+        $password = $_POST['password'];
+        $email = $_POST['email'];
+        // -----
+        $isDateCorrect = false;
+        $isPasswordCorrect = false;
         $isEmailUnique = true;
         $isSucces = false;
-
-        // VERIFICATION DE LA CONFIRMATION DU MOT DE PASSE
-        if (!empty($_POST['password']) && $_POST['password'] === $_POST['confirmation']) {
-            $isPasswordConfirmed = true;
+        
+        // VÉRIFICATION DE LA DATE
+        $currentDate = new DateTime();
+        if ($birthday < $currentDate) {
+            $isDateCorrect = true;
         }else{
             ?>
             <div class="alert alert-danger d-flex align-items-center bandeau" role="alert">
                 <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
                 <div>
-                    La confirmation du mot de passe a échoué.
+                    La date de naissance est incorrect.<br />Veuillez sélectionner une date inférieur à la date du jour.
                 </div>
             </div>
             <?php
         }
 
-        // VERIFICATION D'UN EMAIL UNIQUE
-        if(!empty($allUserIdentified) && $isPasswordConfirmed) {
+        // VÉRIFICATION DU MOT DE PASSE : FORMAT + CONFIRMATION
+        if (!empty($password)) {
+            // FORMAT
+            $pattern = '/^(?=.*[A-Z])(?=(.*\d){2,}).{8,}$/';
+            if (!preg_match($pattern, $password)) {
+                ?>
+                <div class="alert alert-danger d-flex align-items-center bandeau" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                    <div>
+                        Le mot de passe doit contenir :<br/>
+                        - 8 caractères<br/>
+                        - 1 majuscule<br/>
+                        - 2 chiffres<br/>
+                    </div>
+                </div>
+                <?php 
+            }else{
+                // CONFIRMATION
+                if ($password === $_POST['confirmation']) {
+                    $isPasswordCorrect = true;
+                }else{
+                    ?>
+                    <div class="alert alert-danger d-flex align-items-center bandeau" role="alert">
+                        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                        <div>
+                            La confirmation du mot de passe a échoué.
+                        </div>
+                    </div>
+                    <?php
+                }
+            }
+        }
+
+        // VÉRIFICATION D'UN EMAIL UNIQUE
+        if(!empty($allUserIdentified) && $isPasswordCorrect) {
             foreach($allUserIdentified as $user) {
-                if ($user->getEmail() === $_POST['email']) {
+                if ($user->getEmail() === $email) {
                     $isEmailUnique = false;
                 }
             }
@@ -52,12 +90,10 @@ include './navbar.php';
             }
         }
 
-        // CREATION D'UN NOUVEL UTILISATEUR
-        if ($isPasswordConfirmed && $isEmailUnique) {
+        // CRÉATION D'UN NOUVEL UTILISATEUR
+        if ($isDateCorrect && $isPasswordCorrect && $isEmailUnique) {
             $elo = 0;
-            $birthday = new DateTime($_POST['birthday']);
-            $securePassword = password_hash($_POST['password'], PASSWORD_DEFAULT);
-
+            $securePassword = password_hash($password, PASSWORD_DEFAULT);
             $user = new UserIdentified (
                 $_POST['pseudo'],
                 $elo,
@@ -65,7 +101,7 @@ include './navbar.php';
                 $_POST['prenom'],
                 $_POST['sexe'], 
                 $birthday,
-                $_POST['email'],
+                $email,
                 $securePassword,
             );
             $entityManager->persist($user);
@@ -89,7 +125,9 @@ include './navbar.php';
             } 
         }
     }
+// INSCRIPTION D'UN UTILISATEUR - LOGIQUE MÉTIER END
 ?>
+
 
 
 <!----- FORMULAIRE START ----->
