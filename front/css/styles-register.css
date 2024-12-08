@@ -68,7 +68,7 @@ h1 {
     margin-top: 20px;
 }
 
-.h1-inscri {
+.h1-register {
     margin: 0px 0px 64px 0px;
 }
 
@@ -152,7 +152,7 @@ option {
     padding: 8px 0 0 0;
 }
 
-.select-sexe{
+.select-sex{
     position: relative;
 }
 
@@ -219,23 +219,23 @@ option {
     outline: none;
 }
 
-.centres.interets {
+.center.interest {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 32px 0 0 0 ;
 }
 
-.centres-interets {
+.interests {
     display: flex;
     align-items: center;
 }
 
-p.p-centres-interets {
+p.p-interests {
     margin: 0 0 8px 32px;
 }
 
-.txt-carte{
+.txt-card{
     font-size: 20px;
     font-weight: bold;
 }
@@ -257,7 +257,7 @@ input#checkbox {
     padding: 0 0 0 8px;
 }    
 
-.inscription {
+.register {
     width: 100%;
     color: white;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -273,7 +273,7 @@ input#checkbox {
     align-items: center;
     justify-content: center;
 }    
-.txt-inscription {
+.txt-register {
     color: white;
     text-decoration: none;
     font-size: 24px;

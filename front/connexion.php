@@ -71,7 +71,7 @@ include './navbar.php';
     </div>
 </div>
             <div class="no-compte">
-                <p class="souvenir">Vous n'avez pas encore de compte ? <a href="./inscription.php">Inscrivez-vous</a></p>
+                <p class="memorize">Vous n'avez pas encore de compte ? <a href="./register.php">Inscrivez-vous</a></p>
             </div>
         </form>
 
@@ -93,7 +93,7 @@ include './navbar.php';
                     $_SESSION['user_id'] = $useridentified['id'];
                     $_SESSION['user_last_name'] = $useridentified['last_name'];
                     $_SESSION['user_first_name'] = $useridentified['first_name'];
-                    header('Location: inscription.php');
+                    header('Location: register.php');
                     exit();
                 } else {
                     echo 'Adresse e-mail ou mot de passe incorrect.';

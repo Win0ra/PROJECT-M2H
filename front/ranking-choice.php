@@ -15,40 +15,40 @@ include './navbar.php';
 
 <body>
     <div class="content">
-        <div class="list-classements">
+        <div class="list-rankings">
             <a href="./theme-ranking.php">
-                <div class="carte-quiz"><i class="fa-solid fa-basketball"></i>
-                    <p class="titre-carte">Sport</p>
+                <div class="card-quiz"><i class="fa-solid fa-basketball"></i>
+                    <p class="title-card">Sport</p>
                 </div>
             </a>
             <a href="./theme-ranking.php">
-                <div class="carte-quiz"><i class="fa-solid fa-flask-vial"></i>
-                    <p class="titre-carte">Science</p>
+                <div class="card-quiz"><i class="fa-solid fa-flask-vial"></i>
+                    <p class="title-card">Science</p>
                 </div>
             </a>
             <a href="./theme-ranking.php">
-                <div class="carte-quiz"><i class="fa-solid fa-music"></i>
-                    <p class="titre-carte">Music</p>
+                <div class="card-quiz"><i class="fa-solid fa-music"></i>
+                    <p class="title-card">Music</p>
                 </div>
             </a>
             <a href="./theme-ranking.php">
-                <div class="carte-quiz"><i class="fa-solid fa-video"></i>
-                    <p class="titre-carte">Film</p>
+                <div class="card-quiz"><i class="fa-solid fa-video"></i>
+                    <p class="title-card">Film</p>
                 </div>
             </a>
             <a href="./theme-ranking.php">
-                <div class="carte-quiz"><i class="fa-solid fa-feather"></i>
-                    <p class="titre-carte">Histoire</p>
+                <div class="card-quiz"><i class="fa-solid fa-feather"></i>
+                    <p class="title-card">Histoire</p>
                 </div>
             </a>
             <a href="./theme-ranking.php">
-                <div class="carte-quiz"><i class="fa-solid fa-earth-americas"></i>
-                    <p class="titre-carte">Géographie</p>
+                <div class="card-quiz"><i class="fa-solid fa-earth-americas"></i>
+                    <p class="title-card">Géographie</p>
                 </div>
             </a>
             <a href="./theme-ranking.php">
-                <div class="carte-quiz"><i class="fa-solid fa-gamepad"></i>
-                    <p class="titre-carte">Jeux Vidéos</p>
+                <div class="card-quiz"><i class="fa-solid fa-gamepad"></i>
+                    <p class="title-card">Jeux Vidéos</p>
                 </div>
             </a>
         </div>

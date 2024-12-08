@@ -78,13 +78,13 @@ i.fa-solid.fa-image:hover {
     text-shadow: 5px 5px 0px #eefffe;
 }
 
-.titre-et-button {
+.title-and-button {
     display: flex;
     margin: 0 0 48px 0;
     align-items: center;
 }
 
-.photo-profil {
+.picture-profil {
     min-width: 210px;
     height: 210px;
     border-radius: 100%;
@@ -114,7 +114,7 @@ input#avatar {
     margin: 0 0 56px 0;
 }
 
-.infos-persos {
+.infos-perso {
     display: flex;
     flex-wrap: wrap;
 }
@@ -124,25 +124,25 @@ input#avatar {
     display: flex;
 }
 
-span.souligne{
+span.underline{
     font-weight: bold;
     text-decoration: underline;
 }
 
-.mes-classement {
+.my-ranking {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     margin: 0 0 68px 0;
 }
 
-.list-classements {
+.list-rankings {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.btn-classement {
+.btn-ranking {
     width: 365px;
     color: white;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -157,7 +157,7 @@ span.souligne{
     justify-content: center;
 }
 
-.carte-quiz {
+.card-quiz {
     background: white;
     width: 157px;
     height: 157px;
@@ -172,11 +172,11 @@ span.souligne{
     transition: all 0.2s ease-in-out;
 }
 
-.carte-quiz i {
+.card-quiz i {
     font-size: 68px;
 }
 
-.carte-quiz:hover {
+.card-quiz:hover {
     border: 1px solid #edc267;
     box-shadow: 0px 0px 20px 0px hwb(41deg 40% 7% / 75%);
 }
@@ -209,13 +209,13 @@ span.souligne{
     color: violet;
 }
 
-p.titre-carte {
+p.title-card {
     margin: 16px 0 0 0;
     font-size: 20px;
     font-weight: bold;
 }
 
-.btn-securite {
+.btn-security {
     background: white;
     width: 68px;
     height: 29px;
@@ -230,7 +230,7 @@ p.titre-carte {
     cursor: pointer;
 }
 
-.cercle-jaune {
+.yellow-circle {
     height: 23px;
     width: 23px;
     background: #EDC267;
@@ -238,14 +238,14 @@ p.titre-carte {
     transition-duration: 0.8s;
 }
 
-.list-btn-securite {
+.list-btn-security {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.btn-et-txt {
+.btn-and-txt {
     display: flex;
     width: 25%;
     margin: 0 0 40px 0;
@@ -256,7 +256,7 @@ p.param {
     margin: 0 0px 0 16px;
 }
 
-.securite {
+.security {
     margin: 0 0 24px 0;
 }
 
@@ -264,6 +264,6 @@ a {
     text-decoration: none;
 }
 
-a .carte-quiz .titre-carte {
+a .card-quiz .title-card {
     color: black;
 }
