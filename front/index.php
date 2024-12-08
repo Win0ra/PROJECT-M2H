@@ -1,7 +1,18 @@
 <?php
+session_start();
 
 include './navbar.php';
 
+if ($_SESSION['isAuthentified']) {
+    ?>
+    <div class="alert alert-success d-flex align-items-center bandeau" role="alert">
+        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+        <div>
+            Votre inscription s'est déroulée avec succès.
+        </div>
+    </div>
+    <?php
+}
 ?>
 
 <!DOCTYPE html>
@@ -11,6 +22,7 @@ include './navbar.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil La Bouzinerie</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./css/styles.css" media="all" />
     <script src="https://kit.fontawesome.com/e98829b701.js" crossorigin="anonymous"></script>
 </head>
@@ -32,10 +44,74 @@ include './navbar.php';
         <!-- PRESENTATION FIN -->
 
         <!-- SEARCHBAR DEBUT -->
+        <!-- <div id="SearchBar"><i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="searchBar" placeholder="Rechercher un quiz...">
+        </div> -->
+        
         <div id="SearchBar"><i class="fa-solid fa-magnifying-glass"></i>
             <input type="text" id="searchBar" placeholder="Rechercher un quiz...">
+            <script>
+            $(document).ready(function () {
+            $("#search-bar").on("input", function () {
+                const query = $(this).val();
+                if (query.length > 2) { 
+                    $.ajax({
+                        url: "index.php", 
+                        method: "GET",  
+                        data: { q: query }, 
+                        dataType: "json", 
+                        success: function (data) {
+                            let html = "";
+                            if (data.length > 0) {
+                                data.forEach(item => {
+                                    html += `<div class="result-item">${item.name}</div>`;
+                                });
+                            } else {
+                                html = "<div>Aucun résultat trouvé.</div>";
+                            }
+                            $("#results").html(html); 
+                        },
+                        error: function () {
+                            $("#results").html("<div>Une erreur est survenue. Veuillez réessayer.</div>");
+                        }
+                    });
+                } else {
+                    $("#results").empty(); 
+                }
+            });
+        });
+    </script>
+    <?php
+
+
+if (isset($_GET['q'])) {
+    $query = htmlspecialchars($_GET['q']); // Échapper les caractères spéciaux pour éviter les failles XSS
+
+    // Connexion à la base de données
+    try {
+        $pdo = new PDO('mysql:host=localhost;dbname=la_bouzinerie', 'username', 'password');
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    } catch (PDOException $e) {
+        echo json_encode(['error' => 'Erreur de connexion à la base de données']);
+        exit;
+    }
+
+    // Requête SQL
+    $stmt = $pdo->prepare("SELECT name FROM items WHERE name LIKE :query LIMIT 10");
+    $stmt->execute(['query' => '%' . $query . '%']);
+    $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    echo json_encode($results);
+} else {
+    echo json_encode([]);
+}
+?>
         </div>
+        
+
+
         <!-- SEARCHBAR FIN -->
+
         <h3>Les quizs du moment</h3>
         <!-- CONTENT DEBUT -->
         <div class="content">

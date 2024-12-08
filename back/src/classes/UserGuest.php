@@ -33,8 +33,7 @@ class UserGuest {
     protected Collection $avatars; // random avatar
 
     // CONSTRUCTOR
-    public function __construct(int $id, string $pseudo, int $elo = 0) {
-        $this->id = $id;
+    public function __construct(string $pseudo, int $elo = 0) {
         $this->pseudo = $pseudo;
         $this->elo = $elo;
     }

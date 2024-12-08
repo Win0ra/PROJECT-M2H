@@ -1,7 +1,7 @@
 <?php
+session_start();
 
 include './navbar.php';
-
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +19,7 @@ include './navbar.php';
 <body>
     <div class="content">
         <h1>Mon compte</h1>
-        <h2>Bienvenue dans votre interface [Nom Utilisateur]</h2>
+        <h2>Bienvenue dans votre interface <?php echo($_SESSION['firstname']) ?></h2>
         <div class="mes-informations">
             <div class="titre-et-button">
                 <h3>Mes informations</h3>
