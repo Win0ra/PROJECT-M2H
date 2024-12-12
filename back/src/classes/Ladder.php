@@ -14,24 +14,17 @@ class Ladder {
     #[ORM\Column(type: 'integer')]
     private int $id;
 
-    #[ORM\OneToOne(targetEntity : UserIdentified::class, inversedBy: 'ladder')]
-    private UserIdentified $player;
-
-    #[ORM\Column(type: 'integer')]
-    private int $elo;
-
-    #[ORM\Column(type: 'integer')]
-    private int $rank;
+    #[ORM\OneToMany(targetEntity : LadderUser::class, mappedBy: 'ladder', cascade: ['persist', 'remove'])] 
+    // CASCADE permet d'executer automatiquement des actions sur toutes les entitées liées. 
+    // Donc ici, de 'persist' et de 'remove' Ladder AINSI que les entitées liées LadderUsers.
+    private Collection $ladderUsers;
 
     #[ORM\ManyToOne(targetEntity : Topic::class, inversedBy: 'ladders')]
     private Topic $topic;
 
     // CONSTRUCTOR
-    public function __construct(int $id, UserIdentified $player, int $elo, int $rank, Topic $topic) {
-        $this->id = $id;
-        $this->player = $player;
-        $this->elo = $elo;
-        $this->rank = $rank;
+    public function __construct(Topic $topic) {
+        $this->ladderUsers = new \Doctrine\Common\Collections\ArrayCollection();
         $this->topic = $topic;
     }
 
@@ -57,55 +50,19 @@ class Ladder {
     }
 
     /**
-     * Get the value of player
+     * Get the value of ladderUser
      */
-    public function getPlayer(): UserIdentified
+    public function getLadderUsers(): Collection
     {
-        return $this->player;
+        return $this->ladderUsers;
     }
 
     /**
-     * Set the value of player
+     * Set the value of ladderUser
      */
-    public function setPlayer(UserIdentified $player): self
+    public function setLadderUsers(LadderUser $ladderUser): self
     {
-        $this->player = $player;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of elo
-     */
-    public function getElo(): int
-    {
-        return $this->elo;
-    }
-
-    /**
-     * Set the value of elo
-     */
-    public function setElo(int $elo): self
-    {
-        $this->elo = $elo;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of rank
-     */
-    public function getRank(): int
-    {
-        return $this->rank;
-    }
-
-    /**
-     * Set the value of rank
-     */
-    public function setRank(int $rank): self
-    {
-        $this->rank = $rank;
+        $this->ladderUsers[] = $ladderUser;
 
         return $this;
     }

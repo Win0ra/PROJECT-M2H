@@ -4,9 +4,14 @@ use LaBouzinerie\Classes\Choice;
 use LaBouzinerie\Classes\Question;
 use LaBouzinerie\Classes\Quizz;
 use LaBouzinerie\Classes\Topic;
+use LaBouzinerie\Classes\UserGuest;
+use LaBouzinerie\Classes\UserIdentified;
 
 require_once dirname(__DIR__).'/../bootstrap.php';
-
+// USER IDENTIFIED
+$userIdentifiedRepository = $entityManager->getRepository(UserIdentified::class);
+$allUserIdentified = $userIdentifiedRepository->findAll();
+ 
 // TOPIC
 $topicRepository = $entityManager->getRepository(Topic::class);
 $allTopic = $topicRepository->findAll();
