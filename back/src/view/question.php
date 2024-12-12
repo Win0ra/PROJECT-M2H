@@ -22,6 +22,9 @@
 <body>
     <?php
     require_once dirname(__DIR__) . '/recover/index.php';
+    var_dump(INPUT_GET);die; 
+    $quizz = filter_input(INPUT_GET, 'quizz_id', FILTER_SANITIZE_NUMBER_INT);
+    $page = filter_input(INPUT_GET, 'page', FILTER_SANITIZE_NUMBER_INT);
     $questionByQuizz = $questionRepository->findBy(['quizz' => $_GET['quizz_id']]); // Récupération des questions liée au quizz dont l'id est celui envoyé en GET via la variable 'quizz_id'
     if (!is_null($questionByQuizz[$_GET['page'] - 1])) {
         $choiceByQuestion = $choiceRepository->findBy(['question' => $questionByQuizz[$_GET['page'] - 1]->getId()]);
