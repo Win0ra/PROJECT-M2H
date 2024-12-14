@@ -16,63 +16,139 @@
                 $('.lightbox').toggle();
             });
         });
+    document.addEventListener('DOMContentLoaded', function () {
+        const answers = document.querySelectorAll('.answers .answer');
+        answers.forEach(answer => {
+        answer.style.display = 'flex'; // Force l'affichage au cas où
+        answer.style.visibility = 'visible';
+    });
+});
+
     </script>
 </head>
 
 <body>
-    <?php
-    require_once dirname(__DIR__) . '/recover/index.php';
-    var_dump(INPUT_GET);die; 
-    $quizz = filter_input(INPUT_GET, 'quizz_id', FILTER_SANITIZE_NUMBER_INT);
-    $page = filter_input(INPUT_GET, 'page', FILTER_SANITIZE_NUMBER_INT);
-    $questionByQuizz = $questionRepository->findBy(['quizz' => $_GET['quizz_id']]); // Récupération des questions liée au quizz dont l'id est celui envoyé en GET via la variable 'quizz_id'
-    if (!is_null($questionByQuizz[$_GET['page'] - 1])) {
-        $choiceByQuestion = $choiceRepository->findBy(['question' => $questionByQuizz[$_GET['page'] - 1]->getId()]);
-    }
-    // $choiceByQuestion = $choiceRepository->findBy(['question'=>$questionByQuizz[$_GET['page']-1]->getId()]);
-    // var_dump($choiceByQuestion);die;// Récupération de tous les choix correspondant à l'id de la question du tableau $questionByQuizz à l'index indiqué par la variable $GET['page']
-    // VOIR POUR RAJOUTER UN ATTRIBUT IMAGE A LA CLASSE QUIZZ
-    ?>
-    <div class="statement">
-        <h1><?php echo $questionByQuizz[$_GET['page'] - 1]->getStatement() ?></h1>
-    </div>
-    <?php
-    shuffle($choiceByQuestion);
-    ?>
-    <div class="content">
-        <img id="img" src="./../assets/img/Teldrassil.jpg" alt="Elfe de la nuit - World of Warcraft">
-        <div class="answers">
-            <a class="answer one" href="?quizz_id=<?php echo $_GET['quizz_id'] ?>&page=<?php echo $_GET['page'] + 1 ?>">
-                <p class="letter">A</p>
-                <p class="item"><?php echo $choiceByQuestion[0]->getName() ?></p>
-            </a>
+<?php
+require_once dirname(__DIR__) . '/recover/index.php';
 
-            <a class="answer two" href="?quizz_id=<?php echo $_GET['quizz_id'] ?>&page=<?php echo $_GET['page'] + 1 ?>">
-                <p class="letter">B</p>
-                <p class="item"><?php echo $choiceByQuestion[1]->getName() ?></p>
-            </a>
+// Validate and sanitize input
+$quizz_id = isset($_GET['quizz_id']) ? intval($_GET['quizz_id']) : null;
+$page = isset($_GET['page']) ? intval($_GET['page']) : 1;
 
-            <a class="answer tree" href="?quizz_id=<?php echo $_GET['quizz_id'] ?>&page=<?php echo $_GET['page'] + 1 ?>">
-                <p class="letter">C</p>
-                <p class="item"><?php echo $choiceByQuestion[2]->getName() ?></p>
-            </a>
+// Valide l'existence du quizz via son ID 
+if ($quizz_id === null) {
+    die("Invalid quiz ID");
+}
+
+// Chercher le quizz et les questions
+$quizz = $quizzRepository->find($quizz_id);
+if (!$quizz) {
+    die("Quiz not found");
+}
+
+$questionByQuizz = $questionRepository->findBy(['quizz' => $quizz]);
+
+// Vérifie que les questions existent 
+if (empty($questionByQuizz)) {
+    die("No questions found for this quiz");
+}
+
+// Valide le numéro de page
+$totalQuestions = count($questionByQuizz);
+if ($page < 1 || $page > $totalQuestions) {
+    die("Invalid page number");
+}
+
+// Affiche la question actuelle et le choix de réponses
+$currentQuestion = $questionByQuizz[$page - 1];
+$choiceByQuestion = $choiceRepository->findBy(['question' => $currentQuestion]);
+
+// Rendre les réponses aléatoires
+shuffle($choiceByQuestion);
+
+// Détermine la page suivante si elle existe
+$nextPage = ($page < $totalQuestions) ? $page + 1 : null;
+
+// Optional: Get quiz image if available
+$quizImage = method_exists($quizz, 'getImage') ? $quizz->getImage() : "./../assets/img/Teldrassil.jpg";
+?>
+
+        <div class="statement">
+            <h1><?php echo htmlspecialchars($currentQuestion->getStatement()); ?></h1>
         </div>
-    </div>
+        <div class="content">
+            <img id="img" src="<?php echo htmlspecialchars($quizImage); ?>" alt="Quiz Image">
+            <div class="answers">
+    <?php
+        $letters = ['A', 'B', 'C', 'D']; // Adaptez si nécessaire
+        foreach ($choiceByQuestion as $index => $choice) {
+        $nextPageParam = $nextPage ? "?quizz_id={$quizz_id}&page={$nextPage}" : "#";
+    ?>
+        <a class="answer <?php echo strtolower($letters[$index]); ?>" 
+            href="<?php echo htmlspecialchars($nextPageParam); ?>" 
+            data-correct="<?php echo $choice->getName() === $currentQuestion->getAnswer() ? 'true' : 'false'; ?>">
+            <p class="letter"><?php echo $letters[$index]; ?></p>
+            <p class="item"><?php echo htmlspecialchars($choice->getName()); ?></p>
+        </a>
+    <?php } ?>
+</div>
 
-    <!-- LightBox debut -->
-    <div class="lightbox">
-        <div class="main">
-            <div id="fermer">X</div>
-            <img id="zoom" src="./../assets/img/Teldrassil.jpg" />
         </div>
-    </div>
-    <!-- LightBox fin -->
 
-    <div class="footer">
-        <p>Question : <?php echo $_GET['page'] ?>/10</p>
-        <p>0:30</p>
-        <p>Réponses : 0/4</p>
-    </div>
+        <!-- LightBox -->
+        <div class="lightbox">
+            <div class="main">
+                <div id="fermer">X</div>
+                <img id="zoom" src="<?php echo htmlspecialchars($quizImage); ?>" />
+            </div>
+        </div>
 
-</body>
-</html>
+        <div class="footer">
+            <p>Question: <?php echo "{$page}/{$totalQuestions}"; ?></p>
+            <p id="timer">0:30</p>
+            <p id="score">Answers: 0/<?php echo $totalQuestions; ?></p>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let timer = 30; // seconds
+                let timerElement = document.getElementById('timer');
+                let scoreElement = document.getElementById('score');
+                let correctAnswers = 0;
+
+                // Timer countdown
+                let countdown = setInterval(function() {
+                    timer--;
+                    timerElement.textContent = `0:${timer < 10 ? '0' : ''}${timer}`;
+
+                    if (timer <= 0) {
+                        clearInterval(countdown);
+
+                // Redirige vers la page suivante
+                        window.location.href = '<?php echo $nextPageParam; ?>'; 
+                    }
+                }, 1000);
+
+                // Answer click handling
+                document.querySelectorAll('.answer').forEach(answer => {
+                    answer.addEventListener('click', function(e) {
+                        if (this.getAttribute('data-correct') === 'true') {
+                            correctAnswers++;
+                            scoreElement.textContent = `Answers: ${correctAnswers}/${<?php echo $totalQuestions; ?>}`;
+                        }
+                    });
+                });
+
+                // Lightbox 
+                document.getElementById('img').addEventListener('click', function() {
+                    document.querySelector('.lightbox').style.display = 'flex';
+                });
+
+                document.getElementById('fermer').addEventListener('click', function() {
+                    document.querySelector('.lightbox').style.display = 'none';
+                });
+            });
+        </script>
+    </body>
+
+    </html>
