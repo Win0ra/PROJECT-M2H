@@ -1,5 +1,4 @@
 <?php
-
 use LaBouzinerie\Classes\Choice;
 use LaBouzinerie\Classes\Question;
 use LaBouzinerie\Classes\Quizz;
@@ -19,6 +18,7 @@ $allTopic = $topicRepository->findAll();
 // QUIZZ
 $quizzRepository = $entityManager->getRepository(Quizz::class);
 $allQuizz = $quizzRepository->findAll();
+
 // FAIRE UNE FONCTION QUI PERMET DE DONNER UN TABLEAU DE CRITERE POUR LE findBy()
 // function feedFindBy (array $criteria) {
 //     $quizzByTopic = $entityManager->getRepository(Quizz::class)->findBy($criteria);

@@ -8,21 +8,22 @@
     <link rel="stylesheet" type="text/css" href="./../css/insert/topic.css" media="all"/>
 </head>
 <body>
-    <h1>Nouvelle catégorie de Quizz</h1>
+    <h1>Nouveau thème</h1>
     <h5>
-        Pour ajouter une nouvelle catégorie à la base de donnée,
+        Pour ajouter un thème à la base de donnée,
         veuillez charger un fichier Json qui respecte le schéma suivant :
     </h5>
     <hr/>
-    <p class="scheme">
-        {<br/>
-            "<span>name</span>" : "...",<br/>
-            "<span>description</span>" : "...",<br/>
-            "<span>color</span>" : "..."<br/>
-        }
+    <!-- La balise <pre> permet d'afficher des données structurées comme un schéma JSON -->
+    <pre class="scheme">
+    {
+        "name" : "...",
+        "description" : "...",
+        "color" : "...",
+    }
+    </pre>
     <hr/>
-    </p>
-    <div>
+    <div style="margin-bottom: 2rem;">
         <form action="" method="post" enctype="multipart/form-data">
             <input type="file" name="new_topic" required/>
             <input type="submit" value="Valider" class="submit"/>
@@ -127,7 +128,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (!empty($duplicate_color_table)) {
             ?>
             <div class="alert alert-danger" role="alert">
-            Un thème avec la même couleur existe déjà.<br>Veuillez la modifier.
+            Un thème avec la même couleur existe déjà.
             </div>
 
             <!-- Détail des doublons  -->
