@@ -131,7 +131,7 @@ input {
 }
 
 #age{
-    width: 157px;
+    width: 190px;
 }
 
 select#sexe {
@@ -286,4 +286,11 @@ a{
 
 .fa-pen-to-square{
     background-image: white;
+}
+
+/* BOOTSTRAP */
+.alert {
+    height: 20vh;
+    width: 75vw;
+    margin: 0 auto 2rem auto;
 }
