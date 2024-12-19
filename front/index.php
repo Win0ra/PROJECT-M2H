@@ -1,9 +1,12 @@
 <?php
 session_start();
 
-include './navbar.php';
+include './navbar.php'; // Inclusion du menu de navigation
 
-if ($_SESSION['isAuthentified']) {
+require_once dirname(__DIR__).'/back/src/recover/index.php'; // Inclusion de vos fonctions backend
+
+// Vérification de la session utilisateur
+if (isset($_SESSION['isAuthentified']) && $_SESSION['isAuthentified']) {
     ?>
     <div class="alert alert-success d-flex align-items-center bandeau" role="alert">
         <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
@@ -29,198 +32,115 @@ if ($_SESSION['isAuthentified']) {
 
 <body>
     <div class="margin">
-        <!-- PRESENTATION DEBUT -->
+        <!-- PRESENTATION -->
         <div class="Presentation">
             <h1>La Bouzinerie</h1>
             <h2>La Bouzinerie, qu'est-ce que c'est ?</h2>
-            <p>Tout simplement l'histoire de 3 jeunes développeurs en herbe adorant les quizz animés (voire même
+            <p>Tout simplement l'histoire de 3 jeunes développeurs en herbe adorant les quiz animés (voire même
                 mouvementés) et qui se sont décidés à créer un site ludique et amusant.<br />
                 L'idée du nom nous vient de "bouzin" signifiant "vacarme", ce qui nous semble essentiel lorsqu'on
                 participe à des quizz entre ami.e.s !<br />
-                Ici vous pourrez tester vos connaissances, en apprendre de nouvelles et même créer vos propres quizz !<br />
+                Ici vous pourrez tester vos connaissances, en apprendre de nouvelles et même créer vos propres quiz !<br />
                 Nous espérons que vous vous amuserez autant que nous ici, seul.e ou en équipe !<br />
                 Lequel d'entre-vous va devenir le meilleur Bouzin ? &#x1F600</p>
         </div>
-        <!-- PRESENTATION FIN -->
 
-        <!-- SEARCHBAR DEBUT -->
-        <!-- <div id="SearchBar"><i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" id="searchBar" placeholder="Rechercher un quiz...">
-        </div> -->
-        
-        <div id="SearchBar"><i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" id="searchBar" placeholder="Rechercher un quiz...">
-            <script>
-            $(document).ready(function () {
-            $("#search-bar").on("input", function () {
-                const query = $(this).val();
-                if (query.length > 2) { 
-                    $.ajax({
-                        url: "index.php", 
-                        method: "GET",  
-                        data: { q: query }, 
-                        dataType: "json", 
-                        success: function (data) {
-                            let html = "";
-                            if (data.length > 0) {
-                                data.forEach(item => {
-                                    html += `<div class="result-item">${item.name}</div>`;
-                                });
-                            } else {
-                                html = "<div>Aucun résultat trouvé.</div>";
-                            }
-                            $("#results").html(html); 
-                        },
-                        error: function () {
-                            $("#results").html("<div>Une erreur est survenue. Veuillez réessayer.</div>");
-                        }
-                    });
-                } else {
-                    $("#results").empty(); 
+        <!-- SEARCHBAR -->
+        <div id="SearchBar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="searchBar" placeholder="Rechercher un quiz..." oninput="searchQuiz()">
+        </div>
+        <div id="results"></div>
+
+        <script type="text/javascript">
+            async function searchQuiz() {
+                const query = document.getElementById('searchBar').value.trim();
+                const resultsDiv = document.getElementById('results');
+
+                if (query.length === 0) {
+                    resultsDiv.innerHTML = ''; // Vider les résultats si barre de recherche vide
+                    return;
                 }
-            });
-        });
-    </script>
-    <?php
 
+                try {
+                    const response = await fetch(`../back/src/insert/search.php?q=${encodeURIComponent(query)}`);
+                    const data = await response.json();
+                    if (data.length > 0) {
+                        resultsDiv.innerHTML = data.map(item => `<p>${item.title}</p>`).join('');
+                    } else {
+                        resultsDiv.innerHTML = '<p> Aucun résultat trouvé. </p>';
+                    }
+                } catch (error) {
+                    resultsDiv.innerHTML = '<p> Erreur lors de la recherche. Veuillez réessayer plus tard. </p>';
+                    console.error(error);
+                }
+            }
+        </script>
 
-if (isset($_GET['q'])) {
-    $query = htmlspecialchars($_GET['q']); // Échapper les caractères spéciaux pour éviter les failles XSS
-
-    // Connexion à la base de données
-    try {
-        $pdo = new PDO('mysql:host=localhost;dbname=la_bouzinerie', 'username', 'password');
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    } catch (PDOException $e) {
-        echo json_encode(['error' => 'Erreur de connexion à la base de données']);
-        exit;
-    }
-
-    // Requête SQL
-    $stmt = $pdo->prepare("SELECT name FROM items WHERE name LIKE :query LIMIT 10");
-    $stmt->execute(['query' => '%' . $query . '%']);
-    $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-    echo json_encode($results);
-} else {
-    echo json_encode([]);
-}
-?>
-        </div>
-        
-
-
-        <!-- SEARCHBAR FIN -->
-
-        <h3>Les quizs du moment</h3>
-        <!-- CONTENT DEBUT -->
+        <!-- QUIZ CARDS -->
+        <h3>Nos quiz</h3>
         <div class="content">
-            <div class="card">
-                <div class="cards">
-                    <h5 class="card-title">League Of Legends</h5>
-                    <a href="#" class="btn btn-primary">Jouer</a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="cards">
-                    <h5 class="card-title">World Of Warcraft</h5>
-                    <a href="#" class="btn btn-primary">Jouer</a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="cards">
-                    <h5 class="card-title">Quizz 3</h5>
-                    <a href="#" class="btn btn-primary">Jouer</a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="cards">
-                    <h5 class="card-title">Quizz 4</h5>
-                    <a href="#" class="btn btn-primary">Jouer</a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="cards">
-                    <h5 class="card-title">Quizz 5</h5>
-                    <a href="#" class="btn btn-primary">Jouer</a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="cards">
-                    <h5 class="card-title">Quizz 6</h5>
-                    <a href="#" class="btn btn-primary">Jouer</a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="cards">
-                    <h5 class="card-title">Quizz 7</h5>
-                    <a href="#" class="btn btn-primary">Jouer</a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="cards">
-                    <h5 class="card-title">Quizz 8</h5>
-                    <a href="#" class="btn btn-primary">Jouer</a>
-                </div>
-            </div>
-            <div class="card">
-                <div class="cards">
-                    <h5 class="card-title">Quizz 9</h5>
-                    <a href="#" class="btn btn-primary">Jouer</a>
-                </div>
-            </div>
-        </div>
-        <!-- CONTENT FIN -->
+            <?php
+            // Affichage dynamique des cartes de quiz
+            $quizzes = [
+                'League of Legends', 'World of Warcraft', 'Dofus', 'Quizz 4', 'Quizz 5', 'Quizz 6', 'Quizz 7', 'Quizz 8', 'Quizz 9'
+            ];
 
-        <!-- BLOCKS DEBUT -->
+            foreach ($quizzes as $quiz) {
+                echo '
+                <div class="card">
+                    <div class="cards">
+                        <h5 class="card-title">'.htmlspecialchars($quiz).'</h5>
+                        <a href="#" class="btn btn-primary">Jouer</a>
+                    </div>
+                </div>';
+            }
+            ?>
+        </div>
+
+        <!-- PODIUM -->
         <h3 class="h2-podium">Classement des meilleurs bouzins du moment</h3>
         <div class="Blocks">
             <div class="Second">
                 <i class="fa-sharp fa-solid fa-trophy" id="second"></i>
                 <div class="SecondBlock">
-                    <p class="p-podium">[Nom du 2eme]</p>
+                    <p class="p-podium">Raoul</p>
                 </div>
             </div>
             <div class="First">
                 <i class="fa-sharp fa-solid fa-trophy" id="first"></i>
                 <div class="FirstBlock">
-                    <p class="p-podium">[Nom du 1er]</p>
+                    <p class="p-podium">M2H</p>
                 </div>
             </div>
             <div class="Third">
                 <i class="fa-sharp fa-solid fa-trophy" id="third"></i>
                 <div class="ThirdBlock">
-                    <p class="p-podium">[Nom du 3eme]</p>
+                    <p class="p-podium">Scrumy</p>
                 </div>
             </div>
         </div>
-        <!-- BLOCKS FIN -->
+        <!-- FIN PODIUM -->
 
         <!-- RANKING DEBUT -->
-        <a href="./ranking.php"><button class="ranking"><i class="fa-solid fa-ranking-star"></i>
+                <a href="./ranking.php"><button class="ranking"><i class="fa-solid fa-ranking-star"></i>
                 <p class="txt-ranking">Voir le Classement</p>
             </button></a>
         <!-- RANKING FIN -->
 
-        <!-- QUIZ CREATION DEBUT -->
+        <!-- CREATION -->
         <div class="Creation">
-            <h3 class="bouz">Lance-toi, crées ton propre quiz !</h3>
-            <p>Vous avez également la possibilité de créer votre quiz pour ensuite envoyer le lien à vos amis et tester leurs connaissances !
-                Si toi aussi tu as l'âme d'un créateur, clique sur le bouton ci-dessous !
-            </p>
+            <h3 class="bouz">Lance-toi, crée ton propre quiz !</h3>
+            <p>Vous pouvez créer votre quiz pour ensuite envoyer le lien à vos amis et tester leurs connaissances !</p>
             <a href="../back/src/create/"><button class="creation"><i class="fa-solid fa-pencil"></i>
-                    <p class="txt-creation">Créer un quiz</p>
-                </button></a>
+                <p class="txt-creation">Créer un quiz</p>
+            </button></a>
         </div>
     </div>
 </body>
 
 </html>
 
-
-
 <?php
-
-include './footer.php';
-
+include './footer.php'; // Footer
 ?>

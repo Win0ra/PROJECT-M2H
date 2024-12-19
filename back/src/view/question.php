@@ -1,72 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Questions</title>
-    <link rel="stylesheet" type="text/css" href="./../css/question.css" media="all"/>
-    <script type="text/javascript" src="./../assets/jquery/jquery-3.7.1.min.js"></script> 
+    <link rel="stylesheet" type="text/css" href="./../css/question.css" media="all" />
+    <script type="text/javascript" src="./../assets/jquery/jquery-3.7.1.min.js"></script>
     <script type="text/javascript">
-		$(document).ready(function(){
-			$('#img').click(function(){
-				$('.lightbox').toggle();
-			});
-			$('#fermer').click(function(){
-				$('.lightbox').toggle();
-			});
-		});	
-	</script> 
+        $(document).ready(function() {
+            $('#img').click(function() {
+                $('.lightbox').toggle();
+            });
+            $('#fermer').click(function() {
+                $('.lightbox').toggle();
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+        const answers = document.querySelectorAll('.answers .answer');
+        answers.forEach(answer => {
+        answer.style.display = 'flex'; // Force l'affichage au cas où
+        answer.style.visibility = 'visible';
+    });
+});
+
+    </script>
 </head>
+
 <body>
-    <?php
-    require_once dirname(__DIR__).'/recover/index.php';
-    $questionByQuizz = $questionRepository->findBy(['quizz'=>$_GET['quizz_id']]); // Récupération des questions liée au quizz dont l'id est celui envoyé en GET via la variable 'quizz_id'
-    $choiceByQuestion = $choiceRepository->findBy(['question'=>$questionByQuizz[$_GET['page']-1]->getId()]);// Récupération de tous les choix correspondant à l'id de la question du tableau $questionByQuizz à l'index indiqué par la variable $GET['page'] 
-    // VOIR POUR RAJOUTER UN ATTRIBUT IMAGE A LA CLASSE QUIZZ
-    ?>
-    <div class="statement">
-        <h1><?php echo $questionByQuizz[$_GET['page']-1]->getStatement() ?></h1>
-    </div>
+<?php
+require_once dirname(__DIR__) . '/recover/index.php';
 
-    <div class="content">
-        <img id="img" src="./../assets/img/Teldrassil.jpg" alt="Elfe de la nuit - World of Warcraft">
-        <div class="answers">
-            <a class="answer one" href="?quizz_id=<?php echo $_GET['quizz_id'] ?>&page=<?php echo $_GET['page']+1 ?>">
-                <p class="letter">A</p>
-                <p class="item"><?php echo $choiceByQuestion[0]->getName() ?></p>
-            </a>
+// Validation et assainissement des données
+$quizz_id = isset($_GET['quizz_id']) ? intval($_GET['quizz_id']) : null;
+$page = isset($_GET['page']) ? intval($_GET['page']) : 1;
+$reset = isset($_GET['reset']) ? $_GET['reset'] : 'false';
 
-            <a class="answer two" href="?quizz_id=<?php echo $_GET['quizz_id'] ?>&page=<?php echo $_GET['page']+1 ?>">
-                <p class="letter">B</p>
-                <p class="item"><?php echo $choiceByQuestion[1]->getName() ?></p>
-            </a>
+// Valide l'existence du quizz via son ID
+if ($quizz_id === null) {
+    die("Quiz ID invalide");
+}
 
-            <a class="answer tree" href="?quizz_id=<?php echo $_GET['quizz_id'] ?>&page=<?php echo $_GET['page']+1 ?>">
-                <p class="letter">C</p>
-                <p class="item"><?php echo $choiceByQuestion[2]->getName() ?></p>
-            </a>
+// Chercher le quiz et les questions
+$quizz = $quizzRepository->find($quizz_id);
+if (!$quizz) {
+    die("Quiz non trouvé");
+}
 
-            <a class="answer four" href="?quizz_id=<?php echo $_GET['quizz_id'] ?>&page=<?php echo $_GET['page']+1 ?>">
-                <p class="letter">D</p>
-                <p class="item"><?php echo $choiceByQuestion[3]->getName() ?></p>
-            </a>
+$questionByQuizz = $questionRepository->findBy(['quizz' => $quizz]);
+
+// Vérifie que les questions existent
+if (empty($questionByQuizz)) {
+    die("Pas de questions trouvées pour ce quiz");
+}
+
+// Valide le numéro de page
+$totalQuestions = count($questionByQuizz);
+if ($page < 1 || $page > $totalQuestions) {
+    die("Numéro de page invalide");
+}
+
+// Affiche la question actuelle et le choix de réponses
+$currentQuestion = $questionByQuizz[$page - 1];
+$choiceByQuestion = $choiceRepository->findBy(['question' => $currentQuestion]);
+
+// Rendre les réponses aléatoires
+shuffle($choiceByQuestion);
+
+// Détermine la page suivante si elle existe
+$nextPage = ($page < $totalQuestions) ? $page + 1 : null;
+$nextPageParam = $nextPage ? "?quizz_id={$quizz_id}&page={$nextPage}" : "#";
+
+// Optionnel : récupérer l'image du quiz
+$quizImage = method_exists($quizz, 'getImage') ? $quizz->getImage() : "./../assets/img/Teldrassil.jpg";
+?>
+
+        <div class="statement">
+            <h1><?php echo htmlspecialchars($currentQuestion->getStatement()); ?></h1>
         </div>
-    </div>
+        <div class="content">
+            <img id="img" src="<?php echo htmlspecialchars($quizImage); ?>" alt="Quiz Image">
+            <div class="answers">
+    <?php
+        $letters = ['A', 'B', 'C', 'D']; // Adapter si on rajoute des réponses supplémentaires
+        foreach ($choiceByQuestion as $index => $choice) {
+    ?>
+        <a class="answer <?php echo strtolower($letters[$index]); ?>"
+            href="<?php echo htmlspecialchars($nextPageParam); ?>"
+            data-correct="<?php echo $choice->getName() === $currentQuestion->getAnswer() ? 'true' : 'false'; ?>">
+            <p class="letter"><?php echo $letters[$index]; ?></p>
+            <p class="item"><?php echo htmlspecialchars($choice->getName()); ?></p>
+        </a>
+    <?php } ?>
+</div>
 
-     <!-- LightBox debut -->
-	<div class="lightbox">
-		<div class="main">
-			<div id="fermer">X</div>
-			<img id="zoom" src="./../assets/img/Teldrassil.jpg"/>
-		</div>
-	</div>
-	<!-- LightBox fin -->   
+        </div>
 
-    <div class="footer">
-        <p>Question : <?php echo $_GET['page'] ?>/10</p>
-        <p>0:30</p>
-        <p>Réponses : 0/4</p>
-    </div>
+        <!-- LightBox -->
+        <div class="lightbox">
+            <div class="main">
+                <div id="fermer">X</div>
+                <img id="zoom" src="<?php echo htmlspecialchars($quizImage); ?>" />
+            </div>
+        </div>
 
-</body>
-</html>
+        <div class="footer">
+            <p>Question: <?php echo "{$page}/{$totalQuestions}"; ?></p>
+            <p id="timer">0:30</p>
+            <p id="score">Answers: 0/<?php echo $totalQuestions; ?></p>
+        </div>
+
+        <!-- Formulaire pour relancer le quiz -->
+        <form action="" method="get">
+            <input type="hidden" name="quizz_id" value="<?php echo $quizz_id; ?>">
+            <input type="hidden" name="page" value="1">
+            <input type="hidden" name="reset" value="true">
+            <button type="submit">Relancer le quiz</button>
+        </form>
+    
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let timer = 30; // secondes
+                let timerElement = document.getElementById('timer');
+                let scoreElement = document.getElementById('score');
+                let correctAnswers = parseInt(localStorage.getItem('correctAnswers_<?php echo $quizz_id; ?>')) || 0;
+                let nextPageParam = '<?php echo $nextPageParam; ?>';
+                let reset = '<?php echo $reset; ?>';
+                let totalQuestions = <?php echo $totalQuestions; ?>;     
+                let currentQuestionNumber = 1; // Traque le numéro de la question actuelle
+                
+
+        // Réinitialiser le compteur si le quiz est relancé
+                if (reset === 'true') {
+                    localStorage.setItem('correctAnswers_<?php echo $quizz_id; ?>', 0);
+                    correctAnswers = 0;
+                }
+
+        // Mettre à jour le score affiché
+                scoreElement.textContent = `Answers: ${correctAnswers}/<?php echo $totalQuestions; ?>`;
+
+        // Compte à rebours du timer de 30sec
+                let countdown = setInterval(function() {
+                    timer--;
+                    timerElement.textContent = `0:${timer < 10 ? '0' : ''}${timer}`;
+
+                    if (timer <= 0) {
+                        clearInterval(countdown);
+
+        // Redirige vers la page suivante
+                        window.location.href = nextPageParam;
+                    }
+                }, 1000);
+
+        // Réponse traitement des clics
+                document.querySelectorAll('.answer').forEach(answer => {
+                    answer.addEventListener('click', function(e) {
+                        e.preventDefault(); // Empêche la redirection immédiate
+                        if (this.getAttribute('data-correct') === 'true') {
+                            correctAnswers++;
+                            localStorage.setItem('correctAnswers_<?php echo $quizz_id; ?>', correctAnswers);
+                            scoreElement.textContent = `Answers: ${correctAnswers}/<?php echo $totalQuestions; ?>`;
+                        }
+        // Bloque l'incrémentation des réponses une fois le quiz terminé
+                currentQuestionNumber++;
+                if (currentQuestionNumber > totalQuestions) {           
+                    document.querySelectorAll('.answer').forEach(btn => {                     
+                    btn.style.pointerEvents = 'none';                 
+                    btn.classList.add('disabled');             
+            });        
+    }
+    // Redirige vers la page suivante après un court délai
+                        setTimeout(function() {
+                            window.location.href = nextPageParam;
+                        }, 500);
+                    });
+                });
+
+        // Lightbox
+                document.getElementById('img').addEventListener('click', function() {
+                    document.querySelector('.lightbox').style.display = 'flex';
+                });
+
+                document.getElementById('fermer').addEventListener('click', function() {
+                    document.querySelector('.lightbox').style.display = 'none';
+                });
+            });
+        </script>
+    </body>
+
+    </html>

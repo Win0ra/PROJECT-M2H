@@ -1,5 +1,4 @@
 <?php
-// NAVBAR START
 include './navbar.php';
 // NAVBAR END
 
@@ -107,7 +106,7 @@ include './navbar.php';
 </head>
 
 <body>
-    <form action="" method="post">
+    <form action="./my-account.php" method="get">
         <div class="content">
             <h1 class="h1-register">Inscrivez-vous</h1>
 
@@ -147,11 +146,11 @@ include './navbar.php';
                     <input type="text" name="pseudo" id="pseudo" placeholder="Le-plus-grand-des-bouzins" required>
 
                     <h3>Confirmer le mot de passe</h3>
-                    <input type="password" name="confirmation" id="password-confirm" placeholder="****************"  required 
+                    <input type="password" name="password" id="password-confirm" placeholder="****************"  required 
                     class="center-placeholder" onpaste="return false;" oncopy="return false;" oncut="return false;" autocomplete="off">
 
-                    <h3>Date de naissance</h3>
-                    <input type="date" name="birthday" id="age" placeholder="JJ/MM/AAAA" required>
+                    <h3>Age (ans)</h3>
+                    <input type="number" name="age" id="age" required placeholder="18" required>
                 </div>
             </div>
 
@@ -203,9 +202,9 @@ include './navbar.php';
 </body>
 
 </html>
-<!----- FORMULAIRE END ----->
 
+<?php
 
-<!----- FOOTER START ----->
-<?php include './footer.php'; ?>
-<!----- FOOTER END ----->
+include './footer.php';
+
+?>
