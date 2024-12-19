@@ -1,96 +1,7 @@
 <?php
-// NAVBAR START
 include './navbar.php';
-// NAVBAR END
-
-
-// $POST & $FILE START 
-    session_start();
-
-    use LaBouzinerie\Classes\UserIdentified;
-
-    require_once dirname(__DIR__)."/back/bootstrap.php";
-    require_once dirname(__DIR__) . "/back/src/recover/index.php";
-
-    if (!empty($_POST)){
-        $isPasswordConfirmed = false;
-        $isEmailUnique = true;
-        $isSucces = false;
-
-        // VERIFICATION DE LA CONFIRMATION DU MOT DE PASSE
-        if (!empty($_POST['password']) && $_POST['password'] === $_POST['confirmation']) {
-            $isPasswordConfirmed = true;
-        }else{
-            ?>
-            <div class="alert alert-danger d-flex align-items-center bandeau" role="alert">
-                <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
-                <div>
-                    La confirmation du mot de passe a échoué.
-                </div>
-            </div>
-            <?php
-        }
-
-        // VERIFICATION D'UN EMAIL UNIQUE
-        if(!empty($allUserIdentified) && $isPasswordConfirmed) {
-            foreach($allUserIdentified as $user) {
-                if ($user->getEmail() === $_POST['email']) {
-                    $isEmailUnique = false;
-                }
-            }
-            if (!$isEmailUnique) {
-                ?>
-                <div class="alert alert-warning d-flex align-items-center bandeau" role="alert">
-                    <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
-                    <div>
-                        Cet e-mail à déjà été enregistré.
-                    </div>
-                </div> 
-                <?php
-            }
-        }
-
-        // CREATION D'UN NOUVEL UTILISATEUR
-        if ($isPasswordConfirmed && $isEmailUnique) {
-            $elo = 0;
-            $birthday = new DateTime($_POST['birthday']);
-            $securePassword = password_hash($_POST['password'], PASSWORD_DEFAULT);
-
-            $user = new UserIdentified (
-                $_POST['pseudo'],
-                $elo,
-                $_POST['nom'],
-                $_POST['prenom'],
-                $_POST['sexe'], 
-                $birthday,
-                $_POST['email'],
-                $securePassword,
-            );
-            $entityManager->persist($user);
-
-            // ENREGISTREMENT DANS LA BDD (FLUSH) 
-            try {
-                $entityManager->flush();
-                $isSucces = true;
-            } catch (\Throwable $th) {
-                error_log($th->getMessage());
-                throw $th;
-            }
-
-            // REDIRECTION SUR LA HOMEPAGE PERSONNALISÉ
-            if ($isSucces){
-                $_SESSION['isAuthentified'] = $isSucces;
-                $_SESSION['firstname'] = $_POST['prenom'];
-                $_SESSION['lastname'] = $_POST['nom'];
-                
-                header("location: ./index.php");
-            } 
-        }
-    }
 ?>
 
-
-<!----- FORMULAIRE START ----->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -98,14 +9,13 @@ include './navbar.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/styles-inscription.css" type="text/css" media="all">
+    <link rel="stylesheet" href="./css/styles-register.css" type="text/css" media="all">
     <script src="https://kit.fontawesome.com/e98829b701.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 
 <body>
-    <form action="" method="post">
+    <form action="./my-account.php" method="get">
         <div class="content">
             <h1 class="h1-register">Inscrivez-vous</h1>
 
@@ -145,11 +55,11 @@ include './navbar.php';
                     <input type="text" name="pseudo" id="pseudo" placeholder="Le-plus-grand-des-bouzins" required>
 
                     <h3>Confirmer le mot de passe</h3>
-                    <input type="password" name="confirmation" id="password-confirm" placeholder="****************"  required 
+                    <input type="password" name="password" id="password-confirm" placeholder="****************"  required 
                     class="center-placeholder" onpaste="return false;" oncopy="return false;" oncut="return false;" autocomplete="off">
 
-                    <h3>Date de naissance</h3>
-                    <input type="date" name="birthday" id="age" placeholder="JJ/MM/AAAA" required>
+                    <h3>Age (ans)</h3>
+                    <input type="number" name="age" id="age" required placeholder="18" required>
                 </div>
             </div>
 
@@ -201,9 +111,9 @@ include './navbar.php';
 </body>
 
 </html>
-<!----- FORMULAIRE END ----->
 
+<?php
 
-<!----- FOOTER START ----->
-<?php include './footer.php'; ?>
-<!----- FOOTER END ----->
+include './footer.php';
+
+?>
