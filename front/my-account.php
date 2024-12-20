@@ -1,4 +1,8 @@
 <?php
+if (!empty($_SESSION)) {
+    session_start();
+}
+
 include './navbar.php';
 ?>
 
@@ -17,7 +21,7 @@ include './navbar.php';
 <body>
     <div class="content">
         <h1>Mon compte</h1>
-        <h2>Bienvenue dans votre interface <?php echo $_SESSION['user_first_name']; ?></h2>
+        <h2>Bienvenue dans votre interface <?php echo($_SESSION['firstname']) ?></h2>
         <div class="my-informations">
             <div class="title-and-button">
                 <h3>Mes informations</h3>

@@ -27,8 +27,7 @@ class Question {
     private Quizz $quizz;
 
     // CONSTRUCTOR
-    public function __construct(int $id, string $statement, string $answer, Quizz $quizz) {
-        $this->id = $id;
+    public function __construct(string $statement, string $answer, Quizz $quizz) {
         $this->statement = $statement;
         $this->answer = $answer;
         $this->quizz = $quizz;

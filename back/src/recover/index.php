@@ -1,5 +1,4 @@
 <?php
-
 use LaBouzinerie\Classes\Choice;
 use LaBouzinerie\Classes\Question;
 use LaBouzinerie\Classes\Quizz;

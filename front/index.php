@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (!empty($_SESSION)) {
+    session_start();
+}
 
 include './navbar.php'; // Inclusion du menu de navigation
 

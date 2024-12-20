@@ -20,8 +20,7 @@ class Choice {
     private Question $question;
 
     // CONSTRUCTOR
-    public function __construct(int $id, string $name, Question $question) {
-        $this->id = $id;
+    public function __construct(string $name, Question $question) {
         $this->name = $name;
         $this->question = $question;
     }

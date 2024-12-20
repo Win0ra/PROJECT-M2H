@@ -23,7 +23,6 @@ class LadderUser {
     #[ORM\Id]
     #[ORM\ManyToOne(targetEntity: UserIdentified::class, inversedBy: 'ladderUsers')]
     #[ORM\JoinColumn(name: 'user_id', referencedColumnName: 'id', nullable: false)]
-    
     private UserIdentified $user;
 
     #[ORM\Column(type: 'integer')]
