@@ -138,7 +138,7 @@ p.password-lost {
     font-family: Bellota;
     font-size: 24px;
     font-weight: bold;
-    margin: 0px 0px 80px 0px;
+    margin: 0px 0px 36px 0px;
     cursor: pointer;
 }
 
@@ -206,4 +206,54 @@ p.memorize {
 
 .a-connexion {
     height: 48px;
+}
+
+
+.nsm7Bb-HzV7m-LgbsSe .nsm7Bb-HzV7m-LgbsSe-BPrWId {
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+    font-family: 'Bellota';
+    font-weight: 900;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: top;
+    border-radius: 38px;
+    font-size: 24px;
+    padding: 3px 0px 3px 0px;
+}
+
+
+.nsm7Bb-HzV7m-LgbsSe {
+    -webkit-border-radius: 4px;
+    border-radius: 10px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: background-color .218s,border-color .218s;
+    transition: background-color .218s,border-color .218s;
+    -webkit-user-select: none;
+    -webkit-appearance: none;
+    background-color: #fff;
+    background-image: none;
+    color: #000000;
+    cursor: pointer;
+    font-family: "Google Sans",arial,sans-serif;
+    font-size: 14px;
+    height: 40px;
+    letter-spacing: 0.25px;
+    outline: none;
+    overflow: hidden;
+    padding: 0 12px;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: auto;
+    box-shadow: 0 4px 4px hsl(0deg 0% 0% / 25%);
+    border: none;
+}
+
+.nsm7Bb-HzV7m-LgbsSe:hover {
+    background: linear-gradient(#EDC267,#9a6748);
+    color: white;
+    box-shadow: 0 4px 4px hsl(0deg 0% 0% / 25%);
 }
